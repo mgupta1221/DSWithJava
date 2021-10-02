@@ -1,24 +1,40 @@
 package GettingStarted;
 
-
 /**
- * https://www.youtube.com/watch?v=dbk42TKwk4M&list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk&index=23 
+ * https://www.youtube.com/watch?v=lt8oCGqYMGg&list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk&index=26
  */
 public class RotateANumber {
 
     public static void main(String[] args) {
-        
-        int n = 2134;
-        int noOfDigits = 0;
-        int rem = 0;
-        int invrsedNo = 0;
-        while (n != 0) {
-            rem = n % 10;
-            n = n / 10;
-            noOfDigits++;
-            invrsedNo = invrsedNo + (noOfDigits * (int) (Math.pow(10, rem-1)));
+        int n = 27391;
+        int rotationRequired = -2;
+
+        int tempNumber = n;
+        int currentDigit;
+        int count = 0;
+
+        // Counting the number of digits in the number
+        while (tempNumber != 0) {
+            tempNumber = tempNumber / 10;
+            count++;
         }
-        System.out.println(invrsedNo);
+
+        // Handling negative value of rotation required - Rotating by 3 is same as rotating by -2
+        if (rotationRequired < 0) {
+            rotationRequired = (count + rotationRequired);
+        }
+
+        tempNumber = n;
+
+        while (rotationRequired != 0) {
+            currentDigit = tempNumber % 10;
+            tempNumber = tempNumber / 10;
+
+            rotationRequired--;
+            tempNumber = currentDigit * (int) Math.pow(10, count - 1) + tempNumber;
+        }
+
+        System.out.println("Rotated number is: " + tempNumber);
 
     }
 }

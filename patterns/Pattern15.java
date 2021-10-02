@@ -1,6 +1,6 @@
 package patterns;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  * https://www.youtube.com/watch?v=lKhGlVXdD2c&list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk&index=64

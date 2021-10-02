@@ -1,9 +1,10 @@
 package GettingStarted;
 
-import java.util.Scanner;
+
 
 /**
- * HelloWorld
+ * https://www.youtube.com/watch?v=O7PlWc9lOzg&list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk&index=24
+ * 
  */
 public class Inverse {
 

@@ -1,6 +1,6 @@
 package FunctionsAndArrays;
 
-
+// Check readme in folder
 // https://www.youtube.com/watch?v=F0aTGc2vS5s&list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk&index=82
 public class FromBaseNTo10 {
     public static void main(String[] args) {

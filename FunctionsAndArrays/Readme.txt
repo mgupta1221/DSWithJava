@@ -70,6 +70,14 @@ Converting Any base to Decimal number(Base 10):
 4) Add all values of step 3 to get the result.
 
 
+- Imp: Check about logic of Additions and Multiplication in Any base
+https://www.youtube.com/watch?v=YVpTjZRShqo&list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk&index=86
+
+Solution for Addition and Multiplication is in one file
+
+- Remember, in case of multiplication - additoion done is not normal Base 10 addition, it will be 
+respective base's addition
+
 
 
 

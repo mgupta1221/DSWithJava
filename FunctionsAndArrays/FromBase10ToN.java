@@ -1,11 +1,12 @@
 package FunctionsAndArrays;
 
+// Check readme in folder
 // https://www.youtube.com/watch?v=lOsmPMihcTM&list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk&index=80
 
 public class FromBase10ToN {
     public static void main(String[] args) {
 
-        int n = 5;
+        int n = 10;
         int sourcebase = 10;
         int targetbase = 2;
         int rem = 0;
