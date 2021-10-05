@@ -81,6 +81,10 @@ respective base's addition
 
 
 
+Important quesitons in this folder
+SubSetsOfArray
+BinarySearchUseCases
+
 
 
 

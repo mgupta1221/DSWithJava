@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class DiffOf2Arrays {
     public static void main(String[] args) {
 
+        
         Scanner scn = new Scanner(System.in);
 
         int numberOfElements = scn.nextInt();

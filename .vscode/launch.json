@@ -1,0 +1,217 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnyBaseAddition",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.AnyBaseAddition",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnyBaseMultiplication",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.AnyBaseMultiplication",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch BarChartFromNumbers",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.BarChartFromNumbers",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch BarChartInverted",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.BarChartInverted",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinarySearchUseCases",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.BinarySearchUseCases",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch DiffOf2Arrays",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.DiffOf2Arrays",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FromBase10ToN",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.FromBase10ToN",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FromBaseAnyBaseToAnybase",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.FromBaseAnyBaseToAnybase",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FromBaseNTo10",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.FromBaseNTo10",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Rough",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.Rough",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch SubsetsOfArray",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.SubsetsOfArray",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch SumOf2Arrays",
+            "request": "launch",
+            "mainClass": "FunctionsAndArrays.SumOf2Arrays",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inverse",
+            "request": "launch",
+            "mainClass": "GettingStarted.Inverse",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrimeFactorofNumber",
+            "request": "launch",
+            "mainClass": "GettingStarted.PrimeFactorofNumber",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrimeNumber",
+            "request": "launch",
+            "mainClass": "GettingStarted.PrimeNumber",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReverseANumber",
+            "request": "launch",
+            "mainClass": "GettingStarted.ReverseANumber",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch RotateANumber",
+            "request": "launch",
+            "mainClass": "GettingStarted.RotateANumber",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Printing2DArrays",
+            "request": "launch",
+            "mainClass": "TwoDArrays.Printing2DArrays",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern10",
+            "request": "launch",
+            "mainClass": "patterns.Pattern10",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern11",
+            "request": "launch",
+            "mainClass": "patterns.Pattern11",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern12Fibonacci",
+            "request": "launch",
+            "mainClass": "patterns.Pattern12Fibonacci",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern13",
+            "request": "launch",
+            "mainClass": "patterns.Pattern13",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern15",
+            "request": "launch",
+            "mainClass": "patterns.Pattern15",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern18",
+            "request": "launch",
+            "mainClass": "patterns.Pattern18",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern19",
+            "request": "launch",
+            "mainClass": "patterns.Pattern19",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern20PrintW",
+            "request": "launch",
+            "mainClass": "patterns.Pattern20PrintW",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern5",
+            "request": "launch",
+            "mainClass": "patterns.Pattern5",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pattern9",
+            "request": "launch",
+            "mainClass": "patterns.Pattern9",
+            "projectName": "PepJava_31b3709d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Rough(1)",
+            "request": "launch",
+            "mainClass": "patterns.Rough",
+            "projectName": "PepJava_31b3709d"
+        }
+    ]
+}
