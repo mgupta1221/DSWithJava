@@ -75,7 +75,7 @@ https://www.youtube.com/watch?v=YVpTjZRShqo&list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1
 
 Solution for Addition and Multiplication is in one file
 
-- Remember, in case of multiplication - additoion done is not normal Base 10 addition, it will be 
+- Remember, in case of multiplication - addition done is not normal Base 10 addition, it will be 
 respective base's addition
 
 

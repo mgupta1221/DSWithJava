@@ -3,6 +3,7 @@ package TwoDArrays;
 import java.util.Scanner;
 
 // Rotate by 90 Degree - Square 2d ARRAY
+// https://www.youtube.com/watch?v=SoxrXQbhCPI&list=RDCMUC7rNzgC2fEBVpb-q_acpsmw&start_radio=1&rv=SoxrXQbhCPI&t=650
 
 //Solution: Rotatiting a 2D Array means - Making 1st row as last column, 2nd row and second last column...last row as first column
 

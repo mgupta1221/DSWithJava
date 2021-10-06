@@ -23,7 +23,7 @@ public class WavePrint2DArray {
 
         // Printing the result
 
-        for (int i = 0; i < n; i++) { // Notice we are running the outer loop n times, NOT m times
+        for (int i = 0; i < n; i++) { // Notice we are running the outer loop n times(columns), NOT m times
             if (i % 2 == 0) {
                 for (int j = 0; j < m; j++) {
                     System.out.println(arr[j][i]);  //Also notice we are keeping j and i
