@@ -1,3 +1,6 @@
+1. GettingStartedBasics
+2. Recursion And Backtracking
+
 Educative.io  for System Design
 Gaurav Sen for HLD and System Design
 Udit Agarwal (youtube) for LLD
