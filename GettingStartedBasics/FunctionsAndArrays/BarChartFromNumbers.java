@@ -15,6 +15,7 @@ public class BarChartFromNumbers {
         for (int i = 0; i < numberOfElements; i++) {
             arr[i] = scn.nextInt();
         }
+        scn.close();
         // Get largest number to print the max height
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {

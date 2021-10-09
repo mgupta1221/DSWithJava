@@ -73,6 +73,23 @@ arr.remove(i)
 //Whenever removal from ArrayList is required, always iterate the arraylist from right. This is becuase on removal, index
 //of all elements to the right reduces by 1 so immediate next element is missed 
 
+11. // How to understand recursion, See image attached in recursion folder for quick reading of the same
+https://www.youtube.com/watch?v=R7qja_gZrvI
+
+
+12. Recursion tip:
+// Everything before recursive call will execute when you go up in the recursion
+// Everything after recursive call will execute wapas aate hue...
+
+// Notice the difference between PrintDecreasing and than PrintIncreasing in Recursion folder
+
+
+//While solving problem with recursion- we assume approach will work for n-1 and write the codes. Good Example
+is in solution of Tower of Hanoi 
+ https://www.youtube.com/watch?v=QDBrZFROuA0
+
+Recursion works on the idea of faith that if algo will work for "n-1", than it will also work for "n"
+
 
 
 

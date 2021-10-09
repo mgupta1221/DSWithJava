@@ -14,7 +14,7 @@ public class BarChartInverted {
         for (int i = 0; i < numberOfElements; i++) {
             arr[i] = scn.nextInt();
         }
-
+        scn.close();
         // Getting the max Value
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
@@ -22,7 +22,6 @@ public class BarChartInverted {
                 max = arr[i];
             }
         }
-       
 
         for (int i = 1; i <= max; i++) {
             for (int j = 0; j < numberOfElements; j++) {
