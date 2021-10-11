@@ -27,6 +27,8 @@ public class DiagonalTraversal {
             System.out.println();
         }
         
+
+        //Diagonal Print
         for (int i = 0; i < arr.length; i++) {
             for (int k = 0, j = i; j < arr.length; k++, j++) { // 01 12 ..... 02 13 24
                 System.out.print(arr[k][j] + "\t");

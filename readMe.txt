@@ -19,6 +19,8 @@ Refer Readme files in individual folders here as well
 
 
 JAVA Tips
+
+Strings
 1.
 
 char leftChar = str.charAt(low); // See how we pick charcters by index using charAt()
@@ -45,9 +47,16 @@ char UpperCaseB=   (char) (newChar - 32)  // notice we substracting with 32 whic
 say newChar = 'B';
 char UpperCaseB=   (char) (newChar + 32)  // Adding with 32 here if character is uppercase
 
+6. 2 variations of substring method   => str.substring(startIndex, endIndex)
+
+say str= "hello";
+str.substring(1,3)   //   "el"    -> does not print the last index charcter, second  'l' in this case
+str.substring(1)     //   "ello" -> print from the given index till the endF
 
 
-6. Replace a character in a string at specific index
+
+
+7. Replace a character in a string at specific index
 
 Solution:
 Convert the string to StringBuilder. StringBuilder has a function called setCharAt(). See below:
@@ -57,6 +66,8 @@ Convert the string to StringBuilder. StringBuilder has a function called setChar
 
    sbr.setCharAt(2, 'p');  //2 is the index and 'p' is the chracter which will be placed instead of 'm'(index 2)
 
+
+ArrayList
 7. How to declare ArrayList 
 
 ArrayList<Integer> arr= new ArrayList<>();
@@ -89,6 +100,23 @@ is in solution of Tower of Hanoi
  https://www.youtube.com/watch?v=QDBrZFROuA0
 
 Recursion works on the idea of faith that if algo will work for "n-1", than it will also work for "n"
+
+
+13. //For Hacker rank , 2D multiline inputs are taken as :
+
+ Scanner scn = new Scanner(System.in);     
+
+int n =Integer.parseInt( scn.nextLine());
+int[][] a = new int[n][n];
+for (int i = 0; i < n; i++) {            
+    String str = scn.nextLine();
+    String[] temp = str.split(" ");
+    for (int j = 0; j < n; j++) {
+        a[i][j] = Integer.parseInt(temp[j]);
+
+    }
+
+}
 
 
 
