@@ -1,10 +1,11 @@
 package RecursionAndBacktracking.RecursionWithArrayList;
 
 import java.util.ArrayList;
+// https://www.youtube.com/watch?v=Sa5PmCFF_zI
 
 public class GetSubsequence {
     public static void main(String[] args) {
-        String str = "abc";
+        String str = "abc"; // Output should be ["", "a", "b", "c", "ab", "bc", "ac", "abc"]
 
         ArrayList<String> arrList = new ArrayList<>();
         arrList = getSS(str);
@@ -34,13 +35,13 @@ public class GetSubsequence {
 
         // looping through ["","b","c","bc"]
         for (int i = 0; i < subArraylist.size(); i++) {
-            
+
             // adding "a" and " " to each item of array
             concatArrayList.add(firstChar + subArraylist.get(i));
             concatArrayList.add("" + subArraylist.get(i));
         }
 
-        //returning final result
+        // returning final result
         return concatArrayList;
     }
 

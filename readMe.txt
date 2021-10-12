@@ -4,7 +4,7 @@
 Educative.io  for System Design
 Gaurav Sen for HLD and System Design
 Udit Agarwal (youtube) for LLD
-Head First Book for Design patterns
+Head First Book for Object Oriented Analysis and patterns
 
 
 Tips:
@@ -47,6 +47,18 @@ char UpperCaseB=   (char) (newChar - 32)  // notice we substracting with 32 whic
 say newChar = 'B';
 char UpperCaseB=   (char) (newChar + 32)  // Adding with 32 here if character is uppercase
 
+6. How to convert '6' to 6
+
+ char c = '6';
+ System.out.println((char) (c - '0'));  
+ 
+ //this works becuase ascii of '6' is 54 and of '0' (0 gets typecast to '0' automatically here) 
+ //is 48, so the differnece is 6
+
+ //ASCII code of '0' is 48
+
+
+
 6. 2 variations of substring method   => str.substring(startIndex, endIndex)
 
 say str= "hello";
@@ -80,6 +92,18 @@ arr.get(i)
 
 10. Remove element from ArrayList
 arr.remove(i)
+
+11. Taking specific elements from ArrayList, use Sublist() function. Note that it does not 
+return ArrayList<String>, instead it returns  List<String> which you can convert to ArrayList as below:
+
+ List<String> remValues = alphaValues.subList(1, alphaValues.size()); 
+ //Here we are taking all values of ArrayList except first value - Notice SubList returns List<String>
+
+
+You can convert List<String> to ArrayList<String> as below:
+ArrayList<String> values = new ArrayList<String>(alphaValues.subList(1, alphaValues.size()));
+
+
 
 //Whenever removal from ArrayList is required, always iterate the arraylist from right. This is becuase on removal, index
 //of all elements to the right reduces by 1 so immediate next element is missed 
