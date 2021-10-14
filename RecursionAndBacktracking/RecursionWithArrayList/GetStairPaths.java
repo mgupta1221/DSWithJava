@@ -9,7 +9,7 @@ public class GetStairPaths {
     public static void main(String[] args) {
 
         ArrayList<String> arrList = new ArrayList<>();
-        arrList = getSP(3);
+        arrList = getSP(6);
         System.out.println(arrList);
 
     }
@@ -25,7 +25,7 @@ public class GetStairPaths {
             ArrayList<String> emptyArrList = new ArrayList<>();
             return emptyArrList;
         }
-        // Recursive calls
+        // Recursive calls - You are allowed to climb 1 step, 2 steps or 3 steps in one move hence (n-1) till (n-3)
         ArrayList<String> rres1 = getSP(n - 1);
         ArrayList<String> rres2 = getSP(n - 2);
         ArrayList<String> rres3 = getSP(n - 3);

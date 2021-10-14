@@ -1,14 +1,15 @@
 package RecursionAndBacktracking.RecursionOnWayUp;
 
-import java.util.ArrayList;
+// this question is similar to GetKeyPressCombination in "Recursion WithArraysLists" section
+// there we were returning the values using ArrayList but here we have to print them
+
+// Key is that we have taken an extra parameter in the function called 'ans' to calculate the KeyCombination
+// in each iteration and printing it at Base Condition 
 
 // Solution  : https://www.youtube.com/watch?v=Ke8TPhHdHMw
 public class PrintKPC {
     public static void main(String[] args) {
         String str = "678";
-
-        String[] possibleKeys = { ".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz" };
-
         printKPC(str, "");
 
     }

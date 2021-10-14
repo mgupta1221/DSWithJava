@@ -108,6 +108,11 @@ ArrayList<String> values = new ArrayList<String>(alphaValues.subList(1, alphaVal
 //Whenever removal from ArrayList is required, always iterate the arraylist from right. This is becuase on removal, index
 //of all elements to the right reduces by 1 so immediate next element is missed 
 
+
+================================================================================================
+Recursion
+
+
 11. // How to understand recursion, See image attached in recursion folder for quick reading of the same
 https://www.youtube.com/watch?v=R7qja_gZrvI
 
@@ -126,7 +131,17 @@ is in solution of Tower of Hanoi
 Recursion works on the idea of faith that if algo will work for "n-1", than it will also work for "n"
 
 
-13. //For Hacker rank , 2D multiline inputs are taken as :
+
+13. Recursion can be solved using :
+a) Faith and Expectation approach (Check "GetStairPaths" in 'RecursionWithArrayList' section)
+b) Level and Options approach (Check "PrintStairPaths" in 'RecursionOnWayUp' section)
+
+Both approaches are exaplianed briefly in PrintStairPaths solution video, link below
+https://www.youtube.com/watch?v=NEuYcztalew
+
+
+
+14. //For Hacker rank , 2D multiline inputs are taken as :
 
  Scanner scn = new Scanner(System.in);     
 
