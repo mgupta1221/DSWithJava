@@ -7,6 +7,9 @@ Udit Agarwal (youtube) for LLD
 Head First Book for Object Oriented Analysis and patterns
 
 
+Studnet Notes
+https://github.com/tamanna-verma/DSA_Notes
+
 Tips:
 1. 2DArray Spiral display and Rotation concepts are used in DP problems
 
@@ -56,6 +59,11 @@ char UpperCaseB=   (char) (newChar + 32)  // Adding with 32 here if character is
  //is 48, so the differnece is 6
 
  //ASCII code of '0' is 48
+
+ 7.  //Getting alphabet from number(number is in String format)
+        
+    int charVal = ch - '0'; /// converting character to number
+    char code = (char) ('a' + charVal - 1); // notice we are typecasting and adding as well
 
 
 
@@ -136,8 +144,13 @@ Recursion works on the idea of faith that if algo will work for "n-1", than it w
 a) Faith and Expectation approach (Check "GetStairPaths" in 'RecursionWithArrayList' section)
 b) Level and Options approach (Check "PrintStairPaths" in 'RecursionOnWayUp' section)
 
-Both approaches are exaplianed briefly in PrintStairPaths solution video, link below
-https://www.youtube.com/watch?v=NEuYcztalew
+For more details on "Faith and Expectation" and "Levels and Options" approach,
+see readMe file of IntroToRecursion
+
+
+
+
+14. Check PrintPermutations in Recursion -> RecursionOnWayUp
 
 
 
