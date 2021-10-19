@@ -7,8 +7,11 @@ Udit Agarwal (youtube) for LLD
 Head First Book for Object Oriented Analysis and patterns
 
 
-Studnet Notes
+Student Notes
+
+https://github.com/alok722/pepcoding-dsa-java
 https://github.com/tamanna-verma/DSA_Notes
+
 
 Tips:
 1. 2DArray Spiral display and Rotation concepts are used in DP problems

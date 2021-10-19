@@ -31,8 +31,8 @@ public class TowerOfHanoi {
             return;
         }
 
-        toh(n - 1, t1d, t3d, t2d); // Assuiming that the function will work for n-1, first move (n-1) disks from t1
-                                   // to t3
+        toh(n - 1, t1d, t3d, t2d); // Assuiming that the function will work for n-1, first move (n-1)
+                                    // disks from t1 to t3
 
         System.out.println(n + " [" + t1d + "->" + t2d + "]"); // Moving last disk from t1 to t2 directly
 

@@ -6,6 +6,8 @@ Imp Questions:
 //PrintEncodings -> good Question
 
 
+//This section uses "Level and Options approach" where level is represented by the parameter passed in 
+//recursive call and Options are represented by loop inside the recursive function.
 
 
 a)  When you have to return All values from a recursive function in a list - we use Faith and Expectation 

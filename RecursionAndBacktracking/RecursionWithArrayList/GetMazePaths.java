@@ -26,7 +26,7 @@ public class GetMazePaths {
             return emptyArrList;
         }
 
-        ArrayList<String> hpaths = new ArrayList<>(); ///Defined then separately becuase we have to apply condition unline other examples
+        ArrayList<String> hpaths = new ArrayList<>(); ///Defined then separately becuase we have to apply condition unlike other examples
         ArrayList<String> cPaths = new ArrayList<>();
 
 
