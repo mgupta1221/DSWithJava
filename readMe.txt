@@ -53,7 +53,16 @@ char UpperCaseB=   (char) (newChar - 32)  // notice we substracting with 32 whic
 say newChar = 'B';
 char UpperCaseB=   (char) (newChar + 32)  // Adding with 32 here if character is uppercase
 
-6. How to convert '6' to 6
+
+6. Remember the following outputs, so use wisely what to use when:
+
+char a = '3';
+System.out.println((int)a); //51    - when typecasting
+
+char a = '3';
+System.out.println(a-'0');  //3     - if want to convert char to equivalent number, use this
+
+7. How to convert '6' to 6
 
  char c = '6';
  System.out.println((char) (c - '0'));  
