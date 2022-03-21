@@ -10,12 +10,14 @@ public class CoinCombination {
     // Solution video -
     // https://www.youtube.com/watch?v=l_nR5X9VmaI&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=13
 
+    // (uses 1DArray to solve)
     public static void main(String[] args) {
 
         int[] coins = { 2, 3, 5 };
-        int targetAmount = 7; // so possible combinations are {2,2,3} and {2,5} and hence answer should be 2
+        int targetAmount = 7; // so possible combinations are {2,2,3} and {2,5}
+        // and hence answer should be 2
         // Notice here we are looking for combination and NOT 'permutations'
-        // else {232}, {3,2,2}, {5,2} would also be counted
+        // For permutation-  {232}, {3,2,2}, {5,2} would also be counted
 
         int[] dp = new int[targetAmount + 1];// this dp will store the no of possible coin combinations that add up to
                                              // ith index

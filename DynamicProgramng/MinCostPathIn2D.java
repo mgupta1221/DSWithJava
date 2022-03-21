@@ -38,11 +38,11 @@ public class MinCostPathIn2D {
                 if (i == dp.length - 1 && j == dp[0].length - 1) {
                     dp[i][j] = arr[i][j];
                 } else if (i == dp.length - 1) {
-                    dp[i][j] = arr[i][j] + arr[i][j + 1];
+                    dp[i][j] = dp[i][j + 1] + arr[i][j];
                 } else if (j == dp[0].length - 1) {
-                    dp[i][j] = arr[i + 1][j] + arr[i][j];
+                    dp[i][j] = dp[i + 1][j] + arr[i][j];
                 } else {
-                    dp[i][j] = Math.min(arr[i][j] + arr[i][j + 1], arr[i + 1][j] + arr[i][j]) + arr[i][j];
+                    dp[i][j] = Math.min(dp[i][j + 1], dp[i + 1][j]) + arr[i][j];
                 }
 
             }

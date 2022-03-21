@@ -8,12 +8,12 @@ public class CoinPermutation {
     // Video :
     // https://www.youtube.com/watch?v=yc0LunmJA1A&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=14
 
+    // (uses 1DArray to solve)
     public static void main(String[] args) {
 
         int[] coins = { 2, 3, 5 };
-        int targetAmount = 7; // so possible permutations are {232}, {3,2,2}, {5,2}...etc
-        // Notice here we are looking for permutation and NOT combination and NOT
-        // 'permutations'
+        int targetAmount = 7; // so possible permutations are {2,3,2}, {3,2,2}, {5,2}...etc
+        // Notice here we are looking for permutation and NOT combination 
 
         int[] dp = new int[targetAmount + 1];// this dp will store the no of possible coin combinations that add up to
                                              // ith index

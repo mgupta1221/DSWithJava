@@ -21,7 +21,7 @@ https://nados.pepcoding.com/content/0
 
 
 
-Refer Readme files in individual folders here as well 
+Refer Readme files in individual folders here as well
 
 
 JAVA Tips
