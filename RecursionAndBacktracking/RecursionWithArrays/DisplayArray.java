@@ -18,7 +18,7 @@ public class DisplayArray {
         System.out.println(arr[idx]);
         DisplayArray(arr, idx + 1); // recursive call
 
-        // System.out.println(arr[idx]);// Print here to print in reverse
+        // System.out.println(arr[idx]);// Print here to print in reverse--lautte waqt
 
     }
 

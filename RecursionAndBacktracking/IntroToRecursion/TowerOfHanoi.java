@@ -32,11 +32,11 @@ public class TowerOfHanoi {
         }
 
         toh(n - 1, t1d, t3d, t2d); // Assuiming that the function will work for n-1, first move (n-1)
-                                    // disks from t1 to t3
+                                    // disks from t1 to t3  -(Left call as per Euler)
 
         System.out.println(n + " [" + t1d + "->" + t2d + "]"); // Moving last disk from t1 to t2 directly
 
-        toh(n - 1, t3d, t2d, t1d);// Now move (n-1) disks from t3 to t2
+        toh(n - 1, t3d, t2d, t1d);// Now move (n-1) disks from t3 to t2 - (Right call as per Euler)
 
     }
 
