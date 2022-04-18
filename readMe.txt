@@ -7,6 +7,23 @@ Udit Agarwal (youtube) for LLD
 Head First Book for Object Oriented Analysis and patterns
 
 
+
+
+Top 75 questions
+// https://leetcode.com/list/xi4ci4ig/
+
+
+Youtube Learnbay.io
+System Design
+https://www.youtube.com/watch?v=cacrMJkq-LY&list=PLAs_8ZdWQs0kdWVstOpzByNCkzNHigQl-
+
+Low level
+https://www.youtube.com/watch?v=ADtnMlP0ztg&list=PLAs_8ZdWQs0n_1yAA4_4x8EC8W7t_vSVB
+
+High level
+https://www.youtube.com/watch?v=TYO849M8Q5U&list=PLAs_8ZdWQs0kplOtwqU_fMO2InH0bd-Fe
+
+
 Student Notes
 
 https://github.com/alok722/pepcoding-dsa-java
@@ -166,7 +183,7 @@ see readMe file of IntroToRecursion
 
 
 
-14. //For Hacker rank , 2D multiline inputs are taken as :
+15. //For Hacker rank , 2D multiline inputs are taken as :
 
  Scanner scn = new Scanner(System.in);     
 
