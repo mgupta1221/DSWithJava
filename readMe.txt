@@ -7,6 +7,86 @@ Udit Agarwal (youtube) for LLD
 Head First Book for Object Oriented Analysis and patterns
 
 
+For LLD 
+==============================================
+
+Youtube playlist
+1). Gaurav Sen playlist
+2). Udit Agarwal LLD playlist
+3). Soumyajit Bhattacharyay LLD playlist
+4). The Code Mate LLD playlist - By Navneet Rabadiya
+5). The Tech Granth – For Design Patterns. You can refer to his LLD and Design Patterns playlist from this channel.
+6). Christopher Okhravi - For Design Patterns
+7). Keerti Purswani (She/Her) – For Design Patterns & Mock LLD Interviews
+8). SudoCODE – By Yogita Sharma
+9). Distributed Sytems Guy - Bala G
+10). Derek Banas
+
+Some paid best resources for ones who are looking out for well-structured content of LLD :
+
+1). Educative.io – Grokking the Object-Oriented Design Interview
+2). InterviewReady – By Gaurav Sen 
+3). GeeksforGeeks - Low-Level Design Course 
+ 
+Best resources in form of Blogs :
+
+1). Recommended “𝑳𝒐𝒘-𝑳𝒆𝒗𝒆𝒍 𝑫𝒆𝒔𝒊𝒈𝒏 𝑷𝒓𝒊𝒎𝒆𝒓” repository on GitHub
+2). workat.tech website - By Gaurav Chandak
+3). sourcemaking[dot]com/design_patterns
+4). refactoring[dot]guru/design-patterns
+5). System Design articles on LeetCode[dot]com
+ 
+
+
+For HLD
+==============================================
+Books :
+
+1). Designing Data-Intensive Applications – This book is the Bible of System Design.
+2). Grokking the System Design pdf – By Educative.io
+Use https://lnkd.in/gy-uGDN7 to get 10% discount or use https://lnkd.in/dQtAV45A for my 𝐀𝐟𝐟𝐢𝐥𝐢𝐚𝐭𝐞 𝐥𝐢𝐧𝐤𝐬
+3). Web Scalability for Startup Engineers – By Artur Ejsmont
+4). System Design Interview Part I and II – By Alex Xu
+
+Some of the YouTube channels which helped me immensely in my System Design preparation :
+
+1). Gaurav Sen playlist
+2). TechDummies - By Narendra L
+3). SudoCODE - By Yogita Sharma
+4). System Design Interview
+5). The Tech Granth
+6). codeKarle - By Sandeep Kaul
+
+Some of the best paid System Design courses which you can use if you're looking out for well-structured content for System Design :
+
+1). InterviewReady - By Gaurav Sen (Use coupon code “𝐁𝐀𝐑𝐍𝐖𝐀𝐋” for 20% additional discount)
+2). Educative.io - Use https://lnkd.in/gy-uGDN7 to get 10% discount or use https://lnkd.in/dQtAV45A for my 𝐀𝐟𝐟𝐢𝐥𝐢𝐚𝐭𝐞 𝐥𝐢𝐧𝐤𝐬
+3). AlgoExpert - By Clement Mihailescu
+
+Some of the best resources available for free on the Internet in form of blogs :
+
+1). Recommended “System Design Primer” repository on GitHub
+https://github.com/prasadgujar/low-level-design-primer
+
+2). highscalability[dot]com
+3). systeminterview[dot]com
+4). workat.tech website
+5). GeeksForGeeks - (Use coupon code “𝐁𝐀𝐑𝐍𝐖𝐀𝐋” for 10% additional discount for any course)
+
+Some well-curated engineering blogs of the below companies for System Design that helped me immensely in giving a boost to my preparation :
+
+1). Uber
+2). Facebook
+3). Stripe
+4). Snapchat, and a lot more…..=
+https://workat.tech/system-design/article/best-engineering-blogs-articles-videos-system-design-tvwa05b8bzzr
+
+SystemDesign.org  - link below
+https://docs.google.com/document/d/1pOarvQbjzLd9tz5ZuxktyrYsZ41mbWba5_LUeFj65lI/edit
+
+System deisng on Leetcode - 
+https://leetcode.com/discuss/interview-question/system-design?currentPage=1&orderBy=hot&query=
+
 
 
 Top 75 questions
