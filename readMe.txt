@@ -91,6 +91,12 @@ https://leetcode.com/discuss/interview-question/system-design?currentPage=1&orde
 
 Top 75 questions
 // https://leetcode.com/list/xi4ci4ig/
+  (Grouped)
+// https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions 
+
+Also see Patterns:
+// https://seanprashad.com/leetcode-patterns/
+
 
 
 Youtube Learnbay.io
