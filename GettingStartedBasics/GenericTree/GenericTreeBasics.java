@@ -38,6 +38,7 @@ public class GenericTreeBasics {
     // Find Height of a Genertic tree
     private int findHeightOfTree(Node root) {
         // TO DO
+        return 0;
     }
 
     public static void main(String[] args) {
