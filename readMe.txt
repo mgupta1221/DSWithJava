@@ -97,6 +97,8 @@ Top 75 questions
 Also see Patterns:
 // https://seanprashad.com/leetcode-patterns/
 
+have many good quesitons on every topic - Javascript, Coding, Sys Design, front end
+https://bigfrontend.dev/
 
 
 Youtube Learnbay.io
