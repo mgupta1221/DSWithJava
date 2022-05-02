@@ -29,8 +29,7 @@ public class ClimbStairs {
 
         // Approach 2: using DP memoization solution
         // int[] questionBank = new int[n + 1]; // creating a question bank to avoid
-        // solving
-        // // same problem again and again
+        // solving same problem again and again
         // int numOfpaths2 = countPaths(n, questionBank);
         // System.out.println(numOfpaths2);
 

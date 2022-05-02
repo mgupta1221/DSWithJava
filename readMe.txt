@@ -56,6 +56,7 @@ Some of the YouTube channels which helped me immensely in my System Design prepa
 4). System Design Interview
 5). The Tech Granth
 6). codeKarle - By Sandeep Kaul
+7)  Chirag Goel channel on youtube https://www.youtube.com/c/engineerchirag/videos
 
 Some of the best paid System Design courses which you can use if you're looking out for well-structured content for System Design :
 
@@ -87,6 +88,8 @@ https://docs.google.com/document/d/1pOarvQbjzLd9tz5ZuxktyrYsZ41mbWba5_LUeFj65lI/
 System deisng on Leetcode - 
 https://leetcode.com/discuss/interview-question/system-design?currentPage=1&orderBy=hot&query=
 
+System Design Playlist:
+https://www.youtube.com/playlist?list=PLo--PjwNHko2HTGCNe0rFCBu39tN-1PpX
 
 
 Top 75 questions

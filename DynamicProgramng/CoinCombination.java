@@ -17,11 +17,13 @@ public class CoinCombination {
         int targetAmount = 7; // so possible combinations are {2,2,3} and {2,5}
         // and hence answer should be 2
         // Notice here we are looking for combination and NOT 'permutations'
-        // For permutation-  {232}, {3,2,2}, {5,2} would also be counted
+        // For permutation- {232}, {3,2,2}, {5,2} would also be counted
 
-        int[] dp = new int[targetAmount + 1];// this dp will store the no of possible coin combinations that add up to
-                                             // ith index
-        // e.g. dp[4] will store no of posibsle coin combinations jinka total 4 hota ho
+        int[] dp = new int[targetAmount + 1];// we have DP length as target , dp mai store karenge ki given coins ki
+                                             // kitni combinations hai 'i' total Amoutn ko achieve karne ke liye
+                                             // use karke ith index,
+                                             // e.g. dp[4] will store no of posibsle coin combinations
+                                             // jinka total 4 hota ho
         dp[0] = 1;
 
         // looping through coins
