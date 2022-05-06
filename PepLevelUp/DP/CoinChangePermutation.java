@@ -1,6 +1,5 @@
 package PepLevelUp.DP;
 
-
 // LC 
 public class CoinChangePermutation {
 
@@ -9,11 +8,15 @@ public class CoinChangePermutation {
     // Solition video:
     // https://www.youtube.com/watch?v=yc0LunmJA1A&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=14
     private static int CoinChangePermutation_Iterative(int[] coins, int target) {
-        int[] dp = new int[target + 1]; 
+        int[] dp = new int[target + 1];
 
-        dp[0] = 1;// initialize with 1
+        dp[0] = 1; // initialize with 1, to achieve target of 0, we have one combination (logic:
+        // x^0=1)
 
-        // Agar coin repeat karna hai to Coin ka loop andar chalao - Permutation 
+        // Agar coin repeat karna hai to Coin ka loop andar chalao - Permutation
+        // (In permutation , pehle 1st dp target ke liye saare coins try honge , fir 2nd
+        // dp target ke liye sare coins..and so on)
+
         // Agar Coin repeat NAHI karna hai to Coin ka loop bahar chalao - Combination
 
         for (int i = 1; i < dp.length; i++) { // 0 to targetAmount- 'i' amount ko store karne ke kitne tareeke hain

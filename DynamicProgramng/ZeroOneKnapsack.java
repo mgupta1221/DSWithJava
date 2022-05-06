@@ -9,7 +9,7 @@ public class ZeroOneKnapsack {
         int cap = 7;
 
         // Since numbers should not repeat(each item of val[] array should appear once
-        // in the output), we have to sue 2-D DP array
+        // in the output), we have to use 2-D DP array
         int[][] dp = new int[len + 1][cap + 1];
 
         for (int i = 0; i < dp.length; i++) {

@@ -4,7 +4,7 @@ package PepLevelUp.Recursion;
 public class MazePathBasic {
     public static int mazePath(int sr, int sc, int er, int ec, String psf) {
         if (sr == er && sc == ec) {
-            System.out.println(psf);
+            System.out.println(psf); 
             return 1;
         }
 

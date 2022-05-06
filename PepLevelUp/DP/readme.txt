@@ -5,7 +5,7 @@ Following 5 problems are part of the same family:
 4) 0-1 Kanpsack
 5) Unbounded Knapsack
 
-- Diff between logic of Coin Chnage permutation and Combination
+- Diff between logic of Coin Change permutation and Combination
 
 Agar coin repeat karna hai to Coin kar loop andar chalao - Permutation 
 Afgar Coin repeat NAHI karna hai to Coin ka loop bahar chalao - Combination
@@ -17,7 +17,16 @@ Only {2,5} will be the answer
 
 - Key note - Agar duplicacy chahiye to 1D , else use 2D
 
+- 0-1 Knapsack is same as Target Sum Subset, just that Knapsack has weights and values concept.
+
+- Differnece between 0-1 and Unbounded Knapsack is:
+ in 0-1 Knapsack duplicacy is NOT allowed  - (hence solved with 2D)
+ in unbounded Knapsack duplicacy is allowed - (hence solved with 1D)
 
 - Comparison video of Coin Change permutation, Combination and Target Sum Subset: 
 https://www.youtube.com/watch?v=JyyS9mlMcr4&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=15
 
+
+- Check "Count Encoded Strings" question in DP
+// Solution Video- 
+https://www.youtube.com/watch?v=jFZmBQ569So&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=20

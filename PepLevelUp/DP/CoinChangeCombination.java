@@ -1,8 +1,8 @@
 package PepLevelUp.DP;
 
- // LC 518
+// LC 518
 public class CoinChangeCombination {
-   
+
     // Combination means 2,2,3 and 2,3,2 will be counted once only
 
     // Recursive DP apprach- Solution 1
@@ -10,7 +10,7 @@ public class CoinChangeCombination {
         return CoinChange_Recursive_Helper(nums, target, 0);
     }
 
-    // Recurseive helper
+    // Recursive helper
     private static int CoinChange_Recursive_Helper(int[] nums, int target, int idx) {
         if (target == 0) {
             return 1;
@@ -26,18 +26,22 @@ public class CoinChangeCombination {
 
     }
 
-    // Iterative DP apprach- Solution 2
+    // Iterative(Tabulation) DP apprach- Solution 2
     // (uses 1DArray to solve)
     // Solition video:
     // https://www.youtube.com/watch?v=l_nR5X9VmaI&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=14
+    // Trick diagram..CoinChangeCombination.png
     private static int CoinChangeCombination_Iterative(int[] coins, int target) {
-        int[] dp = new int[target + 1];
+        int[] dp = new int[target + 1];// dp[x] will store coins ko use karte hue, x kitni tarah se banaya ja sakta hai
 
-        dp[0] = 1;// initialize with 1
+        dp[0] = 1;// initialize with 1, to achieve target of 0, we have one combination (logic:
+                  // x^0=1)
 
-        // Agar coin repeat karna hai to Coin ka loop andar chalao - Permutation 
+        // Agar coin repeat karna hai to Coin ka loop andar chalao - Permutation
+
         // Agar Coin repeat NAHI karna hai to Coin ka loop bahar chalao - Combination
-
+        // (In combination , pehle 1st coin ke liye poora dp ka loop chalega, fir 2nd
+        // coin k liye..and so on)
 
         for (int i = 0; i < coins.length - 1; i++) { // 2 3 5 6- Have to check for all coins one after the other
             for (int j = coins[i]; j < dp.length; j++) { // 2 to coins.length

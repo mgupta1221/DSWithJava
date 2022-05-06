@@ -1,9 +1,9 @@
-package DynamicProgramng;
+package PepLevelUp.DP;
 
 public class ClimbStairsWithVariableJump {
 
     // Question link:
-    // https://nados.pepcoding.com/content/0/18793f55-3ca7-45c8-881c-3fa279236331/
+    // https://nados.io/question/climb-stairs-with-variable-jumps
 
     // 1. You are given a number n, representing the number of stairs in a
     // staircase.
@@ -18,14 +18,7 @@ public class ClimbStairsWithVariableJump {
     // only -1, -2 and -3 steps at a time, here number of steps are variable.
 
     // Solution video -
-    // https://www.youtube.com/watch?v=uNqoQ0sNZCM&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=3
-
-    public static void main(String[] args) {
-        // int[] stairNumbers = { 2, 4, 1, 0, 2, 3 };
-        int[] stairNumbers = { 3, 3, 0, 2, 1, 2, 4, 2, 0, 0 };
-        countPathsWithTabulation(stairNumbers);
-
-    }
+    // https://www.youtube.com/watch?v=uNqoQ0sNZCM
 
     public static void countPathsWithTabulation(int[] sNos) {
         int n = sNos.length;
@@ -45,6 +38,13 @@ public class ClimbStairsWithVariableJump {
         }
 
         System.out.println(dp[0]);
+
+    }
+
+    public static void main(String[] args) {
+        // int[] stairNumbers = { 2, 4, 1, 0, 2, 3 };
+        int[] stairNumbers = { 3, 3, 0, 2, 1, 2, 4, 2, 0, 0 };
+        countPathsWithTabulation(stairNumbers);
 
     }
 

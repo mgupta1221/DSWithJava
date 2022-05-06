@@ -5,8 +5,8 @@ package RecursionAndBacktracking.RecursionOnWayUp;
 
 public class PrintMazePaths {
     public static void main(String[] args) {
-        int dr = 3;
-        int dc = 3;
+        int dr = 2;
+        int dc = 2;
 
         printAllMazePath(0, 0, dr, dc, "");
 
@@ -18,7 +18,7 @@ public class PrintMazePaths {
         }
 
         if (sr == dr && sc == dc) {
-            System.out.println(psf);
+            System.out.print(psf + " ");
         }
 
         //Moving Horizonatally

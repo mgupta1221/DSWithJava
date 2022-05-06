@@ -22,6 +22,7 @@ public class GetMazePaths {
     public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
         if (sr == dr && sc == dc) {
             ArrayList<String> emptyArrList = new ArrayList<>();
+            // 3,3 se 3,3 par jane ka ek rasta hai...hilo hi mat khade raho
             emptyArrList.add("");
             return emptyArrList;
         }
