@@ -5,6 +5,15 @@ Following 5 problems are part of the same family:
 4) 0-1 Kanpsack
 5) Unbounded Knapsack
 
+
+Following 3 problems are part of the same family:
+1) Longest Pallendromic SubSequence
+2) Longest COmmon SubSequence
+3) Edit Distance
+4) Count_MinInsertionDeletionToConvert.java  - Minimum no of InsertionDeletion to convert string a to b. (Trick :find LCS and
+ subtract from length of one string to get insertions... and vice versa for deletion)
+
+
 - Diff between logic of Coin Change permutation and Combination
 
 Agar coin repeat karna hai to Coin kar loop andar chalao - Permutation 
@@ -30,3 +39,12 @@ https://www.youtube.com/watch?v=JyyS9mlMcr4&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPd
 - Check "Count Encoded Strings" question in DP
 // Solution Video- 
 https://www.youtube.com/watch?v=jFZmBQ569So&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=20
+
+
+- Important on DP solutions
+First columns and rows are generally kept empty in DP 2-D arrays
+so if you talk of dp[i][j]...you are filling for word[i-1][j-1]
+See diagram EditDistance.png in this "DP" folder
+
+
+
