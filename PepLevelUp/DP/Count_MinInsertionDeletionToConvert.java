@@ -4,6 +4,8 @@ package PepLevelUp.DP;
 
 //https://www.geeksforgeeks.org/minimum-number-deletions-insertions-transform-one-string-another/
 
+// Thi follows the pattern of "LCS"
+
 // An efficient approach uses the concept of finding the length of the longest common subsequence of the given two sequences.
 
 // Algorithm: 

@@ -12,6 +12,8 @@ Following 3 problems are part of the same family:
 3) Edit Distance
 4) Count_MinInsertionDeletionToConvert.java  - Minimum no of InsertionDeletion to convert string a to b. (Trick :find LCS and
  subtract from length of one string to get insertions... and vice versa for deletion)
+5) Count_minDeleteToConvert
+6) Count_DistinctSubsequences
 
 
 - Diff between logic of Coin Change permutation and Combination
@@ -42,9 +44,13 @@ https://www.youtube.com/watch?v=jFZmBQ569So&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPd
 
 
 - Important on DP solutions
-First columns and rows are generally kept empty in DP 2-D arrays
+1) First columns and rows are generally kept empty in DP 2-D arrays
 so if you talk of dp[i][j]...you are filling for word[i-1][j-1]
 See diagram EditDistance.png in this "DP" folder
+
+2)One important thing about base conditions is if there are 2 base conditions , in one condition you are returning 1 and in other you are  returning zero  - always put the one returning 1 above the one returning 0.
+E.g. Count_DistinctSubsequences (LC 115) quesiton of DP.
+
 
 
 

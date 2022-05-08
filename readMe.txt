@@ -20,7 +20,8 @@ Youtube playlist
 7). Keerti Purswani (She/Her) – For Design Patterns & Mock LLD Interviews
 8). SudoCODE – By Yogita Sharma
 9). Distributed Sytems Guy - Bala G
-10). Derek Banas
+10) Derek Banas
+11) https://github.com/coding-parrot/Low-Level-Design
 
 Some paid best resources for ones who are looking out for well-structured content of LLD :
 
@@ -57,6 +58,11 @@ Some of the YouTube channels which helped me immensely in my System Design prepa
 5). The Tech Granth
 6). codeKarle - By Sandeep Kaul
 7)  Chirag Goel channel on youtube https://www.youtube.com/c/engineerchirag/videos
+
+8) Microsoft interview.. Good tips:
+Linked  -find Middle node, reverse a part of linked list
+Talk about Pub-Sub model, lot of micro services are connected to same DB
+ https://www.youtube.com/watch?v=m-iyaqb2As4
 
 Some of the best paid System Design courses which you can use if you're looking out for well-structured content for System Design :
 

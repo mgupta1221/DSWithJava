@@ -17,7 +17,8 @@ public class GetSubsequence {
         // say string is "abc"
         if (str.length() == 0) {
             ArrayList<String> tempArraylist = new ArrayList<>();
-            tempArraylist.add("");
+            tempArraylist.add(""); // Blank string ki ek subString hogi, blank itself (2^0 =1)... this will return
+                                   // [" "] , not []
             return tempArraylist;
 
         }
