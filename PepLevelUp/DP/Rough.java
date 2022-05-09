@@ -6,15 +6,7 @@ public class Rough {
 
     private static int DeleteOperationOfStrings(String str1, String str2, int m, int n) {
 
-        char a = str1.charAt(m - 1);
-        char b = str1.charAt(n - 1);
-
-        if (a == b) {
-            return DeleteOperationOfStrings(str1, str2, m - 1, n - 1);
-        } else {
-            return DeleteOperationOfStrings(str1, str2, m, n - 1);
-            return DeleteOperationOfStrings(str1, str2, m - 1, n);
-        }
+        return 1;
 
     }
 

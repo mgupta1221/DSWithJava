@@ -51,15 +51,15 @@ Use https://lnkd.in/gy-uGDN7 to get 10% discount or use https://lnkd.in/dQtAV45A
 
 Some of the YouTube channels which helped me immensely in my System Design preparation :
 
-1). Gaurav Sen playlist
-2). TechDummies - By Narendra L
-3). SudoCODE - By Yogita Sharma
-4). System Design Interview
-5). The Tech Granth
-6). codeKarle - By Sandeep Kaul
+1)  Gaurav Sen playlist
+2)  TechDummies - By Narendra L
+3)  SudoCODE - By Yogita Sharma
+4)  System Design Interview
+5)  The Tech Granth
+6)  codeKarle - By Sandeep Kaul
 7)  Chirag Goel channel on youtube https://www.youtube.com/c/engineerchirag/videos
-
-8) Microsoft interview.. Good tips:
+8)  Tips on HLD design topics  -https://www.youtube.com/watch?v=T6n5PCYLSr0
+9) Microsoft interview.. Good tips:
 Linked  -find Middle node, reverse a part of linked list
 Talk about Pub-Sub model, lot of micro services are connected to same DB
  https://www.youtube.com/watch?v=m-iyaqb2As4
@@ -70,6 +70,7 @@ Some of the best paid System Design courses which you can use if you're looking 
 2). Educative.io - Use https://lnkd.in/gy-uGDN7 to get 10% discount or use https://lnkd.in/dQtAV45A for my 𝐀𝐟𝐟𝐢𝐥𝐢𝐚𝐭𝐞 𝐥𝐢𝐧𝐤𝐬
 3). AlgoExpert - By Clement Mihailescu
 
+
 Some of the best resources available for free on the Internet in form of blogs :
 
 1). Recommended “System Design Primer” repository on GitHub
@@ -79,6 +80,13 @@ https://github.com/prasadgujar/low-level-design-primer
 3). systeminterview[dot]com
 4). workat.tech website
 5). GeeksForGeeks - (Use coupon code “𝐁𝐀𝐑𝐍𝐖𝐀𝐋” for 10% additional discount for any course)
+
+Other resources:
+1) Design Patterns Library - https://app.pluralsight.com/library/courses/patterns-library/table-of-contents
+2) Design Patterns in C# - https://app.pluralsight.com/paths/skills/design-patterns-in-c
+3) Patterns for Building Distributed Systems for The Enterprise - https://app.pluralsight.com/library/courses/cqrs-theory-practice/table-of-contents
+4) Implementing a Design System -https://app.pluralsight.com/library/courses/droidcon-sf-session-75/table-of-contents
+
 
 Some well-curated engineering blogs of the below companies for System Design that helped me immensely in giving a boost to my preparation :
 
