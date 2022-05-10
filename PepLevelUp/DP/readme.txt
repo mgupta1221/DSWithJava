@@ -6,7 +6,7 @@ Following 5 problems are part of the same family:
 5) Unbounded Knapsack
 
 
-Following 3 problems are part of the same family:
+Following 8 problems are part of the same family:
 1) Longest Pallendromic SubSequence
 2) Longest COmmon SubSequence
 3) Edit Distance 
@@ -15,7 +15,14 @@ Following 3 problems are part of the same family:
 5) Count_minDeleteToConvert
 6) Count_DistinctSubsequences
 7) Longest Common SubString (This solved is solved using 2D cell filling approach , rest questions via recursion)
-7) Print Longest Pallendrome SubString (This solved is solved using 2D cell filling approach)
+8) Print Longest Pallendrome SubString (This solved is solved using 2D cell filling approach)
+
+
+Another types of DP questions:
+1) Longest Increasing SubSequence (LIS)
+2) Longest Decreasing SubSequence (LDS)
+3) Russian Doll Envoples (Real time application of LIS) - LC 354
+
 
 
 - Diff between logic of Coin Change permutation and Combination
