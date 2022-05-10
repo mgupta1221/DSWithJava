@@ -66,7 +66,7 @@ Talk about Pub-Sub model, lot of micro services are connected to same DB
 
 Some of the best paid System Design courses which you can use if you're looking out for well-structured content for System Design :
 
-1). InterviewReady - By Gaurav Sen (Use coupon code “𝐁𝐀𝐑𝐍𝐖𝐀𝐋” for 20% additional discount)
+1). InterviewReady - By Gaurav Sen
 2). Educative.io - Use https://lnkd.in/gy-uGDN7 to get 10% discount or use https://lnkd.in/dQtAV45A for my 𝐀𝐟𝐟𝐢𝐥𝐢𝐚𝐭𝐞 𝐥𝐢𝐧𝐤𝐬
 3). AlgoExpert - By Clement Mihailescu
 

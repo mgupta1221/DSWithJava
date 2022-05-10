@@ -6,22 +6,25 @@ public class CPrint_Longest_Pallendrom_SubString {
     // Solution explanation:
     // https://www.youtube.com/watch?v=UflHuQj6MVA
 
-    // We have to fill the upper half of the 2D DP array from top left to bottom
-    // right hence notice the loop - middle lognest diagnal first then upper
-    // diagonal than its upper diagnal like that
     // Cell [i,j] represent if string formed from index i to j is pallendrome or
     // not.
     // If pallendrome than will store 1
 
-    // The last dp cell with value 1 will be the lenghthiest one and will be returned
+    // We have to fill the upper half of the 2D DP array from top left to bottom
+    // right hence notice the loop - middle lognest diagnal first then upper
+    // diagonal than its upper diagnal like that
+
+    // The last dp cell with value 1 will be the lenghthiest one and will be
+    // returned
     // as answer
 
-    // Trick Diagram: CPrint_Longest_Pallndromic_SubString.png
-    private static String cprint_Longest_Pallndromic_SubString(String str, int m, int n, int[][] dp) {
+    // Trick Diagram: "CPrint_Longest_Pallndromic_SubString.png"
+    private static String cprint_Longest_Pallndromic_SubString(String str) {
         String ans = "";
+        int[][] dp = new int[str.length() + 1][str.length() + 1];
         for (int g = 0; g < str.length(); g++) {
             for (int i = 0, j = g; j < str.length(); i++, j++) { // Notice the 2 loops , we have to fill upper triangle
-                                                                 // of 2-D array ina diagnal way..see video
+                                                                 // of 2-D array in a diagnal way..see video
 
                 // main diagnal of the 2D array will represent 1 charcter hence will be
                 // pallendrome
@@ -69,9 +72,8 @@ public class CPrint_Longest_Pallendrom_SubString {
     public static void main(String[] args) {
         String str = "abkccbe";
         str = "abba";
-        int[][] dp = new int[str.length() + 1][str.length() + 1];
 
-        String result = cprint_Longest_Pallndromic_SubString(str, 0, str.length() - 1, dp);
+        String result = cprint_Longest_Pallndromic_SubString(str);
         System.out.println(result);
     }
 

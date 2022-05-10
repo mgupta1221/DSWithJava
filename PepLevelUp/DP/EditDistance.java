@@ -52,11 +52,9 @@ public class EditDistance {
 
     }
 
-    // Recursive solution
+    // Recursive solution  WITHOUT MEMOIZATION
     // Solution desc : https://www.geeksforgeeks.org/edit-distance-dp-5/
     public static int minDistance_recursive(char[] word1, char[] word2, int m, int n) {
-        int[][] dp = new int[word1.length + 1][word2.length + 1];
-
         // If first string is empty, the only option is to
         // insert all characters of second string into first
         if (m == 0) {

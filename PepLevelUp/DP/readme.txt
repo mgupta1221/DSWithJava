@@ -9,11 +9,13 @@ Following 5 problems are part of the same family:
 Following 3 problems are part of the same family:
 1) Longest Pallendromic SubSequence
 2) Longest COmmon SubSequence
-3) Edit Distance
+3) Edit Distance 
 4) Count_MinInsertionDeletionToConvert.java  - Minimum no of InsertionDeletion to convert string a to b. (Trick :find LCS and
  subtract from length of one string to get insertions... and vice versa for deletion)
 5) Count_minDeleteToConvert
 6) Count_DistinctSubsequences
+7) Longest Common SubString (This solved is solved using 2D cell filling approach , rest questions via recursion)
+7) Print Longest Pallendrome SubString (This solved is solved using 2D cell filling approach)
 
 
 - Diff between logic of Coin Change permutation and Combination

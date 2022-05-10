@@ -6,7 +6,7 @@ package PepLevelUp.DP;
 
 /// For Solution code: https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/
 
-// Trick diagram : "Count_LongestCommonSub.png"
+// Trick diagram : "Count_LongestCommonSubseq.png"
 // Recursive solution
 public class Count_Longest_Common_SubSequence {
     public static int count_Longest_Common_Subsequence(String str1, String str2, int s1j,
@@ -24,7 +24,7 @@ public class Count_Longest_Common_SubSequence {
         // If last chacrters of both are same than answer will be in subset of string
         // witout last charcter
         // E.g. strings are "AGTB" and "ATB" than answer will be in "AGT" and "AT"
-        // Else if String are "AGTD" nd "ATB" than answer will with be one of the
+        // Else if String are "AGTD" and "ATB" than answer will with be one of the
         // following: "
         // 1) "AGT" and "ATB" (removing last chacrter from first string)
         // 2) "AGTD" and "AT" (removing last chacrter from second string)
@@ -32,8 +32,7 @@ public class Count_Longest_Common_SubSequence {
         if (lastCharOfStr1 == lastCharOfStr2) {
             return 1 + count_Longest_Common_Subsequence(str1, str2, s1j - 1, s2j - 1); // adding 1 notice for last
                                                                                        // chacrter which matched in both
-                                                                                       // strings and making recursive
-                                                                                       // with rest of the string
+                                                                                       // strings
         }
         int x = count_Longest_Common_Subsequence(str1, str2, s1j, s2j - 1);
         int y = count_Longest_Common_Subsequence(str1, str2, s1j - 1, s2j);
@@ -46,7 +45,7 @@ public class Count_Longest_Common_SubSequence {
             int s2j, int[][] dp) {
 
         if (s1j == 0 || s2j == 0) {
-            return 0;
+            return dp[s1j][s2j] = 0;
         }
 
         char lastCharOfStr1 = str1.charAt(s1j - 1);
@@ -65,20 +64,19 @@ public class Count_Longest_Common_SubSequence {
         }
         int x = count_Longest_Common_Subsequence(str1, str2, s1j, s2j - 1);
         int y = count_Longest_Common_Subsequence(str1, str2, s1j - 1, s2j);
-        dp[s1j][s2j] = Math.max(x, y);
-
-        return dp[0][0];
+        return dp[s1j][s2j] = Math.max(x, y);
 
     }
 
     public static void main(String[] args) {
-        String str1 = "AGGTAB";
-        String str2 = "GXTXAYB";
+        String str1 = "GeeksForGeekQuiz"; // rember elements need to be in continious for SubSequence
+        String str2 = "GeeksQuiz";
         // int result = count_Longest_Common_Subsequence(str1, str2, str1.length(),
         // str2.length());
 
         int[][] dp = new int[str1.length() + 1][str2.length() + 1];
-        int result = count_Longest_Common_Subsequence_MemoisedwithDP(str1, str2, str1.length(), str2.length(), dp);
+        int result = count_Longest_Common_Subsequence_MemoisedwithDP(str1, str2,
+                str1.length(), str2.length(), dp);
         System.out.println(result);
     }
 }

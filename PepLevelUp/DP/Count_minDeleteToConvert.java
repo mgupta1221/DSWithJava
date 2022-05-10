@@ -1,20 +1,23 @@
 package PepLevelUp.DP;
 
 // LC 583
+// Problem:
+// https://leetcode.com/problems/delete-operation-for-two-strings/
+
 // Similar to Edit Distance problem, just that we have only delete instead of 3 operations
 public class Count_minDeleteToConvert {
 
     private static int Count_minDeletionToConvert(String str1, String str2, int m, int n, int[][] dp) {
 
         // If first string is empty, the only option is to
-        // delete all characters of second string
+        // delete all characters of the other string
         if (m == 0) {
             return dp[m][n] = n;
         }
 
         if (n == 0) {
-            dp[m][n] = m;
-            return dp[m][n];
+            return dp[m][n] = m;
+
         }
 
         // memoization
