@@ -99,7 +99,7 @@ https://workat.tech/system-design/article/best-engineering-blogs-articles-videos
 SystemDesign.org  - link below
 https://docs.google.com/document/d/1pOarvQbjzLd9tz5ZuxktyrYsZ41mbWba5_LUeFj65lI/edit
 
-System deisng on Leetcode - 
+System design on Leetcode - 
 https://leetcode.com/discuss/interview-question/system-design?currentPage=1&orderBy=hot&query=
 
 System Design Playlist:

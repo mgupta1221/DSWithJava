@@ -12,6 +12,7 @@ Following 8 problems are part of the same family:
 3) Edit Distance 
 4) Count_MinInsertionDeletionToConvert.java  - Minimum no of InsertionDeletion to convert string a to b. (Trick :find LCS and
  subtract from length of one string to get insertions... and vice versa for deletion)
+ Similar problem is : https://www.geeksforgeeks.org/minimum-number-deletions-make-sorted-sequence/
 5) Count_minDeleteToConvert
 6) Count_DistinctSubsequences
 7) Longest Common SubString (This solved is solved using 2D cell filling approach , rest questions via recursion)
