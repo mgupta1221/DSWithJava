@@ -23,6 +23,11 @@ Another types of DP questions:
 1) Longest Increasing SubSequence (LIS)
 2) Longest Decreasing SubSequence (LDS)
 3) Russian Doll Envoples (Real time application of LIS) - LC 354
+4) Non-Overlapping Bridges problem (Real time application of LIS)
+
+Greedy problem
+1) Maximum Sum of Non Adjacent Elements 
+2) Paint houses
 
 
 
