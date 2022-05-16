@@ -22,6 +22,7 @@ Youtube playlist
 9). Distributed Sytems Guy - Bala G
 10) Derek Banas
 11) https://github.com/coding-parrot/Low-Level-Design
+12) Tips on LLD design topics - https://www.youtube.com/watch?v=9_7jDlmexME  
 
 Some paid best resources for ones who are looking out for well-structured content of LLD :
 
