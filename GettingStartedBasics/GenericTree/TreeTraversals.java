@@ -32,13 +32,13 @@ public class TreeTraversals {
     private static void InOrderTraversal(Node root) {
         if (root == null)
             return;
-
-        for (int i = 0; i < root.children.size() - 1; i++) {            
+        // All children except last
+        for (int i = 0; i < root.children.size() - 1; i++) {
             InOrderTraversal(root.children.get(i));
         }
         System.out.print(root.val + " "); // printing root
         if (root.children.size() > 0) {
-            InOrderTraversal(root.children.get(root.children.size() - 1));
+            InOrderTraversal(root.children.get(root.children.size() - 1)); // Recursion on last node now
         }
     }
 

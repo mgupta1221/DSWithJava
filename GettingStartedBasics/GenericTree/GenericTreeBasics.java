@@ -1,4 +1,5 @@
 package GettingStartedBasics.GenericTree;
+
 import java.util.ArrayList;
 
 ///Generic Tree Pepcoding Playlist 
@@ -19,7 +20,8 @@ public class GenericTreeBasics {
             int result = sizeOfGenericTree(child);
             s = s + result;
         }
-        s += 1;
+
+        s += 1;// adding for the root itself
         return s;
 
     }
@@ -44,7 +46,8 @@ public class GenericTreeBasics {
     // E.g. Height of a tree with only root node is 0
     private int findHeightOfTree(Node root) {
         int tempMaxHeight = -1; // this is important because if the tree has only root node than
-        // below last addition of +1 will make this 0 and return it which is the correct ans.
+        // below last addition of +1 will make this 0 and return it which is the correct
+        // ans.
         for (Node child : root.children) {
             int tempHeight = findHeightOfTree(child);
             tempMaxHeight = Math.max(tempMaxHeight, tempHeight);
