@@ -52,9 +52,30 @@ public class GenericTreeBasics2 {
             return;
         }
 
+        // We will run the loop for a node's children and REMOVE te CHILD which does not
+        // have further children
+
+        // Notice we have to remove children one by one , not directly like :
+        // node.children=null;
+        // but like below
+        // node.children.remove(child);
+
         // Notice we are running the loop from n-1 to 0 (not 0 to n-1)
-        // Reason : https://www.youtube.com/watch?v=Us32OuAMzfQ
-        // see above video from 15 mins to see when we ran the loop in reverse
+        // Say we are going from left to right and If we remove one element than Nodes
+        // will shift left so the indexes which change and few elements will be missed
+        // But if go from right to left, elements will not be misse don rmeoval of node
+
+        // Detailed Reason : https://www.youtube.com/watch?v=Us32OuAMzfQ
+        // see above video from 15 mins to see why we ran the loop in reverse
+
+        // Also, notice we are removing Leafs in preOrder- NOT PostOrder becuase problem
+        // in PostOrder is if we remove leaves while coming back to Parent Node, that
+        // leaf whose children were removed will also be removed
+        // Reason:
+        // https://www.youtube.com/watch?v=0PBC_EEBHGg&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=21
+
+        // Tip : if you use loop like for(Child c: root.children)
+        // it will throw an error
         for (int i = root.children.size() - 1; i >= 0; i--) {
             Node child = root.children.get(i);
             if (child.children.size() == 0) {
@@ -69,6 +90,11 @@ public class GenericTreeBasics2 {
     // Find an element in a tree
     // Explanation:
     // https://www.youtube.com/watch?v=dWri78Z4khs&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=26
+
+    // See Trick Diagram: FindElement.png
+    // Only half Euler tree is trevered
+    // The moment value is found other children are not traversed
+    // and control return from that node to its parent, its parent....till root
     private static Node FindElement(Node root, int val) {
         if (root.val == val) {
             return root;
@@ -80,6 +106,7 @@ public class GenericTreeBasics2 {
             }
 
         }
+        // agar kahi nahi mila
         return new Node(-1);
     }
 
@@ -88,7 +115,8 @@ public class GenericTreeBasics2 {
     // https://www.youtube.com/watch?v=oEBwL5pHzTs&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=28
     private static ArrayList<String> NodeToRootPath(Node root, int data) {
 
-        // agar root mai mil gaya to nayi array list yahi se return kar do
+        // agar node khud hi barabar to wo ek hi value return karega...khud ko hi return
+        // karega
         if (root.val == data) {
             ArrayList<String> arr = new ArrayList<>();
             arr.add(root.val + "-> ");
@@ -100,6 +128,8 @@ public class GenericTreeBasics2 {
             ArrayList<String> pathToChild = NodeToRootPath(child, data);
             if (pathToChild.size() > 0) {
                 pathToChild.add(root.val + "-> ");// Notice we add root here becuase its child has got an answr
+                // LOGIC: jiske yahan se bhara hua arraylist aaya hai..iska matlab wahan answer
+                // mil gaya hai---usme parent khud ko add karega aur return kar dega
                 return pathToChild;
             }
         }
