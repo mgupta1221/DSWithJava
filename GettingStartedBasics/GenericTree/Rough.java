@@ -53,17 +53,16 @@ public class Rough {
 
     private static ArrayList<String> NodeToRootpath(Node root, int val) {
         if (root.val == val) {
+
             ArrayList<String> result = new ArrayList<>();
             result.add(root.val + "->");
             return result;
-
         }
-        // recur for each child
         for (int i = 0; i < root.children.size(); i++) {
-            ArrayList<String> result = NodeToRootpath(root.children.get(i), val);
-            if (result.size() > 0) {
-                result.add(root.val + "->");
-                return result;
+            ArrayList<String> tempResult = NodeToRootpath(root.children.get(i), val);
+            if (tempResult.size() > 0) {
+                tempResult.add(root.val + "->");
+                return tempResult;
             }
         }
         return new ArrayList<>();
@@ -81,7 +80,7 @@ public class Rough {
         ArrayList<String> result = NodeToRootpath(root, 60);
 
         for (String str : result) {
-            System.out.println(str);
+            System.out.print(str);
         }
     }
 

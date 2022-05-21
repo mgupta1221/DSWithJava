@@ -11,3 +11,6 @@ https://www.youtube.com/watch?v=TUxo5YpKvxw&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2C
 
 // See trick diagram for FindElement (same logic applied in "Node To Root" path  )
 
+// Trees are symetrical if they are mirror of each...So you have to understand how to check if
+// trees are mirror of each other..(Basics3.java)
+

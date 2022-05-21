@@ -95,6 +95,8 @@ public class GenericTreeBasics2 {
     // Only half Euler tree is trevered
     // The moment value is found other children are not traversed
     // and control return from that node to its parent, its parent....till root
+
+    // Same logic is used in Printing RootToNode path question below
     private static Node FindElement(Node root, int val) {
         if (root.val == val) {
             return root;
@@ -113,21 +115,21 @@ public class GenericTreeBasics2 {
     // Print Node to root path
     // Explanation:
     // https://www.youtube.com/watch?v=oEBwL5pHzTs&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=28
-    private static ArrayList<String> NodeToRootPath(Node root, int data) {
+    private static ArrayList<Integer> NodeToRootPath(Node root, int data) {
 
         // agar node khud hi barabar to wo ek hi value return karega...khud ko hi return
         // karega
         if (root.val == data) {
-            ArrayList<String> arr = new ArrayList<>();
-            arr.add(root.val + "-> ");
+            ArrayList<Integer> arr = new ArrayList<>();
+            arr.add(root.val);
             return arr;
         }
 
         // Root mai nai mila to children mai dhoondh lo
         for (Node child : root.children) {
-            ArrayList<String> pathToChild = NodeToRootPath(child, data);
+            ArrayList<Integer> pathToChild = NodeToRootPath(child, data);
             if (pathToChild.size() > 0) {
-                pathToChild.add(root.val + "-> ");// Notice we add root here becuase its child has got an answr
+                pathToChild.add(root.val);// Notice we added root here becuase its child has got an answr
                 // LOGIC: jiske yahan se bhara hua arraylist aaya hai..iska matlab wahan answer
                 // mil gaya hai---usme parent khud ko add karega aur return kar dega
                 return pathToChild;
@@ -135,6 +137,106 @@ public class GenericTreeBasics2 {
         }
         // agar kahin nahi mila..na root mai na uske children mai
         return new ArrayList<>();
+    }
+
+    // Get 'Lowest Common Ancestor'
+    // This uses NodeToRoot path solution to get the answer
+    // Question Video:
+    // https://www.youtube.com/watch?v=5xlRdBskWJE&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=29
+    // Solution Video:
+    // https://www.youtube.com/watch?v=w8rr1AYMlfw&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=30
+    // Question Diagram: LowestComAncestor.png
+    // E.g. Here 70 aur 110 ka LCA 30 hoga (in sample tree)
+    // 70 aur 100 ka 10 hoga
+    private static int LowestCommonAncestor(Node root, int data1, int data2) {
+        ArrayList<Integer> nodeToRootPath1 = NodeToRootPath(root, data1); // for 60-> 60, 30 10
+        ArrayList<Integer> nodeToRootPath2 = NodeToRootPath(root, data2); // for 20 -> 20 10
+
+        int i = nodeToRootPath1.size() - 1;
+        int j = nodeToRootPath2.size() - 1;
+
+        // looping from reverse as 10..30..60 till we find first unequal(uncoomon node)
+        // node
+        // which is 30 and 20 in this case
+        // unse pehle wali node answer hogi which is 10
+        while (i >= 0 && j >= 0 && nodeToRootPath1.get(i) == nodeToRootPath2.get(j)) {
+            i--;
+            j--;
+        }
+        // moving ahead now by 1 node which is the answer
+        i++;
+
+        return nodeToRootPath1.get(i);
+    }
+
+    // Distance betwene 2 nodes
+    // Question:
+
+    // https://www.youtube.com/watch?v=1raYelrrhFM&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=31
+    // Solution :
+    // https://www.youtube.com/watch?v=5N5tpizDXys&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=32
+
+    // Question Diagram: DistanceBetweenNodes.png
+    // In this example: Distance between 70 and 110 is 3
+
+    // This uses NodeToRoot path solution to get the answer
+    private static int DistanceBetweenNodes(Node root, int data1, int data2) {
+        ArrayList<Integer> nodeToRootPath1 = NodeToRootPath(root, data1); // for 60-> 60, 30 10
+        ArrayList<Integer> nodeToRootPath2 = NodeToRootPath(root, data2); // for 20 -> 20 10
+
+        int i = nodeToRootPath1.size() - 1;
+        int j = nodeToRootPath2.size() - 1;
+
+        // looping from reverse as 10..30..60 till we find first unequal(uncoomon node)
+        // node
+        // which is 30 and 20 in this case
+        while (i >= 0 && j >= 0 && nodeToRootPath1.get(i) == nodeToRootPath2.get(j)) {
+            i--;
+            j--;
+        }
+        i++;// ab ye i bata rha 70 se 30 kitna dur hai i.e. 1 [70-> 30-> 10]
+        j++;// ab ye j bata rha 110 se 30 kitna dur hai i.e. 2 [110-> 80 -> 30-> 10]
+        return i + j;
+
+    }
+
+    public static void main(String[] args) {
+
+        Node root = PopulateTreeHelper();
+
+        // Mirror a tree
+        // InOrderTraversal(root);// this traversal is to test the mirrored tree before
+        // and after
+        // GetMirrorOfTree(root);
+        // System.out.println();
+        // InOrderTraversal(root);
+
+        // Removing all leaves from tree
+        // InOrderTraversal(root);
+        // RemoveLeaves(root);
+        // System.out.println();
+        // InOrderTraversal(root);
+
+        // Find Element in tree
+        // Node result = FindElement(root, 50);
+        // System.out.println(result.val);
+
+        // Find Node to root path in tree
+        // ArrayList<Integer> result = NodeToRootPath(root, 120);
+        // for (Integer str : result) {
+        // System.out.print(str + " ");
+        // }
+
+        // // LCA
+        // int result = LowestCommonAncestor(root, 70, 120);// answer should be root
+        // // node 10
+        // System.out.println(result);
+
+        // Distance between Nodes
+        int result = DistanceBetweenNodes(root, 70, 110);// answer should be root
+        // node 3
+        System.out.println(result);
+
     }
 
     /// Helper to print and check the graph
@@ -160,49 +262,30 @@ public class GenericTreeBasics2 {
 
         Node child4 = new Node(50);
         Node child5 = new Node(60);
-        // Node child6 = new Node(70);
-        // Node child7 = new Node(80);
-        // Node child8 = new Node(90);
-        // Node child9 = new Node(100);
-        // Node child10 = new Node(110);
-        // Node child11 = new Node(120);
+        Node child6 = new Node(70);
+        Node child7 = new Node(80);
+        Node child8 = new Node(90);
+        Node child9 = new Node(100);
+        Node child10 = new Node(110);
+        Node child11 = new Node(120);
 
         root.children.add(child1);
         root.children.add(child2);
         root.children.add(child3);
 
-        child2.children.add(child4);
-        child2.children.add(child5);
+        child1.children.add(child4);
+        child1.children.add(child5);
+
+        child2.children.add(child6);
+        child2.children.add(child7);
+        child2.children.add(child8);
+
+        child3.children.add(child9);
+
+        child7.children.add(child10);
+        child7.children.add(child11);
 
         return root;
     }
 
-    public static void main(String[] args) {
-
-        Node root = PopulateTreeHelper();
-
-        // Mirror a tree
-        // InOrderTraversal(root);// this traversal is to test the mirrored tree before
-        // and after
-        // GetMirrorOfTree(root);
-        // System.out.println();
-        // InOrderTraversal(root);
-
-        // Removing all leaves from tree
-        // InOrderTraversal(root);
-        // RemoveLeaves(root);
-        // System.out.println();
-        // InOrderTraversal(root);
-
-        // Find Element in tree
-        // Node result = FindElement(root, 50);
-        // System.out.println(result.val);
-
-        // Find Node to root path in tree
-        ArrayList<String> result = NodeToRootPath(root, 50);
-        for (String str : result) {
-            System.out.print(str);
-        }
-
-    }
 }
