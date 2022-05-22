@@ -14,3 +14,7 @@ https://www.youtube.com/watch?v=TUxo5YpKvxw&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2C
 // Trees are symetrical if they are mirror of each...So you have to understand how to check if
 // trees are mirror of each other..(Basics3.java)
 
+// Find Ceil and Kth Largest element solution follow same pattern
+
+// MaxSumSubtree and Diamter questions are similar
+

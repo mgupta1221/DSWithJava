@@ -1,6 +1,11 @@
 1. GettingStartedBasics
 2. Recursion And Backtracking
 
+The following DSA should be more than enough to prepare for a coding interview. You don't need to write KMP, Red-black tree or Heap sort during the interview, but a good understanding of those concepts certainly wouldn't hurt.
+Data Structure: Array, Hashmap, (Mono)Stack, Queue (and Priority Queue), Heap, Linked List (Singly, Doubly) Trie/Prefix, Tree/BST, Disjoint Set, Graph (Ajacent List/Matrix)
+Algorithms: Sort (Simple Sorting, Quick Sort, Merge Sort, Heap Sort), Recursion, Binary Search, Two Pointer, Sliding Window, DFS, BFS, Divide and Conquer, DP (Top Down, Bottom Up), Shortest Path (Dijkistra, Floyyd), MST, Union Find, Greedy
+
+
 Educative.io  for System Design
 Gaurav Sen for HLD and System Design
 Udit Agarwal (youtube) for LLD
@@ -103,7 +108,7 @@ https://docs.google.com/document/d/1pOarvQbjzLd9tz5ZuxktyrYsZ41mbWba5_LUeFj65lI/
 System design on Leetcode - 
 https://leetcode.com/discuss/interview-question/system-design?currentPage=1&orderBy=hot&query=
 
-System Design Playlist:
+System Design Playlist -Curated videos:
 https://www.youtube.com/playlist?list=PLo--PjwNHko2HTGCNe0rFCBu39tN-1PpX
 
 
