@@ -13,3 +13,9 @@ but Binary tree mai root.left , leaf ho sakta hai isliye base case ki jarurat ha
 NodeToRootPath
 NodetoRootPath for Binary tree implementation is differnet compare to as done in Generic tree
 We are using Global arraylist here which will be populated from inside the function.
+
+// Check removeLeafNodes in Basics2.java
+
+// Check Dimater of Treee-  Solved with 2 approaches:
+1. Diameter_Approach1.java
+2. Diameter_Approach2.java
