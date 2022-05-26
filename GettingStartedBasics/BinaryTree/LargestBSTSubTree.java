@@ -69,22 +69,6 @@ public class LargestBSTSubTree {
 
     }
 
-    public static Node removeLeafNodes(Node root) {
-        if (root == null) {
-
-        }
-        if (root.left == null && root.right == null) {
-
-        }
-
-        Node leftTree = removeLeafNodes(root.left);
-        Node rightTree = removeLeafNodes(root.right);
-        if (root.left == null && root.right == null) {
-
-        }
-
-    }
-
     public static Node PopulateBinaryTree() {
         Node root = new Node(50, null, null);
         Node child1 = new Node(25, null, null);
