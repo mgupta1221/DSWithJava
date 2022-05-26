@@ -1,3 +1,11 @@
+Order
+1. Basics1
+2. Basics2
+3. Diameter_Approach1 and 2
+4. IsBinarySearchTree
+5. LargestBSTSubTree
+
+
 // Tree diagram for Basics1 questions: "SampleBinaryTree.png"
 
 -> For height of the tree question, for Base condition return "-1" in case of edges , "0" in case of Nodes
@@ -19,3 +27,6 @@ We are using Global arraylist here which will be populated from inside the funct
 // Check Dimater of Treee-  Solved with 2 approaches:
 1. Diameter_Approach1.java
 2. Diameter_Approach2.java
+
+// in Binary Search Tree calculations like "Is a tree BST", or "largest BST Subtree"
+we need to caulcate min and max at each node

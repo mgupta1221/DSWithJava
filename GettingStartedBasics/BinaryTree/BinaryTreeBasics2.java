@@ -76,14 +76,20 @@ public class BinaryTreeBasics2 {
         if (node == null) {
             return null;
         }
+        // this is leaf node
         if (node.left == null && node.right == null) {
-            return null;
+            return null; // aap leaf hain...to apni jagah null return kara dein
+            // jab isme anadar code aayega tabhi node rmove hoga nahi to aage badh jayega
         }
         // assumption karenege ki agar left pe call karein to left node..saari nodes
         // delete karke hame nayi root dega
         // fir us result node ko apni node ke left mai laga dein
 
         // Notice how we assign result directly into node's left child
+        // E.g. you are on Node 25(refer SampleBinaryTree.png), left child is 12 (which
+        // is leaf) so 12 will be passed and result will come as null due to above
+        // condiiton 'null' will be assigned at left side of 25 (node.left= ...)
+
         node.left = RemoveLeafNodes(node.left);
         node.right = RemoveLeafNodes(node.right);
 
