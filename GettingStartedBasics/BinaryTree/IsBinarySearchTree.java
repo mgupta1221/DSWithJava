@@ -35,12 +35,18 @@ public class IsBinarySearchTree {
         // Tree is BST if root node has following properties, if:
         // a. Its left tree is BST
         // b. Its right tree is BST
-        // c. Its root node is less than left tree's max value and greater than right
+        // c. Its root node is greater than left tree's max value and less than right
         // tree's min value
+
+        // Agar Left ka tree sahi hai , or Right ka tree sahi hai or Tum khud bhi sahi
+        // ho ...to tum BST ho
         mp.isBST = leftTree.isBST && rightTree.isBST
                 && node.val >= leftTree.max && node.val <= rightTree.min;
 
-        // Imagine this tree is child of a parent node than what will be its min and max
+        // mujhe apne min or max calculate karne ke liye...mere left or right sub tree
+        // ke min and max chahiye honge
+        // mera khud ka(root node ka) min = Mere Left tree ka min, Mere Right tree ka
+        // min aur Root node ka min
         mp.min = Math.min(node.val, Math.min(leftTree.min, rightTree.min));
         mp.max = Math.max(node.val, Math.max(leftTree.max, rightTree.max));
 

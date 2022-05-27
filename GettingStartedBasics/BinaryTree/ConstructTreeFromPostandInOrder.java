@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class ConstructTreeFromPostandInOrder {
 
+    // Leet code 106
+
     // Solution video for PreOrder:(same approach, just that we scan PostOrder array
     // from reverse as we collect root node from post Order and child trees from
     // InOrder array )
@@ -42,7 +44,7 @@ public class ConstructTreeFromPostandInOrder {
         // THIS IS IMPORTANT- YOU HAVE TO POPULATE RIGHT NODE FIRST
         root.right = buildTreeHelper(postorder, inorder, idx + 1, end);
         root.left = buildTreeHelper(postorder, inorder, start, idx - 1);
-        
+
         return root;
     }
 

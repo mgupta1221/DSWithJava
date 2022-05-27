@@ -4,6 +4,7 @@ Order
 3. Diameter_Approach1 and 2
 4. IsBinarySearchTree
 5. LargestBSTSubTree
+6. Contruct Tree from PostOrder/PreOrder AND Inorder
 
 
 // Tree diagram for Basics1 questions: "SampleBinaryTree.png"
@@ -30,3 +31,5 @@ We are using Global arraylist here which will be populated from inside the funct
 
 // in Binary Search Tree calculations like "Is a tree BST", or "largest BST Subtree"
 we need to caulcate min and max at each node
+
+// Searching in a Balaneced BST is O(log n)
