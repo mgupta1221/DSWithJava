@@ -15,7 +15,7 @@ public class ConstructTreeFromPreOrder {
     // Solution code:
     // https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/discuss/2034181/Java-or-Recursive-or-100-Faster-or-Easy-to-understand
 
-    // Global variable
+    
 
     // Approach 1
     public static Node buildTree(int[] preorder) {

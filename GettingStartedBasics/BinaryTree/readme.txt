@@ -4,7 +4,13 @@ Order
 3. Diameter_Approach1 and 2
 4. IsBinarySearchTree
 5. LargestBSTSubTree
-6. Contruct Tree from PostOrder/PreOrder AND Inorder
+6. IsBalancedTree
+7. Contruct Tree from PostOrder/PreOrder AND Inorder
+8. Contruct Tree from PreOrder
+9. Contruct Tree from Inorder
+10. Vertical Order Traversal(this approach si also used to solve Top View/Bototm view of the tree )
+
+
 
 
 // Tree diagram for Basics1 questions: "SampleBinaryTree.png"
