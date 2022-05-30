@@ -24,7 +24,7 @@ public class VerticalOrderTraversal {
     // values as list of
     // nodes at that horiznatal distance(HD) from root node
 
-    // Notice we are not using HashMap here but TreeMap becuase TreeMap maintain the
+    // Notice we are not using HashMap here but 'TreeMap' becuase TreeMap maintain the
     // keys in a sorted manner. Irrespective of the key-insetion order
 
     // Also notice, how to print HashMap/TreeMap's key and values

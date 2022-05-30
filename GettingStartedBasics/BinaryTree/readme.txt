@@ -9,6 +9,7 @@ Order
 8. Contruct Tree from PreOrder
 9. Contruct Tree from Inorder
 10. Vertical Order Traversal(this approach si also used to solve Top View/Bototm view of the tree )
+11. Top View/ Bottom View
 
 
 
