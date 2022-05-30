@@ -9,19 +9,40 @@ import java.util.Stack;
 //Solution video:
 // https://www.youtube.com/watch?v=0BsPlzqksZQ&list=PL-Jc9J83PIiEyUGT3S8zPdTMYojwZPLUM&index=10
 
+// This solution works on Indexes(not on real numbers like in 'Next Greater Element')
+
 // Approach same as 'Next Greater Element' just that in that we traversed from end
-//  of the array, here we traversed from 0 to n-1
+// of the array, here we traversed from 0 to n-1.
 
 public class StockSpanProblem {
-    public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
+    public static int[] StockSpan(int[] stockPrices) {
 
-       
+        Stack<Integer> st = new Stack<>();
+        int[] resultArray = new int[stockPrices.length];
+        st.push(0); // notice we are storing index in Stack
+        resultArray[0] = 1; // Storing answer in result array
+
+        for (int i = 1; i < stockPrices.length; i++) {
+            // keep popping till we are getting lesser elements in Stack
+            while (!st.isEmpty() && stockPrices[i] >= stockPrices[st.peek()]) {
+                st.pop();
+            }
+
+            if (st.size() == 0) {
+                resultArray[i] = i + 1; // if not found(stack got empty) than index + 1
+            } else {
+                resultArray[i] = i - st.peek(); // if found, (currentIndex-TopIndexInStack) is the answer
+            }
+            st.push(i);
+
+        }
+        return resultArray;
+
     }
 
     public static void main(String[] args) {
-        int[] nums1 = { 2, 5, 1, 3, 10, 6, 7 };
-        int[] nums2 = { 2, 5, 1, 3, 10, 6, 7 };
-        int[] result = nextGreaterElement(nums1, nums2);
+        int[] stockPrices = { 100, 80, 60, 70, 60, 75, 85 };
+        int[] result = StockSpan(stockPrices);
 
         for (int n : result)
             System.out.print(n + " ");
