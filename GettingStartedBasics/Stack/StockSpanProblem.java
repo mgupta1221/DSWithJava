@@ -11,8 +11,15 @@ import java.util.Stack;
 
 // This solution works on Indexes(not on real numbers like in 'Next Greater Element')
 
+// In this problem we have to find Next Greater element to the left
+
 // Approach same as 'Next Greater Element' just that in that we traversed from end
 // of the array, here we traversed from 0 to n-1.
+
+// Algorithm is:
+// 1. Pehle pop karaega
+// 2. Fir answer banaega
+// 3. fir push karega
 
 public class StockSpanProblem {
     public static int[] StockSpan(int[] stockPrices) {
@@ -29,7 +36,9 @@ public class StockSpanProblem {
             }
 
             if (st.size() == 0) {
-                resultArray[i] = i + 1; // if not found(stack got empty) than index + 1
+                resultArray[i] = i + 1; // if not found(stack got empty) than index+1 - kyunki is element ne sabko pop
+                                        // kara diya iska matlab difference in indexes from left would be uska index+1. +1 isliye
+                                        // kyunki index 0 se shuru hota hai
             } else {
                 resultArray[i] = i - st.peek(); // if found, (currentIndex-TopIndexInStack) is the answer
             }

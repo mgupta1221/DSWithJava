@@ -18,6 +18,11 @@ import java.util.Stack;
 // ELSE If Stack gets empty, answer for that element is -1. 
 
 // Important : At the END, keep pushing the current element to the stack on each iteration.
+// Algorithm is:
+// 1. Pehle pop karaega
+// 2. Fir answer banaega
+// 3. fir push karega
+
 
 public class NextGreaterElement {
     public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
@@ -31,7 +36,9 @@ public class NextGreaterElement {
         map.put(nums2[nums2.length - 1], -1); // last element answer will be -1
 
         for (int i = nums2.length - 2; i >= 0; i--) {
-            // remove elements from stack till elements on stack are smaller than the current element
+            // remove elements from stack till elements on stack are smaller than the
+            // current element
+            // Basically pop all smaller elements
             while (!st.isEmpty() && nums2[i] >= st.peek()) {
                 st.pop();
             }
