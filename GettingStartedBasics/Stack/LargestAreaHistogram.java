@@ -26,6 +26,7 @@ public class LargestAreaHistogram {
         Stack<Integer> st = new Stack<>();
 
         // We will store index because differnce of index will be the width of Histogram
+        // For last element, its own index will be the heighest length possible.
         st.push(heights.length - 1);
         // If element is not found to the right, than we will have lastIndex+1 as its
         // height, and If element is not found to the left, than we will have
@@ -54,7 +55,10 @@ public class LargestAreaHistogram {
         int[] lb = new int[heights.length];
         Stack<Integer> st2 = new Stack<>();
 
+        // For first element, its own index(0) will be the heighest length possible.
         st2.push(0);
+        // If element is not found to the left, than we will have
+        // firstIndex-1 i.e. -1 as its index height.
         lb[0] = -1;
 
         for (int i = 1; i < heights.length; i++) {
@@ -72,7 +76,7 @@ public class LargestAreaHistogram {
         // At the end finding largest area
         int maxArea = Integer.MIN_VALUE;
         for (int i = 0; i < lb.length; i++) {
-            int width = rb[i] - lb[i] - 1;
+            int width = rb[i] - lb[i] - 1;// Important to remeber this formula
             int height = heights[i];
             int area = width * height;
             if (area > maxArea) {
@@ -87,7 +91,7 @@ public class LargestAreaHistogram {
     public static void main(String[] args) {
         int[] heights = { 2, 1, 5, 6, 2, 3 };
         int result = LargestAreaHistogramSolve(heights);
-        System.out.print(result);
+        System.out.print("Largest area: " + result);
 
     }
 }
