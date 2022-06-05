@@ -13,3 +13,7 @@ Algorithm is:
 
 
 6. Sliding Window
+7. Infix Evalaluation
+8. Infix to Postfix
+9. Celebrity Problem (Uses elimination technique)
+10. Merge Intervals (See the technique, also how to Sort array of array)
