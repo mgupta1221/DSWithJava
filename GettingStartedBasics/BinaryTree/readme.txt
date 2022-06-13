@@ -10,6 +10,9 @@ Order
 9. Contruct Tree from Inorder
 10. Vertical Order Traversal(this approach si also used to solve Top View/Bototm view of the tree )
 11. Top View/ Bottom View
+12. House Robber in BinaryTree
+13. Serialize/Deserialize
+14. Nodes with only 1 child
 
 
 
@@ -40,3 +43,21 @@ We are using Global arraylist here which will be populated from inside the funct
 we need to caulcate min and max at each node
 
 // Searching in a Balaneced BST is O(log n)
+
+// For Serialize, we use DFS using Stack
+
+
+
+// Checking for "null" as a value in String[] arraylist
+ This is implemented in DeSeraliazing a Binary tree
+  - Below is the Right way to check "null" as a String using "equals"
+
+        if (str[n].equals("null") == true) {
+            return null;
+        }
+
+ -  This below one would NOT WORK
+        if (str[n] == "null") {
+            return null;
+        }
+

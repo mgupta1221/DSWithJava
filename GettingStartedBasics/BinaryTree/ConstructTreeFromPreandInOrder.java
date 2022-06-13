@@ -22,7 +22,7 @@ public class ConstructTreeFromPreandInOrder {
     // right side in InOrder array
 
     // So using this approach, we will get all roots from the PreOrder array and
-    // left and right subtree from InOrder arratt recursively.
+    // left and right subtree from InOrder array recursively.
     // We will use 'start' and 'end' variable to populate left and right nodes of
     // root node recursively.
 
@@ -32,6 +32,7 @@ public class ConstructTreeFromPreandInOrder {
     static HashMap<Integer, Integer> map = new HashMap<>();
 
     public static Node buildTree(int[] preorder, int[] inorder) {
+        // Storing index of each node as per its inorder placement, which will be used later
         for (int i = 0; i < inorder.length; i++) {
             map.put(inorder[i], i);
         }

@@ -1,0 +1,6 @@
+ ye code tha LLD wale ka
+2 design pattern or solid principles ka implementataion
+
+han EMAIL Design
+aur get all user of a contact
+vice versa

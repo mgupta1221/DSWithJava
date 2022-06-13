@@ -15,7 +15,7 @@ public class Count_MaxSumOfNonAdjElements {
     // Trick Diagram: "Count_MaxSumOfNonAdjElements.png"
     // Trick Diagram explanation below
 
-    // Here we have to find minimum cost ensuring no 2 houses are adjacent:
+    // Here we have to find maximum cost ensuring no 2 houses are adjacent:
     // https://www.geeksforgeeks.org/minimize-cost-of-painting-n-houses-such-that-adjacent-houses-have-different-colors/
 
     // Solution Approach:
@@ -31,7 +31,7 @@ public class Count_MaxSumOfNonAdjElements {
     // initialze 'include' with arr[0] and 'exclude' with 0
     // If we include 10 than we can onyl take 'exclude of previous 5' and add to the
     // current value
-    // I we exclude 10 than we can take both: Include and Exclude and take there
+    // If we exclude 10 than we can take both: Include and Exclude and take there
     // maximum
     private static int count_maxSumOfNonAdjElements(int[] nums) {
         int include = nums[0];
