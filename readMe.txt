@@ -28,6 +28,7 @@ Youtube playlist
 10) Derek Banas
 11) https://github.com/coding-parrot/Low-Level-Design
 12) Tips on LLD design topics - https://www.youtube.com/watch?v=9_7jDlmexME  
+13) https://github.com/arpit20adlakha/Data-Structure-Algorithms-LLD-HLD
 
 Some paid best resources for ones who are looking out for well-structured content of LLD :
 
@@ -69,12 +70,17 @@ Some of the YouTube channels which helped me immensely in my System Design prepa
 Linked  -find Middle node, reverse a part of linked list
 Talk about Pub-Sub model, lot of micro services are connected to same DB
  https://www.youtube.com/watch?v=m-iyaqb2As4
+ 10) https://www.youtube.com/watch?v=OOKpXfneQ9Q&list=PL0evysyBWYO4n2wkp1UgqpUfSsXnu5EMf
 
 Some of the best paid System Design courses which you can use if you're looking out for well-structured content for System Design :
 
 1). InterviewReady - By Gaurav Sen
 2). Educative.io - Use https://lnkd.in/gy-uGDN7 to get 10% discount or use https://lnkd.in/dQtAV45A for my 𝐀𝐟𝐟𝐢𝐥𝐢𝐚𝐭𝐞 𝐥𝐢𝐧𝐤𝐬
 3). AlgoExpert - By Clement Mihailescu
+
+
+LLD link
+https://github.com/coding-parrot/Low-Level-Design
 
 
 Some of the best resources available for free on the Internet in form of blogs :
