@@ -3,51 +3,63 @@ package GettingStartedBasics.BinaryTree;
 import java.util.*;
 
 // Leetcode 124
-
+// Solution description: 
+// https://www.youtube.com/watch?v=Osz-Vwer6rw
 public class MaxPathSum {
-
-    private static boolean FindMaxPathSum(Node root, int sum) {
-
-        if (root == null) {
-            return false;
-        }
-        if (root.val == sum) {
-            return true;
-        }
-
-        return FindMaxPathSum(root.left, sum - root.val) || FindMaxPathSum(root.right, sum - root.val);
-
-        // ArrayList<Integer> pathSum = new ArrayList<>();
-        // FindMaxPathSumHelper(root, 0, pathSum);
+    public class Res {
+        int res;
     }
 
-    // private static void FindMaxPathSumHelper(Node root, int currentSum,
-    // ArrayList<Integer> pathSum) {
-    // ArrayList<Integer> pathSum = new ArrayList<>();
+    private static int FindMaxPathSum(Node root, int sum) {
+        FindMaxPathSumHelper(root, 0);
+        return sum;
+    }
 
-    // FindMaxPathSumHelper(root, 0, pathSum);
+    private static int FindMaxPathSumHelper(Node root, int currentSum) {
 
-    // }
+        if (root == null) {
+            return 0;
+        }
+        int a = root.val;
+        int leftSum = FindMaxPathSumHelper(root.left, currentSum);
+        int rightSum = FindMaxPathSumHelper(root.right, currentSum);
+
+        // we will keep calculating the global currentSum considering all max of 3
+        // options:
+        // 1. Node itself
+        // 2. Node + Either left or right child
+        // 3. Node + Left+ right
+        // and update 'currentSum' with max of 3
+
+        int tempResultA = Math.max(a, Math.max(leftSum, rightSum) + a);
+        int tempResultB = Math.max(tempResultA, leftSum + rightSum + a);
+        currentSum = Math.max(currentSum, tempResultB);
+
+        // For each node execution, Return the root + either taking left or right path
+        // (as we
+        // can't take both left and right since we need a linear path), to be used by
+        // its parent
+        return tempResultA;
+
+    }
 
     public static void main(String[] args) {
         Node root = PopulateBinaryTree();
-        Boolean result = FindMaxPathSum(root, 38);
-        System.out.println(result);
-
+        FindMaxPathSum(root, 0);
     }
 
     public static Node PopulateBinaryTree() {
-        Node root = new Node(3, null, null);
-        Node child1 = new Node(9, null, null);
-        Node child2 = new Node(20, null, null);
+        Node root = new Node(1, null, null);
+        Node child1 = new Node(2, null, null);
+        Node child2 = new Node(3, null, null);
         Node child3 = new Node(15, null, null);
         Node child4 = new Node(7, null, null);
 
         root.left = child1;
         root.right = child2;
 
-        child2.left = child3;
-        child2.right = child4;
+        // child2.left = child3;
+        // child2.right = child4;
 
         return root;
     }
