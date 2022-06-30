@@ -5,35 +5,33 @@ import java.util.*;
 // Leetcode 124
 // Solution description: 
 // https://www.youtube.com/watch?v=Osz-Vwer6rw
-public class MaxPathSum {
-    public class Res {
-        int res;
-    }
+public class PathSum_MaxPathSum {
+    static int globalVar_Sum = 0;
 
     private static int FindMaxPathSum(Node root, int sum) {
-        FindMaxPathSumHelper(root, 0);
-        return sum;
+        FindMaxPathSumHelper(root);
+        return globalVar_Sum; // returning the global variable as it is maintaining the max sum
     }
 
-    private static int FindMaxPathSumHelper(Node root, int currentSum) {
+    public static int FindMaxPathSumHelper(Node root) {
 
         if (root == null) {
             return 0;
         }
         int a = root.val;
-        int leftSum = FindMaxPathSumHelper(root.left, currentSum);
-        int rightSum = FindMaxPathSumHelper(root.right, currentSum);
+        int leftSum = FindMaxPathSumHelper(root.left);
+        int rightSum = FindMaxPathSumHelper(root.right);
 
         // we will keep calculating the global currentSum considering all max of 3
         // options:
         // 1. Node itself
         // 2. Node + Either left or right child
-        // 3. Node + Left+ right
+        // 3. Node + Left + right
         // and update 'currentSum' with max of 3
 
         int tempResultA = Math.max(a, Math.max(leftSum, rightSum) + a);
         int tempResultB = Math.max(tempResultA, leftSum + rightSum + a);
-        currentSum = Math.max(currentSum, tempResultB);
+        globalVar_Sum = Math.max(globalVar_Sum, tempResultB);
 
         // For each node execution, Return the root + either taking left or right path
         // (as we
@@ -45,7 +43,8 @@ public class MaxPathSum {
 
     public static void main(String[] args) {
         Node root = PopulateBinaryTree();
-        FindMaxPathSum(root, 0);
+        int result = FindMaxPathSum(root, 0);
+        System.out.println(result);
     }
 
     public static Node PopulateBinaryTree() {

@@ -4,11 +4,10 @@ package GettingStartedBasics.BinaryTree;
 // Solution:  https://www.geeksforgeeks.org/root-to-leaf-path-sum-equal-to-a-given-number/
 
 // or https://www.youtube.com/watch?v=3LKHFfuqlIg&list=PL-Jc9J83PIiHgjQ9wfJ8w-rXU368xNX4L&index=56
-public class PathSum {
+public class PathSum_FindTargetSum {
 
     private static boolean PathSum(Node root, int targetSum) {
         // boolean ans = false;
-
         if (root == null) {
             return false;
         }
@@ -18,12 +17,11 @@ public class PathSum {
         } 
 
         return PathSum(root.left, targetSum - root.val) || PathSum(root.right, targetSum - root.val);
-
     }
 
     public static void main(String[] args) {
         Node root = PopulateBinaryTree();
-        boolean result = PathSum(root, 31);
+        boolean result = PathSum(root, 30);
         System.out.println(result);
 
     }
