@@ -1,7 +1,10 @@
 package GettingStartedBasics.BinaryTree;
 
-// Question Leetcode 572 : 
-// With Approach 1 : 
+// Question Leetcode 572 :
+
+// O(n2) solution: 
+
+// With Approach 1 :
 // https://www.geeksforgeeks.org/check-if-a-binary-tree-is-subtree-of-another-binary-tree/
 // Note: Solution is not working here, but executed fine on Leetcode
 
