@@ -43,6 +43,5 @@ public class Permutations_LC47 {
             }
             System.out.println();
         }
-
     }
 }
