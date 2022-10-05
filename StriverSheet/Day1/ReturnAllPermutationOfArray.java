@@ -10,15 +10,15 @@ public class ReturnAllPermutationOfArray {
     // Approach:
 
     public static void permuteRecur(int[] nums, int index, List<List<Integer>> result) {
-        if (index == nums.length - 1) {
-            List<Integer> tempResult = new ArrayList<>();
+
+        if (index == nums.length) {
+            List<Integer> ds = new ArrayList<>();
             for (int i = 0; i < nums.length; i++) {
-                tempResult.add(nums[i]);
+                ds.add(nums[i]);
             }
-            result.add(tempResult);
+            result.add(new ArrayList<>(ds));
             return;
         }
-
         for (int i = index; i < nums.length; i++) {
             swap(nums, i, index);
             permuteRecur(nums, index + 1, result);
@@ -50,7 +50,6 @@ public class ReturnAllPermutationOfArray {
             }
             System.out.println();
         }
-
     }
 
 }
