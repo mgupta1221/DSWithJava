@@ -29,6 +29,8 @@ Youtube playlist
 11) https://github.com/coding-parrot/Low-Level-Design
 12) Tips on LLD design topics - https://www.youtube.com/watch?v=9_7jDlmexME  
 13) https://github.com/arpit20adlakha/Data-Structure-Algorithms-LLD-HLD
+14) LLD Basic to Advanced playlist - https://www.youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW
+
 
 Some paid best resources for ones who are looking out for well-structured content of LLD :
 
@@ -71,6 +73,7 @@ Linked  -find Middle node, reverse a part of linked list
 Talk about Pub-Sub model, lot of micro services are connected to same DB
  https://www.youtube.com/watch?v=m-iyaqb2As4
  10) https://www.youtube.com/watch?v=OOKpXfneQ9Q&list=PL0evysyBWYO4n2wkp1UgqpUfSsXnu5EMf
+ 11) HLD Basic to Advanced Playlist - https://www.youtube.com/playlist?list=PL6W8uoQQ2c63W58rpNFDwdrBnq5G3EfT7
 
 Some of the best paid System Design courses which you can use if you're looking out for well-structured content for System Design :
 
