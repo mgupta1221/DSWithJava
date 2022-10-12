@@ -6,7 +6,7 @@ package StriverSheet.Day2;
 // https://www.youtube.com/watch?v=C4oBXLr3zos - For quick approach understanding
 // https://www.youtube.com/watch?v=73lyz0EZye8 - Code is from this video
 
-// Start from end of the both arrays and keep comparing the index values and keep storing the higher
+// Trick is to Start from end of the both arrays and keep comparing the values and keep storing the higher
 // value in Array 1's end such that:
 
 // If element of Array 1 > Element of Array 2 =>  Store the "element of Array 1" at last index of array 1

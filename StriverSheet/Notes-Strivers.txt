@@ -1,4 +1,7 @@
 1. Use case for "Floyd Cycle detection algorithm (Slow-Fast pointer)" - Finding Duplicate element - Day 2
 
+2. Use case for Merge Sort- (Questions with conditions like (i<j) and (num[i]> nums[j])
+ i) Count inversions in an Array- Day 2
+ ii) Reverse pairs - Day 3
 
 

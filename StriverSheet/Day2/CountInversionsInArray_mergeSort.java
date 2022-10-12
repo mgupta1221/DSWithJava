@@ -1,6 +1,6 @@
 package StriverSheet.Day2;
 
-public class MergeSort_CountInversionsInArray {
+public class CountInversionsInArray_mergeSort {
 
     // Problem :
     // https://www.codingninjas.com/codestudio/problems/count-inversions_615
@@ -13,10 +13,12 @@ public class MergeSort_CountInversionsInArray {
     // A pair ('ARR[i]', 'ARR[j]') is said to be an inversion when:
     // 1. 'ARR[i] > 'ARR[j]'
     // 2. 'i' < 'j'
-    // Where 'i' and 'j' denote the indices ranging from [0, 'N').
+    // Where 'i' and 'j' denote the indices ranging from [0, 'N'].
 
-    // Recursive function which will split array recursively and later merge the
-    // array in a sorted form
+    // Below is the Recursive function which will split array recursively and later
+    // merge the array in a sorted form
+
+    // https://www.youtube.com/watch?v=owZhw-A0yWE&t=628s
     public static int mergeSort(int[] nums, int low, int high) {
         int inversionCount = 0;
         if (low < high) { // 'if' not 'while'
@@ -46,7 +48,10 @@ public class MergeSort_CountInversionsInArray {
                 mergedArr[k] = nums[j];
                 j++;
                 k++;
-                inversionCount = inversionCount + (mid - i + 1); // statement added for getting inversion
+                inversionCount = inversionCount + (mid - i + 1); // statement added for getting inversion.
+                // mid-i+1 , becuase we have to pick all elements to the right of the current
+                // element in the left array, and 'mid' is the last element of the first array
+                // and 'i' is the current index so total elements = mid-i+1
             }
         }
         while (i <= mid) {

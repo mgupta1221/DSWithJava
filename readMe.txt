@@ -128,6 +128,7 @@ Top 75 questions
 
 Also see Patterns:
 // https://seanprashad.com/leetcode-patterns/
+https://levelup.gitconnected.com/dont-just-leetcode-follow-the-coding-patterns-instead-4beb6a197fdb
 
 have many good quesitons on every topic - Javascript, Coding, Sys Design, front end
 https://bigfrontend.dev/

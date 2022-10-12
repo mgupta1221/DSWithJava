@@ -26,7 +26,7 @@ public class RepeatAndMissingNumber {
         for (int n : nums) {
             xXORy = xXORy ^ n;
         }
-        for (int i = 1; i <= nums.length; i++) {// not that it is starting from 1 not 0
+        for (int i = 1; i <= nums.length; i++) {// notice that it is starting from 1 not 0
             xXORy = xXORy ^ i;
         }
 
