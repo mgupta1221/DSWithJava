@@ -1,4 +1,4 @@
-package StriverSheet.Day1;
+package StriverSheet.Day1_Arrays;
 
 public class SortArray0s1s2s {
 

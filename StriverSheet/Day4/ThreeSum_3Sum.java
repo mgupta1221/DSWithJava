@@ -2,18 +2,8 @@ package StriverSheet.Day4;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
-class Pair {
-    int index1;
-    int index2;
-
-    Pair(int n1, int n2) {
-        this.index1 = n1;
-        this.index2 = n2;
-    }
-}
 
 public class ThreeSum_3Sum {
 
@@ -24,10 +14,10 @@ public class ThreeSum_3Sum {
     // Approach: 2 pointer appraoch-
     // Approach: Sort the array, and then fix two pointers, so the remaining sum
     // will be (target – (nums[i] + nums[j])). Now we can fix two-pointers, one
-    // front, and another at the end, and easily use a two-pointer to find the
+    // front, and another at the end, and use a two-pointer to find the
     // remaining two numbers of the triplet. We can
     // easily jump duplicates, by skipping the same elements by running a loop.
-    // Notice the while loop inside 'if' conditions to avoid duoplicates
+    // Notice the while loop inside 'if' conditions to avoid duplicates
 
     // Full explanation here:
     // https://takeuforward.org/data-structure/4-sum-find-quads-that-add-up-to-a-target-value/

@@ -28,19 +28,23 @@ public class RotateMatrix {
     public static int[][] RotateMatrix_Optimised(int[][] matrix) {
 
         // Transposing a matrix
-        // Notice to transpose:  'j' has to start from i and not 0
+        // Notice to transpose: 'j' has to start from i and not 0
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = i; j < matrix[0].length; j++) { 
+            for (int j = i; j < matrix[0].length; j++) {
                 swap(matrix, i, j, i, j);
             }
         }
 
         // Reversing each row
-        // Notice to rotate:  we are moving 'j' only till half
+        // Notice to rotate: we are moving 'j' only till half
+        int cols = matrix[0].length - 1;
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length / 2; j++) { 
-                swap(matrix, i, j, matrix[0].length - 1 - j, i);
+            for (int j = 0; j <= matrix[0].length / 2; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[i][cols - j];
+                matrix[i][cols - j] = temp;
             }
+
         }
 
         return matrix;
