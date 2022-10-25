@@ -17,7 +17,7 @@ public class DetectCycle {
                 return true;
             }
         }
-        return false;
+        return slow == fast;
 
     }
 
