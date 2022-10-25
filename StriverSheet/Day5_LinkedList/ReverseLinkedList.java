@@ -1,5 +1,7 @@
 package StriverSheet.Day5_LinkedList;
 
+import StriverSheet.Day5_LinkedList.Add2NumbersAsLinkedList;
+
 // LC: 206 https://leetcode.com/problems/reverse-linked-list/
 
 // Maintain 3 variables-  Previous, Current and Next
@@ -16,7 +18,8 @@ public class ReverseLinkedList {
 
         ListNode current = head;
         ListNode previous = null;
-        ListNode next;
+        ListNode next = null;
+        
         while (current != null) {
             next = current.next;
             current.next = previous;
@@ -55,22 +58,4 @@ public class ReverseLinkedList {
 
     }
 
-}
-
-// Node class
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
 }

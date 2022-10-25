@@ -1,28 +1,39 @@
-package StriverSheet.Day5_LinkedList;
-import StriverSheet.Day5_LinkedList.Add2NumbersAsLinkedList;
+package StriverSheet.Day6;
 
-// LC: 876 https://leetcode.com/problems/middle-of-the-linked-list/
+import StriverSheet.Day6.IntersectionOf2LL;
 
-public class MiddleOfLinkedList {
-    public static ListNode middleNode(ListNode head) {
+// LC: 141  https://leetcode.com/problems/linked-list-cycle/
 
+public class DetectCycle {
+    public static boolean hasCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
 
         while (fast != null && fast.next != null) {
+
             slow = slow.next;
             fast = fast.next.next;
+            if (fast == slow) {
+                return true;
+            }
         }
-
-        return slow;
+        return false;
 
     }
 
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 4, 5 };
-        ListNode head = GetLinkedList(nums);
-        ListNode middleNode = middleNode(head);
-        System.out.println(middleNode.val);
+
+        ListNode head = new ListNode(3);
+        ListNode node2 = new ListNode(2);
+        ListNode node3 = new ListNode(0);
+        ListNode node4 = new ListNode(-4);
+        head.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node2; // cycle created here
+
+        boolean result = hasCycle(head);
+        System.out.println(result);
     }
 
     // Helper Functions
@@ -43,8 +54,6 @@ public class MiddleOfLinkedList {
             System.out.print(head.val + " -> ");
             head = head.next;
         }
-
+        System.out.println();
     }
-
 }
-

@@ -1,4 +1,5 @@
 package StriverSheet.Day5_LinkedList;
+import StriverSheet.Day5_LinkedList.Add2NumbersAsLinkedList;
 
 //LC 237. https://leetcode.com/problems/delete-node-in-a-linked-list/
 
@@ -68,19 +69,19 @@ public class DeleteNode {
 }
 
 // Node class
-class ListNode {
-    int val;
-    ListNode next;
+// class ListNode {
+// int val;
+// ListNode next;
 
-    ListNode() {
-    }
+// ListNode() {
+// }
 
-    ListNode(int val) {
-        this.val = val;
-    }
+// ListNode(int val) {
+// this.val = val;
+// }
 
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
+// ListNode(int val, ListNode next) {
+// this.val = val;
+// this.next = next;
+// }
+// }
