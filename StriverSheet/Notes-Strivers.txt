@@ -6,7 +6,10 @@
  i) Count inversions in an Array- Day 2
  ii) Reverse pairs - Day 3
 
-3. 2 pointers technique is used in Finding 3 nums (or, 4 numbers) with a target sum. - Day 4
+3. 2 pointers technique is used in :
+i)  3Sum (or, 4 numbers) with a target sum. - Day 4
+ii) Trapping Rain water problem - Day 7
+
 Note: 2 pointers appraoch always need Sorting
 
 4.  Day 4 questions on array uses various important approaches like: 2 pointers, Sliding Window
