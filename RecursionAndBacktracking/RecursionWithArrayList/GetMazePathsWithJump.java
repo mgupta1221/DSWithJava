@@ -34,7 +34,7 @@ public class GetMazePathsWithJump {
         ArrayList<String> finalResult = new ArrayList<>();
         for (int i = 1; i <= dc - sc; i++) { // important thing is this loop runnign from 0 to number
                                             // of possible jumps
-                                             // i.e. dc-sc
+                                             // i.e. dc-sc (possible horizontal movements)
             // and it is important to note that loop has to start from 1 else it will go
             // infinite.
             hpaths = getMazePaths(sr, sc + i, dr, dc);

@@ -20,7 +20,6 @@ public class GetSubsequence {
             tempArraylist.add(""); // Blank string ki ek subString hogi, blank itself (2^0 =1)... this will return
                                    // [" "] , not []
             return tempArraylist;
-
         }
         // Getting first Character "a"
         String firstChar = str.substring(0, 1);

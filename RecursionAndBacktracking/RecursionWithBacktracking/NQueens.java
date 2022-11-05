@@ -48,7 +48,7 @@ public class NQueens {
     }
 
     // We have to check in top, dialognally-left and diagonally-right. No need to
-    // check for the row below becuase no queen has not been placed there yet(below
+    // check for the row below becuase no queen has been placed there yet(below
     // the current row) as are moving from top row to the the last row serially
     public static boolean IsItSafeToPlaceQueen(int[][] chess, int row, int col) {
 

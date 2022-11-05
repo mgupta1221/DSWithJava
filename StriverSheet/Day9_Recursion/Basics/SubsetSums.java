@@ -1,8 +1,8 @@
-package RecursionAndBacktracking.IntroToRecursion;
+package StriverSheet.Day9_Recursion.Basics;
 
 import java.util.ArrayList;
 
-public class Test {
+public class SubsetSums {
 
     public static ArrayList<Integer> subsetSums(ArrayList<Integer> arr, int N) {
         ArrayList<Integer> result = new ArrayList<>();
@@ -19,7 +19,6 @@ public class Test {
         }
 
         subsetSumsHelper(arr, N, idx + 1, currentSum, result);
-        
         subsetSumsHelper(arr, N, idx + 1, currentSum + arr.get(idx), result);
 
     }
@@ -32,7 +31,5 @@ public class Test {
         ArrayList<Integer> result = subsetSums(arr, 2);
 
         System.out.println(result);
-
     }
-
 }
