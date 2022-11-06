@@ -128,9 +128,9 @@ public class CoinCombinationsSingleNInfinite {
         int[] coins = { 10, 1, 2, 7, 6, 1, 5 };
 
         // var result = CoinChangeCombination_In(coins, 10, "", 0);
-        // var result = CoinChangeCombination_Single(coins, 10, "", 0);
+         var result = CoinChangeCombination_Single(coins, 10, "", 0);
         // var result = CoinChangeCombination_Single_SubSeqeunce(coins, 8, "", 0);
-        var result = CoinChangeCombination_Infinite_SubSeqeunce(coins, 10, "", 0);
+        //var result = CoinChangeCombination_Infinite_SubSeqeunce(coins, 10, "", 0);
         // var result = CoinChangeCombination_Infin2(coins, 5, "", 0);
         System.out.println("Count: " + result);
     }

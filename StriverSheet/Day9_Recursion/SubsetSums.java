@@ -1,4 +1,4 @@
-package StriverSheet.Day9_Recursion.Basics;
+package StriverSheet.Day9_Recursion;
 
 import java.util.ArrayList;
 
