@@ -6,7 +6,7 @@ Questions where there are 2 nested for loops, Time Complexity will be m*n
 ====================
 
 Check Time Complexity of Combination Sum -I . Understand the reason given
-====================
+========================================
 
 Tip: If you want to add sublist into a list than use Constructor like below: See proble SubsetII.java
 
@@ -16,9 +16,19 @@ Tip: If you want to add sublist into a list than use Constructor like below: See
  result.add(subResult);                   // this WILL NOT work
  result.add(new ArrayList<>(subResult));  // this will work 
 
-====================
+========================================
  Tip: Whenever the problem is related to picking up elements from an array to form a combination, start
  thinking about the “pick and non-pick” approach.
  E.g. Target Sum Subset, CombinationSum
 
+========================================
+Array list e.g. below:
+ArrayList<String> res = new ArrayList<>();
+
+can be sorted with:
+
+Collections.sort(res);
+
+
+========================================
  
