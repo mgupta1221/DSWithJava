@@ -72,9 +72,12 @@ Some of the YouTube channels which helped me immensely in my System Design prepa
 Linked  -find Middle node, reverse a part of linked list
 Talk about Pub-Sub model, lot of micro services are connected to same DB
  https://www.youtube.com/watch?v=m-iyaqb2As4
- 10) https://www.youtube.com/watch?v=OOKpXfneQ9Q&list=PL0evysyBWYO4n2wkp1UgqpUfSsXnu5EMf
- 11) HLD Basic to Advanced Playlist - https://www.youtube.com/playlist?list=PL6W8uoQQ2c63W58rpNFDwdrBnq5G3EfT7
 
+10) https://www.youtube.com/watch?v=OOKpXfneQ9Q&list=PL0evysyBWYO4n2wkp1UgqpUfSsXnu5EMf
+
+11) HLD Basic to Advanced Playlist - https://www.youtube.com/playlist?list=PL6W8uoQQ2c63W58rpNFDwdrBnq5G3EfT7
+
+12) https://medium.com/coders-mojo/most-popular-system-design-questions-mega-compilation-45218129fe26
 Some of the best paid System Design courses which you can use if you're looking out for well-structured content for System Design :
 
 1). InterviewReady - By Gaurav Sen
@@ -125,6 +128,9 @@ Top 75 questions
 // https://leetcode.com/list/xi4ci4ig/
   (Grouped)
 // https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions 
+
+Company wise : Most popular Coding Questions
+https://leetcode.com/discuss/interview-question/2016707/Company-wise-%3A-Most-popular-Coding-Questions
 
 Also see Patterns:
 // https://seanprashad.com/leetcode-patterns/
@@ -320,7 +326,7 @@ for (int i = 0; i < n; i++) {
 
 }
 
-16. Tree Shaking is  agrapgh Traversal
+16. Tree Shaking is a graph Traversal
 17. Diff tool uses Lognest Common Subsequence
 
 
