@@ -31,7 +31,7 @@ public class SortArray0s1s2s {
         int mid = 0;
         int high = nums.length - 1;
 
-        while (mid <= high) {   // <= is important , not <
+        while (mid <= high) { // <= is important , not <
             int currentNum = nums[mid]; // Get nums[m] as current Number
             if (currentNum == 0) {
                 swap(nums, low, mid); // first swap and than increment
@@ -44,6 +44,12 @@ public class SortArray0s1s2s {
             if (currentNum == 2) {
                 swap(nums, mid, high);
                 high--;
+                // Reason why mid is not increased
+                // ..... Low=1............mid=1........high=2....
+                // E.g. [low->1..... 2..mid->1........0..2<--high]
+                // in this case 1(value of mid) has to be swapped with 2..if 2 goes to mid
+                // position we cannot increase
+                // 'mid' index
             }
         }
     }

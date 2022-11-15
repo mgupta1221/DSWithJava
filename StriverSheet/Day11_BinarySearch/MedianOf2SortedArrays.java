@@ -23,13 +23,13 @@ public class MedianOf2SortedArrays {
             // Total required - already present
             int cut2 = ((n1 + n2) / 2) - cut1; // // notice cut2 is index value, not actual in nums array
 
-            // Initialize l1,l2,r1,r2
+            // Initialize l1,l2,r1,r2 - these are actual numbers (not indexes)
             int l1 = cut1 == 0 ? Integer.MIN_VALUE : nums1[cut1 - 1];
             int l2 = cut2 == 0 ? Integer.MIN_VALUE : nums2[cut2 - 1];
             int r1 = cut1 == n1 ? Integer.MAX_VALUE : nums1[cut1];
             int r2 = cut2 == n2 ? Integer.MAX_VALUE : nums2[cut2];
 
-            // this below condition should hold true to find the media..remember this
+            // this below condition should hold true to find the median..remember this
             if (l1 <= r2 && l2 <= r1) {
                 if ((n1 + n2) % 2 == 0) {
                     return (double) (Math.max(l1, l2) + Math.min(r1, r2)) / 2; // Notice type-casting else it will

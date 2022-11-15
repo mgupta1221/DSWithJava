@@ -2,11 +2,11 @@ package StriverSheet.Day2;
 
 public class MergeSort {
 
-     // Recursive function which will split array recursively and later merge the
+    // Recursive function which will split array recursively and later merge the
     // array in a sorted form
     public static void mergeSort(int[] nums, int low, int high) {
 
-        if (low < high) { // 'if' not 'while'
+        if (low < high) { // 'if' not 'while' else it will be infinite loop --- IMPORTANT
             int mid = (low + high) / 2;
             mergeSort(nums, low, mid);
             mergeSort(nums, mid + 1, high);

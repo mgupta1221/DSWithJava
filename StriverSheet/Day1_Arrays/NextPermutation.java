@@ -9,10 +9,11 @@ public class NextPermutation {
 
     // Approach:
 
-    // Step 1: Move from right to left and find an element where num[i] < num[i+1]
+    // Step 1: Move from right to left and till you find an element where num[i] <
+    // num[i+1]
     // -> store i index
     // Step 2: Again move from R to L -> Find an element greater than num[i] ->
-    // store j index
+    // -> store j index
     // Step 3: Swap element at index i and j
     // Step 4: Reverse the elements from index i+1 till the end
 

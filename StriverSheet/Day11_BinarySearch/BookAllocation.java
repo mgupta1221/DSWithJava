@@ -9,7 +9,7 @@ public class BookAllocation {
     // Similar quesiton on LC is :
     // https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 
-    // Solution approach:
+    // Solution approach (Good Explanation):
     // https://www.youtube.com/watch?v=gYmWHvRHu-s
 
     // Approach is Binary search use hoga kyunki Sorted array ka quesiton.
