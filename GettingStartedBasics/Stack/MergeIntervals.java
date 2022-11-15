@@ -18,10 +18,10 @@ import java.util.Stack;
 
 public class MergeIntervals {
     public static class Pair implements Comparable<Pair> {
-        int start;
-        int end;
+        public int start;
+        public int end;
 
-        Pair(int st, int end) {
+        public Pair(int st, int end) {
             this.start = st;
             this.end = end;
         }
@@ -35,12 +35,11 @@ public class MergeIntervals {
     public static int[][] merge(int[][] intervals) {
         
         // Storing arrays of array in array of class 'Pair'
-        
+
         Pair[] pairs = new Pair[intervals.length];
         for (int i = 0; i < intervals.length; i++) {
             pairs[i] = new Pair(intervals[i][0], intervals[i][1]);
         }
-
 
         // After storing, sorting
         Arrays.sort(pairs);

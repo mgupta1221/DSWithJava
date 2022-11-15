@@ -24,7 +24,7 @@ public class SetMatrixZeroes {
         int[] col = new int[m];
         int[] row = new int[n];
 
-        //
+        
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (matrix[i][j] == 0) {
@@ -40,7 +40,6 @@ public class SetMatrixZeroes {
                     matrix[i][j] = 0;
                 }
             }
-
         }
 
     }
