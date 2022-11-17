@@ -32,7 +32,8 @@ public class UniquePathsLeetCode62 {
     }
 
     public static void main(String[] args) {
-        int count = uniquePaths(3, 3);
+        int count = uniquePaths(3, 7);
+        System.out.println(count);
 
     }
 

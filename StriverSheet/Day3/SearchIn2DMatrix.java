@@ -7,9 +7,12 @@ package StriverSheet.Day3;
 // Since matrix is sorted efficient way is to apply Binary Search.
 
 // See how we can locate an element in 2D matrix via mid value
-// for ith element (say 5th element in  a 2D matrix with total columns C):
+// for ith element (say 5th element in a 2D matrix with total columns C):
 // RowIndex  =  5/C
 // ColIndex  =  5%C
+
+// Remember: DIVIDE BY COLUMNS (not Rows)
+// Also,  / is for Row, % is to get Column
 
 public class SearchIn2DMatrix {
 

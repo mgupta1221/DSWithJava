@@ -17,8 +17,13 @@ public class UniquePaths {
 
     public static int uniquePaths(int m, int n) {
 
-        // Solved using recursion
+        // Solved using recursion -- Aapproach 1
         // return uniquePaths_recursion(m, n, 0, 0, 0);
+
+        // Solved using recursion -- Approach 2
+        // int[][] directions = { { 0, 1 }, { 1, 0 } };
+        // String[] dirNames = { "r", "d" };
+        // return uniquePaths2(m - 1, n - 1, 0, 0, directions, dirNames);
 
         // Solved using DP (TOP Down)
         return uniquePaths_DP(m, n, 0, 0, 0);
@@ -37,6 +42,28 @@ public class UniquePaths {
                     uniquePaths_recursion(m, n, currentI, currentJ + 1, totalPaths + 1);
 
         return totalPaths;
+
+    }
+
+    public static int uniquePaths2(int m, int n, int r, int c, int[][] directions, String[] dirNames) {
+
+        if (r == m && c == n) {
+            return 1;
+        }
+
+        int count = 0;
+        for (int i = 0; i < dirNames.length; i++) {
+
+            int r1 = r + directions[i][0]; // Notice we have to create new variables here and pass it to the recursive
+                                           // function
+            int c1 = c + directions[i][1];
+
+            if (r >= 0 && c >= 0 && r <= m && c <= n) {
+                count += uniquePaths2(m, n, r1, c1, directions, dirNames);
+            }
+        }
+
+        return count;
 
     }
 

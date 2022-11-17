@@ -8,14 +8,17 @@ public class MajorityElement_I {
     // Apprch 1: Using HashMap, Store the count for each element. Space Complexity:
     // O(N)
 
-    // Apprch 2: From the problem, we can say majority element's count is more than
-    // N/2.
+    // Approach 2: Moore's algo: From the problem, we can say majority element's
+    // count is more than N/2.
+
     // So when we traverse through the array we try to keep track of the count of
     // elements and which element we are tracking.
 
     // Initialize 2 variables:
     // Count – for tracking the count of element
     // Element – for which element we are counting
+
+    // Idea is Majority element will survive till the end even if we do count--
 
     // Explanation:
     // https://takeuforward.org/data-structure/find-the-majority-element-that-occurs-more-than-n-2-times/
@@ -27,6 +30,7 @@ public class MajorityElement_I {
         for (int n : nums) {
             if (count == 0) {
                 currentNum = n;
+                count++;
             }
             if (currentNum == n) {
                 count++;

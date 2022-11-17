@@ -22,12 +22,11 @@ public class ReversePairs {
 
     public static int mergeSort(int[] nums, int start, int end) {
 
-        int cnt = 0;
         if (start < end) {
             int mid = (start + end) / 2;
             int inv = mergeSort(nums, start, mid); // notice how we are adding inv and sending back to calling function
             inv += mergeSort(nums, mid + 1, end);
-            inv += cnt += merge(nums, start, mid, end);
+            inv += merge(nums, start, mid, end);
             return inv;
         } else {
             return 0;
@@ -47,6 +46,16 @@ public class ReversePairs {
             cnt += j - (mid + 1);// this will be the count becuase j was initally set mid+1 (getting actual
                                  // fcounts)
         }
+
+        // Below can be a simpler way to write abbove logic code with 2 nested loops
+        // int cnt=0;
+        // for (int k1 = start; k1 <= mid; k1++) {
+        // for (int k2 = mid + 1; k2 <= end; k2++) {
+        // if (nums[k1] > 2 * nums[k2]) {
+        // cnt++;
+        // }
+        // }
+        // }
 
         // Merge operation begins as in merge sort
         int i = start;

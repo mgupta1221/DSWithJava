@@ -1,6 +1,8 @@
  O(1) < O(logn) < O(n) < O(nlogn) holds true.
 
 1. Use case for "Floyd Cycle detection algorithm (Slow-Fast pointer)" - Finding Duplicate element - Day 2
+Cycle detection will only work when there are numbers from 1-N....For random nujmbers it will
+not work becuase we are using indexes from 1-N
 
 2. Use case for Merge Sort- (Questions with conditions like (i<j) and (num[i]> nums[j])
  i) Count inversions in an Array- Day 2

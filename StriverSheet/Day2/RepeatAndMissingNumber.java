@@ -9,8 +9,10 @@ package StriverSheet.Day2;
 
 // Approach:
 
+// Same logic for this question:
+// All Repeating Except Two | Two Unique Rest Twice | Bit Manipulation Interview Questions
 // For logic:
-// Pepcoding - All Repeating Except Two | Two Unique Rest Twice | Bit Manipulation Interview Questions
+// Pepcoding - 
 // https://www.youtube.com/watch?v=pnx5JA9LNM4&list=PL-Jc9J83PIiE-181crLG1xSIWhTGKFiMY&index=48
 
 // For actual question:
@@ -45,7 +47,7 @@ public class RepeatAndMissingNumber {
         }
         // Notice we have to do XOR with 1...N too.
         for (int i = 1; i <= nums.length; i++) {
-            if ((i & rmsb) == 0) {
+            if ((i & rmsb) == 0) { // remember this inner paranthesis else this line will give error
                 x = x ^ i;
             } else {
                 y = y ^ i;

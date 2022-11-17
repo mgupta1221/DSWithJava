@@ -11,6 +11,9 @@ package StriverSheet.Day2;
 // Step 3: Move both slow and fast pointer with 1 (same speed) till you find a common value - Use 'while' loop here
 // Common value found is duplicate element
 
+// Explanation why this approach works: https://www.youtube.com/watch?v=-YiQZi3mLq0
+// FindDuplicateInArray-Explanation.png
+
 public class FindDuplicateInArray {
 
     public static int findDuplicate(int[] nums) {
@@ -28,7 +31,7 @@ public class FindDuplicateInArray {
         while (slow != fast) { // Notice here we have to while loop instead of do-while
             slow = nums[slow];
             fast = nums[fast];
-        }        ;
+        }
         return slow;
     }
 
