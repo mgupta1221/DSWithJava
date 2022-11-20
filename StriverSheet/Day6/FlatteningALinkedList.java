@@ -19,8 +19,8 @@ public class FlatteningALinkedList {
         if (head == null || head.next == null) {
             return head;
         }
-        head.next = flatten(head.next);
-        head = mergeSortedLinkedLists(head, head.next);
+        head.next = flatten(head.next); // this line is important how recursive call is assigned back to head.next
+        head = mergeSortedLinkedLists(head, head.next); // and than merged result is sent back to head
         return head;
     }
 
@@ -51,12 +51,39 @@ public class FlatteningALinkedList {
 
     public static void main(String[] args) {
 
-        int[] nums1 = { 1, 2, 5, 5, 2, 1 };
-        NodeF head = GetLinkedList(nums1);
+        // Preparing data -- starts
+        int[] nums = { 5, 10, 19, 28 };
+
+        NodeF head = GetLinkedList(nums);
+
+        // Getting Node 19 to assign bottom list to it
+
+        NodeF itrNode1 = head;
+        while (itrNode1.val != 19) {
+            itrNode1 = itrNode1.next;
+        }
+        int[] nums1 = { 22, 50 };
+        NodeF bottomHead1 = GetBottomLinkedList(nums1);
+
+        // Getting Node 28 to assign bottom list to it
+
+        NodeF itrNode2 = head;
+        while (itrNode2.val != 28) {
+            itrNode2 = itrNode2.next;
+        }
+
+        int[] nums2 = { 35, 40, 45 };
+        NodeF bottomHead2 = GetBottomLinkedList(nums2);
+
+        itrNode1.bottom = bottomHead1;
+        itrNode2.bottom = bottomHead2;
+
+        // Preparing data -- ends
 
         NodeF result = flatten(head);
 
-        System.out.println(result.val);
+        PrintLinkedList(result);
+
     }
 
     // Helper Functions
@@ -72,10 +99,22 @@ public class FlatteningALinkedList {
         return head;
     }
 
+    public static NodeF GetBottomLinkedList(int[] nums) {
+        NodeF head = new NodeF(nums[0]);
+
+        NodeF tempHead = head;
+        for (int i = 1; i < nums.length; i++) {
+            NodeF node = new NodeF(nums[i]);
+            tempHead.bottom = node;
+            tempHead = node;
+        }
+        return head;
+    }
+
     public static void PrintLinkedList(NodeF head) {
         while (head != null) {
             System.out.print(head.val + " -> ");
-            head = head.next;
+            head = head.bottom;
         }
         System.out.println();
     }

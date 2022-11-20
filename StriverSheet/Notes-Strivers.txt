@@ -16,6 +16,10 @@ Note: 2 pointers appraoch always need Sorting
 
 4.  Day 4 questions on array uses various important approaches like: 2 pointers, Sliding Window
 
+5. For Linked list, try to use dummyNode logic, this handles many use cases:
+dummyNode= new Node(-1);
+dummyNode.next= head;
+
 5. In DP, there are following two different ways to store the values so that these values can be reused: 
 i)  Memoization (Top Down) 
 ii) Tabulation (Bottom Up)

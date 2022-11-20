@@ -8,7 +8,7 @@ package StriverSheet.Day6;
 
 // Approach 2 (Optimized):
 // Finding cycle approach - Iterate theough each LL in parrallel and when one LL ends,
-// move to the head of the other LL and keep iterating till the common node is found.
+// attach its end to the head of the other LL and keep iterating till the common node is found.
 
 public class IntersectionOf2LL {
     public static ListNode getIntersectionNode_approach2(ListNode head1, ListNode head2) {

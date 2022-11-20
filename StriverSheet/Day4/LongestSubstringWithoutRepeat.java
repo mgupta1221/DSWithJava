@@ -13,33 +13,45 @@ public class LongestSubstringWithoutRepeat {
     // Sliding Window
     // Traverse the string characters and maintain 2 variables: i and j
     // starting from 0. As we traverse ,we will keep storing characters in
-    // hashSet(and keep increasing j as we move). If a repeated element appears, we
-    // will remove all elements till duplicacy is removed and keep increasing 'i' by
-    // 1 at each removal (sliding window). We will maintain max length with unique
-    // characters at each iteration using: (j-i+1)
+    // hashSet(and keep increasing currentIndex as we move in while loop). If a
+    // repeated element appears, we will remove last occured element increasw
+    // 'removal index' by
+    // 1 at each removal (sliding window).
 
-    //// imagine 'abca' - while loop below will work till first 'a' is removed
+    // Answer Hashset ke size() ki max value se nikaalna hai
 
-    public static int lengthOfLongestSubstring(String s) {
-        int i = 0;
-        int j = 0;
-        int len = s.length();
-        int maxLength = Integer.MIN_VALUE;
-        HashSet<Character> hSet = new HashSet<>();
+    // imagine 'abca' - jab second wala 'a' aayega to first 'a' ko hashset se
+    // remove karna hai 'indexTobeRemoved pointer' use karke aur 'indexTobeRemoved
+    // pointer' increase karna hai taaki wo 'b' ko point karega
 
-        while (j < len) {
-            char currentChar = s.charAt(j);
-            if (hSet.contains(currentChar)) {
-                while (i < j && hSet.contains(currentChar)) {
-                    hSet.remove(s.charAt(i)); /// Notice how are removing element from left one by one using HashSet
-                    i++;
-                }
-            }
-            hSet.add(currentChar);
-            maxLength = Math.max(maxLength, j - i + 1);
-            j++;
+    public static int lengthOfLongestSubstring(String str) {
+        if (str.length() == 0) {
+            return 0;
         }
+        HashSet<Character> hSet = new HashSet<>();
+        // Maintain 2 pointers - One for currentIndex and one for item to be removed
+        // when
+        // duplicate
+        int currentIndex = 0;
+        int indexTobeRemoved = 0;
+        int maxLength = 0;
 
+        while (currentIndex < str.length()) {
+            char currentChar = str.charAt(currentIndex);
+            // agar repeat element aata hai to pehle jo occur hua use remove karna
+            // hai HashSet se.. aur pointer(removal Pointer) increase karna hai uske baad..
+            // Important: currentIndex increase nahi hoga in case duplicate element aata
+            // hai because hume new element ko consider karna hai next iteration mai
+            if (hSet.contains(currentChar)) {
+                maxLength = Math.max(maxLength, hSet.size());
+                hSet.remove(str.charAt(indexTobeRemoved));
+                indexTobeRemoved++;// increasing the pointer to remove if the next element reappears
+            } else {
+                hSet.add(currentChar); // if no duplicate keep adding to HashSet
+                currentIndex++; /// only increase if NO duplicate element occurs
+            }
+        }
+        maxLength = Math.max(maxLength, hSet.size());
         return maxLength;
 
     }
