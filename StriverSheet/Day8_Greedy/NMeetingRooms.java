@@ -21,7 +21,6 @@ import java.util.Arrays;
 // the positions and check which meeting can be performed.
 // Overall : O(n) +O(n log n) + O(n) ~O(n log n)
 
-
 public class NMeetingRooms {
 
     public static int canAttendMeetings(int start[], int end[], int n) {
@@ -36,7 +35,7 @@ public class NMeetingRooms {
         Arrays.sort(pairs);
         Pair prev = pairs[0];
 
-        int count = 1;
+        int count = 1; // Notice we are initializing the count with 1 and NOT 0
 
         for (int i = 1; i < pairs.length; i++) {
             if (prev.end < pairs[i].start) {

@@ -7,8 +7,9 @@ import java.util.Map;
 // Problem: https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/
 // Approach : https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/CoinChangingMinimumCoin.java
 
-// Approach 1: Top down Dynamic programming without 2D array
-// Approach 2: Bottom up Dynamic programming without 2D array
+// Approach 1: Top down Dynamic programming using Hashmap for DP values
+// Approach 2: Top down Dynamic programming using 2D array fr DP values
+// Approach 2: Plain recursive approach but with exponential time complexity and space complexity is way greater than O(n).
 public class MinCoinsToMakeTargetSum {
 
     public static int minCoins_approach1(int[] coins, int n, int target) {
@@ -22,6 +23,7 @@ public class MinCoinsToMakeTargetSum {
 
         if (target == 0)
             return 0;
+
         if (dpMap.containsKey(target)) {
             return dpMap.get(target);
         }
@@ -29,74 +31,87 @@ public class MinCoinsToMakeTargetSum {
         int result = Integer.MAX_VALUE;
 
         for (int i = 0; i < coins.length; i++) {
-            if (target - coins[i] < 0) {
-                continue;
-            }
-            int tempResult = minCoins_approach1_helper(coins, n, target - coins[i], dpMap);
-            if (tempResult < result) {
-                result = tempResult;
+            if (target - coins[i] >= 0) {
+                int tempResult = minCoins_approach1_helper(coins, n, target - coins[i], dpMap);
+
+                // Note that "tempResult" is checked for MaxValue, not "result" and +1 is done
+                // to add 1 counter for that coin which is considered in this loop
+                if (tempResult != Integer.MAX_VALUE && tempResult + 1 < result) {
+                    result = tempResult + 1;
+                }
             }
         }
         // if min is MAX_VAL dont change it. Just result it as is. Otherwise add 1 to
         // it.
-        result = (result == Integer.MAX_VALUE ? result : result + 1);
+
         dpMap.put(target, result);
         return result;
 
     }
 
-    public static int minCoins_approach2(int[] coins, int n, int target) {
+    public static int minCoins_approach2(int[] coins, int n, int target, int[][] dp) {
 
-        int[][] dp = new int[coins.length + 1][target + 1];
+        if (target == 0) {
+            return 0;
+        }
 
-        for (int i = 1; i < dp.length - 1; i++) {
-            for (int j = 1; j <= target; j++) {
+        if (dp[n][target] != 0) {
+            return dp[n][target];
+        }
 
-                if (j >= coins[i]) {
-                    dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - coins[i]] + 1);
-                } else {
-                    dp[i][j] = dp[i - 1][j];
+        int minCoins = Integer.MAX_VALUE;
+        for (int i = 0; i < coins.length; i++) {
+            if (target - coins[i] >= 0) {
+                int count = minCoins_approach2(coins, n, target - coins[i], dp);
+                if (count != Integer.MAX_VALUE && count + 1 < minCoins) {
+                    minCoins = count + 1;
                 }
             }
-
         }
-        return dp[coins.length][target];
 
-        // int[][] dp = new int[coins.length][target + 1];
+        dp[n][target] = minCoins;
+        return dp[n][target];
+    }
 
-        // for (int i = 1; i < dp.length; i++) {
+    // Appraoch 3:
+    public static int minCoins_approach3(int[] coins, int n, int target) {
 
-        // for (int j = 1; j <= target; j++) {
-        // if (i == 0)
-        // dp[i][j] = 0;
+        // If V == 0, then 0 coins required.
+        if (target == 0)
+            return 0;
 
-        // if (j >= coins[i]) {
-        // dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - coins[i]] + 1);
-        // } else {
-        // dp[i][j] = dp[i - 1][j];
-        // }
-        // }
-        // }
+        int result = Integer.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+            if (target - coins[i] >= 0) {
+                int tempResult = minCoins_approach3(coins, n, target - coins[i]);
 
-        // return dp[coins.length - 1][target];
-
+                if (tempResult != Integer.MAX_VALUE && tempResult + 1 < result) {
+                    result = tempResult + 1;
+                }
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
-        // int coins[] = { 9, 6, 5, 1 };
-        // int m = coins.length;
-        // int V = 11;
-
-        int coins[] = { 9, 2, 11, 5, 14, 17, 8, 18 };
+        int coins[] = { 9, 6, 5, 1 };
         int m = coins.length;
-        int V = 39;
+        int target = 11;
+
+        // int coins[] = { 9, 2, 11, 5, 14, 17, 8, 18 };
+        // int m = coins.length;
+        // int V = 39;
 
         // Approach 1:
-        System.out.println("Minimum coins required is " + minCoins_approach1(coins,
-                m, V));
+        // System.out.println("Minimum coins required is " + minCoins_approach1(coins,
+        // m, target));
 
-        // Appaorch 2:
-        // System.out.println("Minimum coins required is " + minCoins_approach2(coins,
-        // m, V));
+        // Approach 2:
+        int[][] dp = new int[coins.length][target + 1];
+        System.out.println("Minimum coins required is " + minCoins_approach2(coins, coins.length - 1, target, dp));
+
+        // Appaorch 3:
+        // System.out.println("Minimum coins required is " + minCoins_approach3(coins,
+        // m, target));
     }
 }

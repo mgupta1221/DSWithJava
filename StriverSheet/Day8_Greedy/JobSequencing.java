@@ -32,13 +32,18 @@ public class JobSequencing {
         // loop through jobs and start filling from backwards. We are trying to complete
         // jobs at the last interval as much as possible hence looping reverse.
         // Idea ye hai ki ek job apni given deadine se pehle kabhi bhi khatam kiya ja
-        // sakta hai..hum koshish ye kar rhe hain ki harjob apni deadline par hi
+        // sakta hai..hum koshish ye kar rhe hain ki har job apni deadline par hi
         // complete ho taaki baaki jobs usse pehle khatam kiye jaa sakein aur profit max
         // ho sake
-        // agar result[idx] fill nahi hai iska matlab us deadline par koi job finish
+        // agar result[j] fill nahi hai iska matlab us deadline par koi job finish
         // nahi kiya gaya hai
         for (int i = 0; i < arr.length; i++) {
-            for (int j = arr[i].deadline; j >= 1; j--) {
+            for (int j = arr[i].deadline; j >= 1; j--) { // ye loop isliye hai kyunki ye job apni deadline se pehle
+                                                         // kabhi bhi kiya ja sakta hai E.g. say deadline is 3 for a Job
+                                                         // than it can be completed in 3,2 or 1. but hum descending
+                                                         // loop isliye chala rhe hain kyunki jitna last mai job mai job
+                                                         // ko khaam karenge..utna profit max hoga..
+                                                         // Notice loop will go till 1, not 0
                 if (result[j] == false) {
                     result[j] = true;
                     count++;

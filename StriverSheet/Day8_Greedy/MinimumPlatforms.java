@@ -9,12 +9,12 @@ import java.util.Arrays;
 
 // Sort both arrival and departure times. Idea is if all trains come than
 // what is the maximum number of platforms required so that overlapping trains at any point
-// can stay on station at the same time. 
-// Now after sorting, if in the loop keep comparing arrival and departure time . 
+// can stay on station at the same time.
+// Now after sorting, if in the loop keep comparing arrival and departure time. 
 // If arrival time is appearing before departure at any point than increase count++
 // becuase we need 1 new  platform for the new train, vice-versa if departure is before arrival
 // at any point, than reduce the count that means we can free 1 platform as train has
-// left from station. keep calcualting maxCOunt. At the end of while loop 
+// left from station. keep calcualting maxCount. At the end of while loop 
 // maxCOunt will be the answer.
 
 public class MinimumPlatforms {
@@ -35,7 +35,6 @@ public class MinimumPlatforms {
             } else if (arr[i] > dep[j]) {
                 count--;
                 j++;
-
             }
 
         }
