@@ -1,4 +1,5 @@
 package StriverSheet.Day6;
+
 import StriverSheet.Day6.IntersectionOf2LL;
 // LC: 25 https://leetcode.com/problems/reverse-nodes-in-k-group/
 
@@ -9,6 +10,8 @@ import StriverSheet.Day6.IntersectionOf2LL;
 public class ReverseNodesInKGroups {
     public static ListNode reverseKGroup_recur(ListNode head, int k, int len) {
 
+        // this below condition is very important to attach last remaining nodes(<k) to
+        // the last group
         if (len < k) {
             return head;
         }
