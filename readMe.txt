@@ -12,6 +12,9 @@ Udit Agarwal (youtube) for LLD
 Head First Book for Object Oriented Analysis and patterns
 
 
+Patterns problems for reveision:
+https://leetcode.com/discuss/study-guide/1476329/useful-posts-from-leetcode-discussions-for-personal-use-and-concept-revision/1468977
+
 For LLD 
 ==============================================
 
