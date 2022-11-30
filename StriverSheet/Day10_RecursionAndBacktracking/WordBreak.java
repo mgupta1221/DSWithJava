@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
+// Problem: https://leetcode.com/problems/word-break/
 public class WordBreak {
 
     public static Boolean wordBreak(String str, List<String> wordDict) {
@@ -27,9 +28,10 @@ public class WordBreak {
         if (dp.containsKey(str))
             return dp.get(str);
 
+        // To remember to start the loop from 1 , not 0
         for (int i = 1; i <= len; i++) { // abcde
 
-            String subStr = str.substring(0, i);// ab
+            String subStr = str.substring(0, i);// ab --- i will be excluded
             if (!wordDict.contains(subStr)) {
                 continue;
             } else {

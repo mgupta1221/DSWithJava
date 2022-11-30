@@ -274,7 +274,44 @@ ArrayList<String> values = new ArrayList<String>(alphaValues.subList(1, alphaVal
 
 //Whenever removal from ArrayList is required, always iterate the arraylist from right. This is becuase on removal, index
 //of all elements to the right reduces by 1 so immediate next element is missed 
+================================================================================================
+Generate Random nummbers
+1. Getting random number between 0 to n in JAVA;
 
+Random random = new Random();
+ var index = random.nextInt(len);        <-- this till give random numbers between 0 to len
+
+
+
+ 2. Getting random number from an array;
+
+int[] nums= {2,4,5,3,11}
+Random random = new Random();
+var index = random.nextInt(nums.length);   
+
+int randomValue= nums[index];         <-- random value generated
+
+
+3. Getting random number from a HashSet;
+ HashSet<Integer> set = new HashSet<Integer>();
+ set.add(1);
+ set.add(2);
+
+ Integer arr[] = new Integer[set.size()];  
+ set.toArray(arr);                            <- First Convert HashSet to Array(Simpler way)
+
+ ,or,
+
+ Integer[] arr = set.toArray(new Integer[set.size()]);   // 'int' wont work, only 'Integer' works with HashSet
+
+Random random = new Random();
+var index = random.nextInt(arr.length);   
+
+int randomValue= nums[index];         <-- random value generated
+
+
+// Approach used in following question:
+https://leetcode.com/problems/insert-delete-getrandom-o1/submissions/
 
 ================================================================================================
 Recursion

@@ -1,7 +1,7 @@
 package StriverSheet.Day11_BinarySearch;
 
 public class MedianOf2SortedArrays {
-
+    // Problem: https://leetcode.com/problems/median-of-two-sorted-arrays/
     // Approach : https://www.youtube.com/watch?v=yD7wV8SyPrc
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
 

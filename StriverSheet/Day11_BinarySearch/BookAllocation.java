@@ -20,7 +20,7 @@ public class BookAllocation {
     // Now We will try to allocate pages to students such that no student shoud have
     // more than 'mid' number of pages allocated..Why? becuase we want 'mid' to be
     // our answer. This decision whether such division is possible in 'B' students
-    // or not is done in 'isPossible' function.
+    // or not is done in 'isPossible' function.`
 
     // aur idea ye hai ki ek bande ko 'mid' se jayada pages ki book allocate nahi
     // hogi. 'isPossible' function isi ke base par likhna hai jo ye decide karke
@@ -29,36 +29,6 @@ public class BookAllocation {
     // of pages in books allocated to each of them. Agar allocate ho sakti hain to
     // hum aur further minimum value dhudenge as asked in the quesiton by setting
     // high=mid-1, else move to bigger half of the array
-
-    // helper function
-    public static boolean isPossible(int[] arr, int barrier, int B) {
-
-        int allocatedStudent = 1; // start this with 1 becuase a least 1 element will always be 1
-        int pagesSum = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-
-            // this below condition is important for test cases.. kabhi bhi elements 'mid'
-            // se
-            // badhe nahi hona chhaiye..kyunki fir allocation possible hi nahi hoga
-
-            if (arr[i] > barrier)
-                return false;
-
-            if (pagesSum + arr[i] > barrier) {
-                allocatedStudent += 1;
-                pagesSum = arr[i];
-            } else {
-                pagesSum += arr[i];
-            }
-        }
-        if (allocatedStudent < B) {
-            return true;
-        } else {
-            return false;
-        }
-
-    }
 
     // main function
     public static int books(int[] pages, int B) {
@@ -79,7 +49,36 @@ public class BookAllocation {
                 low = mid + 1;
             }
         }
-        return low;// Important: always return low here
+        return low;// Important: always return low here, not high
+
+    }
+
+    // helper function
+    public static boolean isPossible(int[] arr, int barrier, int B) {
+
+        int allocatedStudent = 1; // start this with 1 becuase at least 1 element will always be 1
+        int pagesSum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            // this below condition is important for test cases.. kabhi bhi elements 'mid'
+            // se badhe nahi hona chhaiye..kyunki fir allocation possible hi nahi hoga
+
+            if (arr[i] > barrier) // IMPORTANT this is forgetable condition so do remember to put this
+                return false;
+
+            if (pagesSum + arr[i] > barrier) {
+                allocatedStudent += 1;
+                pagesSum = arr[i];
+            } else {
+                pagesSum += arr[i];
+            }
+        }
+        if (allocatedStudent < B) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
 

@@ -23,7 +23,7 @@ public class SudokuSolver {
                         }
                     }
                     return false; // this is important else it will go into infinite loop - control will only
-                                  // reach here position[i][j] cannot be filled with any number between 1-9
+                                  // reach here  if position[i][j] cannot be filled with any number between 1-9
                 }
             }
         }

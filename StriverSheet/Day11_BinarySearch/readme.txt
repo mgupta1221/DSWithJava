@@ -9,4 +9,4 @@ E.g. In case of Nth Root:
 So we can see if we calculate for 1,2 and than 3 and than corresponding answer also increases.
 TC: log n
 
-2. 
+2. Another clue to use Binary search if given array is sorted.E.g. maximum pages question (But this is not Always)
