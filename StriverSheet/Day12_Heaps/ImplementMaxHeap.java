@@ -22,6 +22,9 @@ package StriverSheet.Day12_Heaps;
 
 // NOTE: MaxHeaps.png in this folder
 
+// TIME COMPLEXITY of ExtarctMin() method which recursively calls MaxHeapify is O(log(n))
+// since each call to Heapify costs O(lg(n)).
+
 class Heap {
     public int[] heap;
     public int size = 0;
@@ -41,7 +44,7 @@ class Heap {
         heap[b] = temp;
     }
 
-    // Insert new node in maxHeap
+    // Function to Insert new node in maxHeap
     public void insert(int val) {
         heap[size] = val;
         int current = size;
@@ -55,7 +58,7 @@ class Heap {
 
     }
 
-    // Removing Max value(root node of Max heap) and heapify
+    // Function to Remove Max value(root node of Max heap) and heapify
     public void extractMax() {
         int lastNode = heap[size - 1];
         heap[0] = lastNode;
@@ -63,6 +66,7 @@ class Heap {
         maxHeapify(0);
     }
 
+    // recursive helper function to remove root node
     public void maxHeapify(int pos) {
 
         // If leaf node than return, see MaxHeaps.png in this folder to see why this
