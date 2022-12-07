@@ -6,7 +6,7 @@ public class MaxSumCombination {
     // Problem: https://www.geeksforgeeks.org/k-maximum-sum-combinations-two-arrays/
 
     // BruteForce approach: Create a Max heap (using Priority Queue, notice how we
-    // have created max heap by using Collections.reverseorder()) and than remove()
+    // have created MaxHeap by using Collections.reverseOrder() and than remove()
     // element to get max sum values
     // Time Complexity: O(N2)
     // Auxiliary Space : O(N2)

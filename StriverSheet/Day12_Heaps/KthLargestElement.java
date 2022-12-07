@@ -40,6 +40,7 @@ class Heap2 {
     public void insert(int[] heap, int val) {
         heap[size] = val;
         int current = size;
+        // compare element with its parent and swap if parent is smaller
         while (heap[(current - 1) / 2] < heap[current]) {
             int temp = heap[(current - 1) / 2];
             heap[(current - 1) / 2] = heap[current];
