@@ -51,7 +51,7 @@ class QueueCustom {
     }
 }
 
-public class QueueUsingArray {
+public class ImplementQueueUsingArray {
 
     public static void main(String[] args) {
         // Create a queue of capacity 4

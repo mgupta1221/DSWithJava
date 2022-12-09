@@ -1,12 +1,11 @@
-package GettingStartedBasics.Stack;
+package StriverSheet.Day13_Stacks;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
 
-// Leetcode 496 : https://leetcode.com/problems/next-greater-element-i/
+//Problem: LC 496  https://leetcode.com/problems/next-greater-element-i/
 
-//Solution video:
+// Soluton :
 //https://www.youtube.com/watch?v=rSf9vPtKcmI&list=PL-Jc9J83PIiEyUGT3S8zPdTMYojwZPLUM&index=7
 
 // Approach:  Assign the last element's answer as -1 and push it to the stack
@@ -23,25 +22,23 @@ import java.util.Stack;
 // 2. Fir answer banaega
 // 3. fir push karega
 
-public class NextGreaterElement {
-    public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        // This Hashmap will store <Element, NextGreaterValue>
-        // This will help in fetching NextGreater Value for Nums1 array quickly in O(1)
-        // time
-        Map<Integer, Integer> map = new HashMap<>();
-        Stack<Integer> st = new Stack<>();
+// The main intuition behind popping them is that these elements can never be the NGE 
+// for any element present at the left of A[i] because A[i] is greater than these elements.
 
-        st.push(nums2[nums2.length - 1]); // this is important step, push the last element to the stack
-        map.put(nums2[nums2.length - 1], -1); // last element answer will be -1
+public class NextGreaterElement_I {
+
+    public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        // This Hashmap will store for each element <Element, NextGreaterValue>
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        Stack<Integer> st = new Stack<>();
+        map.put(nums2[nums2.length - 1], -1);
+        st.push(nums2[nums2.length - 1]);
 
         for (int i = nums2.length - 2; i >= 0; i--) {
-            // remove elements from stack till elements on stack are smaller than the
-            // current element
-            // Basically pop all smaller elements
             while (!st.isEmpty() && nums2[i] >= st.peek()) {
                 st.pop();
             }
-
             if (st.isEmpty()) {
                 map.put(nums2[i], -1); // if stack gets empty, no greater element found
             } else {
@@ -49,12 +46,13 @@ public class NextGreaterElement {
             }
             st.push(nums2[i]);
         }
-        int[] tempResultArr = new int[nums1.length];
+
+        int[] result = new int[nums1.length];
         for (int i = 0; i < nums1.length; i++) {
-            // System.out.print(map.get(nums1[i]) + " ");
-            tempResultArr[i] = map.get(nums1[i]);
+            result[i] = map.get(nums1[i]);
         }
-        return tempResultArr;
+        return result;
+
     }
 
     public static void main(String[] args) {
