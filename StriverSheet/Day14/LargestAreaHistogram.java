@@ -1,7 +1,5 @@
-package GettingStartedBasics.Stack;
+package StriverSheet.Day14;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
 
 // Leetcode 84 : https://leetcode.com/problems/largest-rectangle-in-histogram/
@@ -14,7 +12,7 @@ import java.util.Stack;
 // Appraoch is same as NextGreaterElement problem
 
 public class LargestAreaHistogram {
-    public static int LargestAreaHistogramSolve(int[] heights) {
+    public static int largestRectangleArea(int[] heights) {
 
         // Part 1 : Finding width for each index TOWARDS RIGHT..jab tak apne se chota
         // element na mil jaye tab tak ka distance is the width on the
@@ -88,8 +86,8 @@ public class LargestAreaHistogram {
     }
 
     public static void main(String[] args) {
-        int[] heights = {1,1 };
-        int result = LargestAreaHistogramSolve(heights);
+        int[] heights = { 1, 1 };
+        int result = largestRectangleArea(heights);
         System.out.print("Largest area: " + result);
 
     }

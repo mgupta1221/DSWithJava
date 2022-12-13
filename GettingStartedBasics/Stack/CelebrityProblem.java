@@ -16,7 +16,7 @@ import java.util.Stack;
 // Aproach uses Elimination technique:
 // First we put all elements in stack and pick top 2 elements from stack and check if one knows other.
 // If first knows second than second can be a celebrity and vice versa. We do this till stack has 2 elemnts
-//At last, check if the last element in stack suffices the celebrity condition with other elemnts.
+// At last, check if the last element in stack suffices the celebrity condition with other elements.
 
 public class CelebrityProblem {
 
@@ -62,8 +62,7 @@ public class CelebrityProblem {
 
         // Last step: Check if the last person is celebrity or not
         int c = st.peek();
-        // If any person doesn't
-        // know 'c' than return -1
+        // If any person doesn't know 'c' than return -1
 
         // NOTICE the condition is written to return -1 and NOT 'c'.
         // If condition does not suffice than return 'c' at the end.
