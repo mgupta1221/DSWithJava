@@ -23,7 +23,10 @@ public class LongestPallendromeInString {
         int[][] dp = new int[str.length() + 1][str.length() + 1];
         for (int g = 0; g < str.length(); g++) {
             for (int i = 0, j = g; j < str.length(); i++, j++) { // Notice the 2 loops , we have to fill upper triangle
-                                                                 // of 2-D array in a diagnal way..see video
+                                                                 // of 2-D array in a diagnal way..see video...
+                                                                 // pehli baar (0,0) ke liye chalega ...phir g update
+                                                                 // hoga to (0,1) se start hoga..phir (0,2) se start
+                                                                 // hoga...likewise
 
                 // main diagnal of the 2D array will represent 1 charcter hence will be
                 // pallendrome
@@ -63,7 +66,7 @@ public class LongestPallendromeInString {
 
     public static void main(String[] args) {
         String str = "abbccbe";
-       // str = "abba";
+        // str = "abba";
 
         String result = longestPalindrome(str);
         System.out.println(result);
