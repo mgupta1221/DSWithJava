@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class LongestCommonPrefix {
 
-    // Problem: LVC 14  https://leetcode.com/problems/longest-common-prefix/
+    // Problem: LC 14  https://leetcode.com/problems/longest-common-prefix/
 
     // Appproach:
     // 1. Sort the array of strings in alphabetical order.
