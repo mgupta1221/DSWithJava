@@ -5,6 +5,18 @@ for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
     pq.add(item);
 }
 
+Important: HashMap cannot be iterated over index like Strings and Arrays. Get() and put() functins of hashMap work only on key, not on Index
+    Below is the way to iterate through HashMap via keySet.
+
+    Used in 'Valid Anagaram' problem - Approach 3
+   
+    Set<Character> keys = map.keySet();
+    for (Character key : keys) {
+        if (map.get(key) != 0) {
+            return false;
+        }
+    }
+
 
 2. For Descending  order in CompareTo, use:
 public int compareTo(MapItem item) {
