@@ -24,7 +24,8 @@ public class VerticalOrderTraversal {
     // values as list of
     // nodes at that horiznatal distance(HD) from root node
 
-    // Notice we are not using HashMap here but 'TreeMap' becuase TreeMap maintain the
+    // Notice we are not using HashMap here but 'TreeMap' becuase TreeMap maintain
+    // the
     // keys in a sorted manner. Irrespective of the key-insetion order
 
     // Also notice, how to print HashMap/TreeMap's key and values
@@ -45,8 +46,9 @@ public class VerticalOrderTraversal {
         // Printing the filled map to show the output
 
         // notice you can pull 'keys' using keySet
-        for (int key : map.keySet()) {
-            
+
+        Set<Integer> keys = map.keySet();
+        for (int key : keys) {
             // and have to pull valyes using key (not index)
             String value = map.get(key).toString();
             System.out.println(key + " " + value);
@@ -66,8 +68,7 @@ public class VerticalOrderTraversal {
         if (mapAtHD == null) {
             mapAtHD = new ArrayList<>();
             mapAtHD.add(node.val);
-        } 
-        else {
+        } else {
             mapAtHD.add(node.val);
         }
         map.put(hd, mapAtHD);

@@ -9,7 +9,8 @@ int asciValue= (int)'=';
 See 'Valid Anagrams' question.
 
 2)  Very important: HashMap cannot be iterated over index like Strings and Arrays
-    Below is the way to iterate through HashMap via keySet.
+    Below is the way to iterate through HashMap via keySet (for keys) and values(for values). 
+    Notice we are using Set<> and Collection<> respectively
 
     Used in 'Valid Anagaram' problem - Approach 3
    
@@ -19,6 +20,11 @@ See 'Valid Anagrams' question.
             return false;
         }
     }
+
+     Collection<Integer> values = list.values();
+        for (int val : values) {
+            result.add(val);
+     }
 
     3) Convert String to Integer, and Integer to String
 

@@ -6,7 +6,7 @@ import java.util.*;
 // https://www.geeksforgeeks.org/print-nodes-top-view-binary-tree/
 // This is not on LeetCode
 
-//NOTE: Prerequisite Firt understand "Vertical order traversal" and "Top View" of a Binary Tree
+//NOTE: Prerequisite First understand "Vertical order traversal" and "Top View" of a Binary Tree
 
 public class BottomViewOfBinaryTree {
 

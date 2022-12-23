@@ -2,6 +2,9 @@ package StriverSheet.Day16_StringII;
 
 //LC 38: https://leetcode.com/problems/count-and-say/
 
+// Approach 1: Using recursion (Self written)
+// Approach 2: Shorter approach 
+
 public class CountAndSay {
 
     public static String countAndSay(int n) {
@@ -88,9 +91,40 @@ public class CountAndSay {
 
     }
 
+    // Approach 2:
+    public static String countAndSay_approach2(int n) {
+        String s = "1";
+        for (int i = 1; i < n; i++) {
+            s = countIdxhelper_approach2(s);
+        }
+        return s;
+    }
+
+    public static String countIdxhelper_approach2(String s) {
+        StringBuilder sb = new StringBuilder();
+        char c = s.charAt(0);
+        int count = 1;
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) == c) {
+                count++;
+            } else {
+                sb.append(count);
+                sb.append(c);
+                c = s.charAt(i);
+                count = 1;
+            }
+        }
+        sb.append(count);
+        sb.append(c);
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
 
-        String result = countAndSay(11);
+        // String result = countAndSay(11); // Approach 1: Self written with recursion
+        // System.out.println(result);
+
+        String result = countAndSay_approach2(11); // Approach 2: Shorter
         System.out.println(result);
 
     }
