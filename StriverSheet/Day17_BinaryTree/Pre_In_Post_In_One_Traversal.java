@@ -44,7 +44,7 @@ class NodeWithOrder {
     }
 }
 
-public class Pre_In_Post_inoNETraversal {
+public class Pre_In_Post_In_One_Traversal {
 
     public static void allTraversalInOneMethod(TreeNode root,
             List<Integer> pre,

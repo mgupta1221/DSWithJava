@@ -2,7 +2,7 @@ package StriverSheet.Day18;
 
 public class DepthOfTree {
 
-    // Problem: https://leetcode.com/problems/maximum-depth-of-binary-tree/
+    // Problem: LC 104 https://leetcode.com/problems/maximum-depth-of-binary-tree/
     
     // Solution:
     // https://takeuforward.org/data-structure/maximum-depth-of-a-binary-tree/

@@ -6,8 +6,11 @@ public class Diameter_Approach1 {
     // https://www.youtube.com/watch?v=S0Bwgtn32uI&list=PL-Jc9J83PIiHYxUk8dSu2_G7MR1PaGXN4&index=45
 
     // Approach 1
-    // Easier solution but too many recurisve calls
-    // This approach uses height function as well
+    // Easier solution but too many recursive calls
+    // This approach uses height function as well which is also a recursive call. To
+    // avoid those recursive calls for height we return both 'dia' and 'height' via
+    // a class object. See DiamterOfTree2.java approach. Notice there are no
+    // recursive calls in that implementation.
     private static int DiameterofBinaryTree(Node node) {
         if (node == null) {
             return 0;
@@ -19,7 +22,9 @@ public class Diameter_Approach1 {
         // maxDistance between 2 nodes on right hand side
         int hd = DiameterofBinaryTree(node.right);
 
-        // Notice we are using Height func here
+        // Notice we are using Height func here- this means:
+        // max of (maxHeight of leftChild, MaxHeight of right Child) + 2 (for distance
+        // from self till left and right child)
         int f = HeightOfTree(node.left) + HeightOfTree(node.right) + 2;
 
         // taking max of 3 values

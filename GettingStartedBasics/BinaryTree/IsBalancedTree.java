@@ -54,7 +54,7 @@ public class IsBalancedTree {
         Pair rightTreePair = IsBalancedUsingPairObject(root.right);
 
         Pair myResult = new Pair();
-        int pairHeight = Math.abs(leftTreePair.height - rightTreePair.height) + 1;
+        int pairHeight = 1 + Math.max(leftTreePair.height, rightTreePair.height);
         boolean pairIsBalanced = Math.abs(leftTreePair.height - rightTreePair.height) <= 1
                 && leftTreePair.isBalanced
                 && rightTreePair.isBalanced;
