@@ -13,28 +13,33 @@ public class CreateTreeFrom_In_And_PreOrder {
 
     // Approach:
     // IMPORTANT : [REFER the image CreateTreeFromGivenTraversals.png]
-    // Step 1: We create root from last node of postOrder and need to define its
+    // Step 1: We create root from first node of preOrder and need to define its
     // Left and Right node
     // Step 2: For left - We first find the index of root node in InOrder becuase we
-    // know everything on the left will form the left subtree of the root.
-    // We have to define the new 'InOrder' and 'PostOrder' array for this left node
-    // to be passed to the recursive call as indexes ('start' and 'end' index of
-    // both 'InOrder' and 'PostOrder' for this left node)
+    // already know that everything on the left will form the left subtree of the
+    // root.
+    // We have to define the new 'InOrder' and 'PreOrder' array for this new left
+    // node to be passed to the recursive call as indexes ('start' and 'end' index
+    // of both 'InOrder' and 'PreOrder' for this left node)
 
-    // Step 3: To Define InOrder and Post order array -
-    // For LEFT child
-    // a) For defining InOrder for Left child - it is from
-    // 'StartInOrderIndex' till (rootIndex-1)
-    // b) For defining PostOrder for Left child - it is from
-    // 'StartPostOrderIndex' till (StartPostOrderIndex +
-    // (rootIndex-StartInOrderIndex) - 1 ,
+    // Step 3: To Define InOrder and PreOrder array -
+    // For LEFT child:
+    // a) For defining InOrder array indexes for Left child - it is from
+    // 'StartInOrderIndex' till (rootIndex-1) -
+    // Note : This step is same for PreOrder and PostOrder solution both
 
-    // NOW for RIGHT Child
+    // b) For defining PreOrder indexes for Left child (For '9' in the given
+    // example) - it is from
+    // 'StartPreOrderIndex+1' till (all elements to the left of rootIndex in
+    // InOrder)
+    // i.e. (StartPreOrderIndex + (rootIndex-StartInOrderIndex) ,
+
+    // NOW for RIGHT Child:
     // c) For defining InOrder for Right child - it is from '(rootIndex + 1)' till
-    // (EndInOrderIndex), and
+    // (EndInOrderIndex),
     // b) For defining PostOrder for Right child - it is from
-    // 'StartPostOrderIndex + (rootIndex-StartInOrderIndex)' till
-    // EndPostOrderIndex - 1 ,
+    // 'StartPreOrderIndex + (rootIndex-StartInOrderIndex) + 1' till
+    // EndPreOrderIndex ,
 
     public static TreeNode buildTree(int[] preorder, int[] inorder) {
         HashMap<Integer, Integer> map = new HashMap<>();

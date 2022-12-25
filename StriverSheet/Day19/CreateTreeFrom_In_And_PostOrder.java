@@ -15,12 +15,12 @@ public class CreateTreeFrom_In_And_PostOrder {
     // Step 1: We create root from last node of postOrder and need to define its
     // Left and Right node
     // Step 2: For left - We first find the index of root node in InOrder becuase we
-    // know everything on the left will form the left subtree of the root.
-    // We have to define the new 'InOrder' and 'PostOrder' array for this left node
-    // to be passed to the recursive call as indexes ('start' and 'end' index of
-    // both 'InOrder' and 'PostOrder' for this left node)
+    // already know that everything on the left will form the left subtree of the
+    // root. We have to define the new 'InOrder' and 'PostOrder' array for this left
+    // node to be passed to the recursive call as indexes ('start' and 'end' index
+    // of both 'InOrder' and 'PostOrder' for this left node)
 
-    // Step 3: To Define InOrder and Post order array -
+    // Step 3: To Define InOrder and PostOrder array -
     // For LEFT child
     // a) For defining InOrder for Left child - it is from
     // 'StartInOrderIndex' till (rootIndex-1)
