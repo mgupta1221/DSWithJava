@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ConvertToMirror",
+            "request": "launch",
+            "mainClass": "StriverSheet.Day19.ConvertToMirror",
+            "projectName": "PepJava_c02ecfb3"
+        },
+        {
+            "type": "java",
             "name": "Launch RottenOrange",
             "request": "launch",
             "mainClass": "StriverSheet.Day14.RottenOrange",

@@ -100,9 +100,9 @@ public class LCA_Of_BinaryTree {
         child2.left = child7;
 
         // TreeNode result = lowestCommonAncestor(root, child5, child3); // Finding for
-        // 25 and 75, Ans:
+        // 25 and 75, Ans: 50
 
-        TreeNode result = lowestCommonAncestor_2(root, child5, child3); // Finding for 25 and 75, Ans: 50
+        TreeNode result = lowestCommonAncestor_2(root, child5, child3); // Finding for 30 and 12, Ans: 25
         System.out.println(result.val);
     }
 
