@@ -3,11 +3,13 @@ package StriverSheet.Day21;
 public class KthSmallest_Element_in_BST {
     // Problem: LC 230 https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 
-    // Appraoch : Use InOrder
+    // Appraoch : Use InOrder traversal
 
     public static int kthSmallest(TreeNode root, int k) {
-        int result[] = new int[1];
-        int counter[] = new int[1];
+        // We are keeping arrays below (and not primitive variables) as we want the
+        // values to persist in recursive calls
+        int result[] = new int[1]; // to store the result
+        int counter[] = new int[1]; // keeping a counter
         kthSmallest_helper(root, k, counter, result);
         return result[0];
 

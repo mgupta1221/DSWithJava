@@ -57,6 +57,32 @@ public class TreeNode {
         return root;
     }
 
+    public static TreeNode PopulateBST3() {
+        TreeNode root = new TreeNode(1, null, null);
+        TreeNode child1 = new TreeNode(4, null, null);
+        TreeNode child2 = new TreeNode(3, null, null);
+        TreeNode child3 = new TreeNode(2, null, null);
+        TreeNode child4 = new TreeNode(4, null, null);
+        TreeNode child5 = new TreeNode(2, null, null);
+        TreeNode child6 = new TreeNode(5, null, null);
+        TreeNode child7 = new TreeNode(4, null, null);
+        TreeNode child8 = new TreeNode(6, null, null);
+
+        root.left = child1;
+        root.right = child2;
+
+        child1.left = child3;
+        child1.right = child4;
+
+        child2.left = child5;
+        child2.right = child6;
+
+        child6.left = child7;
+        child6.right = child8;
+
+        return root;
+    }
+
     public static void PrintTree(TreeNode root) {
         if (root == null) {
             return;
