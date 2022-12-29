@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 //The difference between a longest common substring and a longest common subsequence 
 //is the criterion of contiguity. The symbols that make up a longest common substring 
-//must appear in both strings as a contiguous string.
+// must appear in both strings as a contiguous string.
 
 // Problem
 // https://www.geeksforgeeks.org/longest-common-substring-dp-29/

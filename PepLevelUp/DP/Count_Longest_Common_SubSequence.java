@@ -8,6 +8,7 @@ package PepLevelUp.DP;
 
 // Trick diagram : "Count_LongestCommonSubseq.png"
 // Recursive solution
+// This recursive solution will cause TLE on leetcode
 public class Count_Longest_Common_SubSequence {
     public static int count_Longest_Common_Subsequence(String str1, String str2, int s1j,
             int s2j) {
@@ -16,8 +17,7 @@ public class Count_Longest_Common_SubSequence {
             return 0;
         }
         // Find last charcters of both strings and compare, (remember in Longest
-        // Palendromic question we
-        // compared first and last chacrerters both of the given string)
+        // Palendromic question we compared first and last chacrerters both of the given string)
         char lastCharOfStr1 = str1.charAt(s1j - 1);
         char lastCharOfStr2 = str2.charAt(s2j - 1);
 

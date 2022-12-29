@@ -42,7 +42,6 @@ If the arraySize in question is of length 6, than we create an array of size 7 (
 3. Coin Change Permutation   (uses 1D-array to solve)
 4. Zero One Knapsack
 5. Unbounded Knapsack
-
 6. Paint N houses
 
 

@@ -16,3 +16,16 @@ Key point is InOrder traversal of a "BST" gives the sorted node values
 2) Serializing a tree
 3) BST iterator
 4) Pair with given sum
+
+
+Stack<St> St
+root.right
+while(st is empty){
+    node n = st.pop();
+    n.push(left and right)
+    if(stis )
+    root.right=n;
+    root.left= null;
+
+
+}

@@ -13,7 +13,7 @@ public class EditDistance {
     // Trick diagram -: "EditDistance.png"
     // Notice first row and first column are for empty charcters and filled with
     // numbers adjacent
-    /// E..g for the cell circles it means- how many operations are needed to create
+    /// E..g for the cell circled in trick diagram it means- how many operations are needed to create
     // "abc"(see row) . Answer will be 3 as 3 Inserts are required(a,b,c).
     //
     public static int minDistance(char[] word1, char[] word2) {

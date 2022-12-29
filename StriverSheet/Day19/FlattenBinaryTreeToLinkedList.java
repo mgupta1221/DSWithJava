@@ -57,9 +57,9 @@ public class FlattenBinaryTreeToLinkedList {
     public static void main(String[] args) {
         TreeNode root = TreeNode.PopulateBinaryTree();
 
-        // flatten_appraoch1(root);
+        flatten_appraoch1(root);
 
-        flatten_appraoch2(root);
+        // flatten_appraoch2(root);
 
         TreeNode.PrintTree(root);// just printing
     }
