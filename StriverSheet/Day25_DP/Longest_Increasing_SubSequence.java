@@ -1,5 +1,7 @@
 package StriverSheet.Day25_DP;
 
+import GettingStartedBasics.FunctionsAndArrays.test;
+
 // Problem: LC 300 https://leetcode.com/problems/longest-increasing-subsequence/
 
 public class Longest_Increasing_SubSequence {
@@ -29,8 +31,10 @@ public class Longest_Increasing_SubSequence {
 
     public static void main(String[] args) {
         // int[] nums = { 10, 9, 2, 5, 3, 7, 101, 18 }; /// ans: 4 --- {2,3,7,101}
+        // 1 1
         int[] nums = { 0, 1, 0, 3, 2, 3 }; // ans: 4 ---{0,1,2,3}
         int result = lengthOfLIS(nums);
         System.out.println(result);
     }
+
 }

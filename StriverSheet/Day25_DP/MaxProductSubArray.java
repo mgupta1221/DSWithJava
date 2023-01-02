@@ -22,6 +22,8 @@ package StriverSheet.Day25_DP;
 // min_ending_here = -6 
 // we have to use both of these to calculate the maxProduct.
 
+// Note: This is solved in single loop only
+
 public class MaxProductSubArray {
 
     public static int maxProduct(int[] nums) {

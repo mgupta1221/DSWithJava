@@ -1,5 +1,6 @@
 package StriverSheet.Day25_DP;
 
+// Problem: https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1
 // See PepJava\DynamicProgramng\ZerOneKnapSack.java for approach description
 
 // Weight is capacity and n is number of values

@@ -37,7 +37,6 @@ public class Longest_Common_Subsequence {
         }
         return Math.max(longestCommonSubs_helper(text1, text2, idx1, idx2 - 1),
                 longestCommonSubs_helper(text1, text2, idx1 - 1, idx2));
-
     }
 
     // Appraoch 2: DP with memoization - no TLE
@@ -74,22 +73,19 @@ public class Longest_Common_Subsequence {
             dp[idx1][idx2] = Math.max(x, y);
             return dp[idx1][idx2];
         }
-
     }
 
     public static void main(String[] args) {
 
-        // String text1 = "abcde", text2 = "ace"; // ans: 3 "ace"
+        String text1 = "abcde", text2 = "ace"; // ans: 3 "ace"
 
-        String text1 = "bl", text2 = "yby"; // ans: 1 "b"
+        // String text1 = "bl", text2 = "yby"; // ans: 1 "b"
 
         int result = longestCommonSubsequence(text1, text2);// Approach 1 : Recursive
-
         // int result = longestCommonSubsequence_memoizedDP(text1, text2); //Appraoch2:
         // DP with memoization
 
         System.out.println(result);
 
     }
-
 }

@@ -1,5 +1,4 @@
 
-
 package PepLevelUp.RecursionTree;
 
 //LEETCODE 322
@@ -9,7 +8,7 @@ public class CoinChange_GetMinCoins_LC322 {
         if (result != (int) 1e9) {
             return result;
         }
-        return -1; //return -1 if minimum could not be found
+        return -1; // return -1 if minimum could not be found
     }
 
     // Full explanation given in word doc
@@ -17,12 +16,12 @@ public class CoinChange_GetMinCoins_LC322 {
         if (target == 0) {
             return 0;
         }
-        
+
         // Check image in doc file why we are adding 1 at line 17 below
-        int min = (int) 1e9;  //use this, instead of Integer.MAX_VALUE
+        int min = (int) 1e9; // use this, instead of Integer.MAX_VALUE
         for (int i = idx; i < coins.length; i++) {
             if (target - coins[i] >= 0) {
-                min = Math.min(min, coinChangeHelper(coins, target - coins[i], i) + 1);
+                min = Math.min(min, 1 + coinChangeHelper(coins, target - coins[i], i));
             }
         }
 
