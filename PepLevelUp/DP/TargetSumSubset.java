@@ -53,7 +53,7 @@ public class TargetSumSubset {
         // remember 'i' will start with 0 value to solve this problem than all nums will
         // come(see trick diagram- TargetSumSubset.png)
         // meanning of each cell is kya {4,2,7} ka koi combination hai jo 5 ka
-        // cimbination banaye
+        // combination banaye
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[0].length; j++) {
 
@@ -78,7 +78,7 @@ public class TargetSumSubset {
                         dp[i][j] = true;
                     } else {
                         // agar number aayega to upar wali row mai x cells left jayenge//
-                        // where x is current target(column value) minus nums[i-1]( jo number aane ki
+                        // where x is current target(column value) minus arr[i-1]( jo number aane ki
                         // keh rha hai row side se)
                         // See video for explanation of this
                         var arrVal = arr[i - 1];
@@ -96,11 +96,37 @@ public class TargetSumSubset {
         return dp[arr.length][targetSum];
     }
 
+    public static boolean TargetSumSubset_Recursive(int[] arr, int targetSum) {
+        boolean result = TargetSumSubset_Recursive_helper(arr, targetSum, 0);
+        return result;
+    }
+
+    public static boolean TargetSumSubset_Recursive_helper(int[] arr, int targetSum, int idx) {
+        if (targetSum == 0) {
+            return true;
+        }
+        if (idx == arr.length) {
+            return false;
+        }
+
+        // If element is higher than targetSum than skip the element and moving forward
+        // with other elements
+        if (targetSum < arr[idx]) {
+            TargetSumSubset_Recursive_helper(arr, targetSum, idx + 1);
+        }
+        // 'Include and Not include the element' logic below
+        return TargetSumSubset_Recursive_helper(arr, targetSum - arr[idx], idx + 1) ||
+                TargetSumSubset_Recursive_helper(arr, targetSum, idx + 1);
+
+    }
+
     public static void main(String[] args) {
         int[] nums = new int[] { 2, 3, 13, 6 };
         int target = 9;
 
-        boolean result = TargetSumSubset_Iterative(nums, target);
+        // boolean result = TargetSumSubset_Iterative(nums, target); // iterative
+        // solution
+        boolean result = TargetSumSubset_Recursive(nums, target); // recursive solution
         System.out.println(result);
     }
 }

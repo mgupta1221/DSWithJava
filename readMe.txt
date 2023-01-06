@@ -132,6 +132,9 @@ Top 75 questions
   (Grouped)
 // https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions 
 
+Leetcode 150 questions
+https://leetcode.com/problem-list/top-interview-questions/ 
+
 Company wise : Most popular Coding Questions
 https://leetcode.com/discuss/interview-question/2016707/Company-wise-%3A-Most-popular-Coding-Questions
 
