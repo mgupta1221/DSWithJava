@@ -4,3 +4,9 @@
 han EMAIL Design
 aur get all user of a contact
 vice versa
+
+Adobe quesitons:
+1) Platform, Meeting room
+2) Tree Serialization
+3) How to design an SDK which can be consumed by users?  What design patters to be used?
+4) Design a Payment gateway

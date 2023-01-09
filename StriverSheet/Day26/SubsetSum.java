@@ -15,9 +15,10 @@ import java.util.Arrays;
 // numbers in array should be divisible by 2. 
 // And if we can find a subarray with total = (sum/2) that would mean array can be divided into 2 subarrays with equal sum
 
-// Solved with 2 approaches below:
+// Solved with 3 approaches below:
 // 1. Recursion without memoization
 // 2. Recursion with memoization
+// 3. With DP - See TargetSumSubset.java in "PepLevelup/DP"
 
 public class SubsetSum {
 
