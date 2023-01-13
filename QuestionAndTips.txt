@@ -1,0 +1,65 @@
+ ye code tha LLD wale ka
+2 design pattern or solid principles ka implementataion
+
+han EMAIL Design
+aur get all user of a contact
+vice versa
+
+Adobe quesitons:
+1) Platform, Meeting room, Stock-Buy-sell, 
+Reverse words in sentence(with followups liked you need to exclude some charatcers, Store the given sentence in Linked list such that reversal is easy),
+Round robin Algo
+
+2) Tree Serialization
+3) How to design an SDK which can be consumed by users?  What design patters to be used?
+4) Design a Payment gateway
+
+More Interview questions asked:
+1. Find the largest sub sequence with non-repeating characters.
+2. Low level design (how you design classes and various flow) -  Stack overflow, Snake & Ladder, Tic-Tac-Toe, Movie booking system(Both LLD and HLD)
+3. High level design -  you need to be quick in understanding the functional and non functional requirements and then think of how we can scale up the service .
+4. Managerial Round : Most of the discussion about past projects and the expectations from future role. They can give some puzzle or dsa problems as well if time permits.
+Imp concept : Sliding window, Stack, Recursion, Tree, Graph, DP
+
+✅ FOR LLD Preparation:
+There are few YouTube playlists which can be very useful for practicing this round as
+Concept and Coding chanel (https://lnkd.in/dXUs84qw) by Shrayansh Jain
+Tech Granth (https://lnkd.in/dcr3d22d)
+Sudo Code (https://lnkd.in/d7XyV5w9) by Yogita Sharma
+To perform better in this round knowledge of design patterns is important specially few of them and their use case
+Singleton, Factory, Chain of Responsibility, Decorator and Adapter pattern.
+Imp : Go through the sample problems of above playlists.
+
+
+✅ For System Design Round :: 
+Few YouTube playlists are again good to start with but having a book Or reading through some blogs would also be useful. 
+For clearing this round first should able to find Functional and Non functional requirements and then
+a. Horizontal and vertical scaling and apply according to user base and cost required.
+b. Caching and it's various technique
+c. Sql vs No sql database with proper understanding when to choose which one according to problem requirements.
+d. Sharding and Indexing if required.
+e. Designing various micro services and how they will call each other ( ex : message queue or orchestrator service) .
+
+
+✅ 𝐀𝐏𝐈 𝐃𝐞𝐬𝐢𝐠𝐧 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰
+👉 Best Practices (https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design), 
+👉 Implementation (https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-implementation), 
+👉 Guidelines (https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md) of API Design
+👉 Look for use cases like - Stripe (https://stripe.com/docs/api) and Twitter (https://developer.twitter.com/en/docs/api-reference-index) API Documentation
+👉 #SystemsExpert also has a few case studies on API design as well
+
+✅ 𝐁𝐞𝐡𝐚𝐯𝐢𝐨𝐫𝐚𝐥 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰
+👉 Watch Jeff H Sipe, Interview / Negotiation Coach Youtube channel for behavioral questions (https://www.youtube.com/c/JeffHSipe)
+👉 https://www.interviewkickstart.com/blog/behavioral-interview-questions-software-engineer-and-developer   
+
+
+✅ For Resume building:
+https://www.youtube.com/watch?v=NoVJIlneF3g&t=57s
+
+
+✅ For Database Design round
+Focus was on database internals like consistency types, isolation levels, and how durability support is provided. Or you could be asked to design a database schema and slowly scale it out. Concepts like sharding and partitioning
+This round could also include caching mechanisms.
+This round could be a sub type of HLD but with more in depth
+
+4 . Managerial Round : You should able to explain projects that you have worked on and ready for questions from OS, oops or some sql query.

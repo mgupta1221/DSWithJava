@@ -6,7 +6,7 @@ Data Structure: Array, Hashmap, (Mono)Stack, Queue (and Priority Queue), Heap, L
 Algorithms: Sort (Simple Sorting, Quick Sort, Merge Sort, Heap Sort), Recursion, Binary Search, Two Pointer, Sliding Window, DFS, BFS, Divide and Conquer, DP (Top Down, Bottom Up), Shortest Path (Dijkistra, Floyyd), MST, Union Find, Greedy
 
 
-Educative.io  for System Design
+Educative.io for System Design
 Gaurav Sen for HLD and System Design
 Udit Agarwal (youtube) for LLD
 Head First Book for Object Oriented Analysis and patterns
@@ -347,8 +347,6 @@ For more details on "Faith and Expectation" and "Levels and Options" approach,
 see readMe file of IntroToRecursion
 
 
-
-
 14. Check PrintPermutations in Recursion -> RecursionOnWayUp
 
 
@@ -364,9 +362,7 @@ for (int i = 0; i < n; i++) {
     String[] temp = str.split(" ");
     for (int j = 0; j < n; j++) {
         a[i][j] = Integer.parseInt(temp[j]);
-
     }
-
 }
 
 16. Tree Shaking is a graph Traversal

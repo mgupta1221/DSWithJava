@@ -69,10 +69,9 @@ public class EggDropping {
             int tempResult = Math.max(l, r);
             min = Math.min(min, tempResult);
         }
-        dp[n][k] = min + 1; // Notice we are adding + 1 becuase to do this assessment of egg break, or, egg survive we have
-                            // already attempted once so that should be counted
+        dp[n][k] = min + 1; // Notice we are adding + 1 becuase to do this assessment of egg break, or, egg
+                            // survive we have already attempted once so that should be counted
         return min + 1;
-
     }
 
     public static void main(String[] args) {
