@@ -38,7 +38,7 @@ public class MergeOverlappingIntervals {
             pairs[i] = new Pair(intervals[i][0], intervals[i][1]);
         }
         Arrays.sort(pairs);
-        // Arrays.sort(intervals, (a, b) -> a[1] - b[1]); <- Quicker way to sort array
+        // Arrays.sort(intervals, (a, b) -> a[0] - b[0]); <- Quicker way to sort array
         // using inbuilt func
 
         Stack<Pair> st = new Stack<>();
@@ -70,8 +70,8 @@ public class MergeOverlappingIntervals {
     }
 
     public static void main(String[] args) {
-        int intervals[][] = { { 1, 3 }, { 8, 10 }, { 2, 6 }, { 15, 18 } };
-
+        //int intervals[][] = { { 1, 3 }, { 8, 10 }, { 2, 6 }, { 15, 18 } };
+        int intervals[][] = { { 1, 4 }, { 2, 3 } };
         int result[][] = merge(intervals);
 
         // printing result

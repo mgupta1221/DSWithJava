@@ -14,7 +14,7 @@ public class SortArray0s1s2s {
     // Maintain 3 pointers low, mid and high
     // Inititalize low = 0, mid = 0 and high = nums.length-1
 
-    // Now till mid < high
+    // Now while mid <= high
     // if nums[mid]=0 : swap numbers at low and mid, low++, mid++
     // if nums[mid]=1 : mid++
     // if nums[mid]=0 : swap numbers at mid and high, high--
@@ -38,7 +38,8 @@ public class SortArray0s1s2s {
                 low++;
                 mid++;
             }
-            if (currentNum == 1) {
+            if (currentNum == 1) {// [mid] is pointing to 1, so skip 'Swapping' becuase 1 should occur in middle
+                                  // and increment 'm' by 1
                 mid++;
             }
             if (currentNum == 2) {

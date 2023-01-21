@@ -7,7 +7,7 @@ public class Kadane_MaxSumSubArray {
 
     // LC 53: https://leetcode.com/problems/maximum-subarray/
 
-   
+    // - A subarray is a contiguous non-empty sequence of elements within an array.   
 
     // Full explanation :
     // https://www.youtube.com/watch?v=VMtyGnNcdPw&t=1s
@@ -55,8 +55,8 @@ public class Kadane_MaxSumSubArray {
     }
 
     public static void main(String[] args) {
-        // int nums[] = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
-        int nums[] = { -1, -2 };
+         int nums[] = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+        //int nums[] = { -1, -2 };
         // maxSumSubArray_Approach1(nums);
 
         List<Integer> indexes = new ArrayList<>(); // this is to store the start and end of index of longest subArray

@@ -13,7 +13,7 @@ package StriverSheet.Day2;
 // All Repeating Except Two | Two Unique Rest Twice | Bit Manipulation Interview Questions
 // For logic:
 // Pepcoding - 
-// https://www.youtube.com/watch?v=pnx5JA9LNM4&list=PL-Jc9J83PIiE-181crLG1xSIWhTGKFiMY&index=48
+// https://www.youtube.com/watch?v=pnx5JA9LNM4&list=PL-Jc9J83PIiE-181crLG1xSIWhTGKFiMY&index=48 (Listen from 9:25)
 
 // For actual question:
 // Pepcoding - Find Duplicate Number and Missing Number from 1 to N 
@@ -45,7 +45,7 @@ public class RepeatAndMissingNumber {
                 y = y ^ n;
             }
         }
-        // Notice we have to do XOR with 1...N too.
+        // Notice we have to do XOR with 1...N too in below for loop.
         for (int i = 1; i <= nums.length; i++) {
             if ((i & rmsb) == 0) { // remember this inner paranthesis else this line will give error
                 x = x ^ i;

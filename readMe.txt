@@ -82,6 +82,12 @@ Talk about Pub-Sub model, lot of micro services are connected to same DB
 
 12) https://medium.com/coders-mojo/most-popular-system-design-questions-mega-compilation-45218129fe26
 Some of the best paid System Design courses which you can use if you're looking out for well-structured content for System Design :
+13) System Desing Primer
+https://github.com/donnemartin/system-design-primer
+https://github.com/imujjwalanand/Grokking-the-System-Design
+https://sites.google.com/site/includemak/system-design
+https://github.com/codekarle/system-design/tree/master/system-design-prep-material/architecture-diagrams
+https://github.com/sanyathisside/System-Design
 
 1). InterviewReady - By Gaurav Sen
 2). Educative.io - Use https://lnkd.in/gy-uGDN7 to get 10% discount or use https://lnkd.in/dQtAV45A for my 𝐀𝐟𝐟𝐢𝐥𝐢𝐚𝐭𝐞 𝐥𝐢𝐧𝐤𝐬
@@ -90,6 +96,7 @@ Some of the best paid System Design courses which you can use if you're looking 
 
 LLD link
 https://github.com/coding-parrot/Low-Level-Design
+https://github.com/sanyathisside/System-Design
 
 
 Some of the best resources available for free on the Internet in form of blogs :
