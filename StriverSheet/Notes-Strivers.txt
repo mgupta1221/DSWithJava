@@ -8,6 +8,14 @@ not work becuase we are using indexes from 1-N
  i) Count inversions in an Array- Day 2
  ii) Reverse pairs - Day 3
 
+3. Notice how are calucating finding middle cell (with '%' and '/' ) in matrix:
+Day 3 - Search in 2D Matrix
+
+int row = mid / NumberOfColumns;
+int col = mid % NumberOfColumns;
+
+3. Day 3 - In UniquePaths, check different patterns to solve DP problems (Recursive and DP solution)
+
 3. 2 pointers technique is used in :
 i)  3Sum (or, 4 numbers) with a target sum. - Day 4
 ii) Trapping Rain water problem - Day 7

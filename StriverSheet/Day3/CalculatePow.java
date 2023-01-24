@@ -52,7 +52,7 @@ public class CalculatePow {
 
     public static void main(String[] args) {
         double x = 2.00;
-        int n = 10;
+        int n = 10;   // ans : 1024
 
         // double x = 2;
         // int n = -2147483648;

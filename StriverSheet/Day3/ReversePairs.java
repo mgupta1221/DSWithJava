@@ -44,7 +44,8 @@ public class ReversePairs {
                 j++;
             }
             cnt += j - (mid + 1);// this will be the count becuase j was initally set mid+1 (getting actual
-                                 // fcounts)
+                                 // counts). ALSO, this parentheses around (m+1) is also necessary for correct
+                                 // answer
         }
 
         // Below can be a simpler way to write abbove logic code with 2 nested loops

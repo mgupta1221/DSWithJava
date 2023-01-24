@@ -7,10 +7,10 @@ public class UniquePaths {
     // Problem: There is a robot on an m x n grid. Return the number of possible
     // unique paths that the robot can take to reach the bottom-right corner.
 
-    // Approach: This question is solved using both DP and Recursion. See separate
-    // functions below
+    // 3 Approaches: This question is solved using both DP (2 ways) and Recursion(1
+    // way). See separate functions below
 
-    // In case of DP: First row and First column will be 1 becuase there is only one
+    // In case of DP: First row and First column will be 1 because there is only one
     // way to reach those cells
 
     // Approach details: https://www.youtube.com/watch?v=rBAxUTqvlQA
@@ -25,8 +25,10 @@ public class UniquePaths {
         // String[] dirNames = { "r", "d" };
         // return uniquePaths2(m - 1, n - 1, 0, 0, directions, dirNames);
 
-        // Solved using DP (TOP Down)
-        return uniquePaths_DP(m, n, 0, 0, 0);
+        // Solved using DP - 2 ways (TOP Down)
+        // return uniquePaths_DP1(m, n, 0, 0, 0);
+        int[][] dp = new int[m][n];
+        return uniquePaths_DP2(0, 0, m, n, dp);
     }
 
     public static int uniquePaths_recursion(int m, int n, int currentI, int currentJ, int totalPaths) {
@@ -67,7 +69,7 @@ public class UniquePaths {
 
     }
 
-    public static int uniquePaths_DP(int m, int n, int currentI, int currentJ, int totalPaths) {
+    public static int uniquePaths_DP1(int m, int n, int currentI, int currentJ, int totalPaths) {
 
         int[][] dp = new int[m][n];
 
@@ -83,6 +85,21 @@ public class UniquePaths {
             }
         }
         return dp[m - 1][n - 1];
+    }
+
+    public static int uniquePaths_DP2(int startx, int starty, int endx, int endy, int[][] dp) {
+        if (startx >= endx || starty >= endy) {
+            return 0;
+        }
+        if (startx == endx - 1 && starty == endy - 1) {
+            return dp[startx][starty] = 1;
+        }
+        if (dp[startx][starty] != 0) {
+            return dp[startx][starty];
+        }
+        return dp[startx][starty] = uniquePaths_DP2(startx + 1, starty, endx, endy, dp) +
+                uniquePaths_DP2(startx, starty + 1, endx, endy, dp);
+
     }
 
     public static void main(String[] args) {

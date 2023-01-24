@@ -2,18 +2,43 @@ package StriverSheet.Day3;
 
 public class test1 {
 
-    public static double myPow(double x, int n) {
-        return 0;
+    public static int uniquePaths(int m, int n) {
+        // int[] result = new int[1];
+        int result = 0;
+        int[][] dp = new int[m + 1][n + 1];
+
+        String[] dirNames = { "R", "L" };
+        int[][] dr = { { 0, 1 }, { 1, 0 } };
+        result = uniquePaths_helper(0, 0, m, n, dr, dirNames, dp);
+        return result;
+
+    }
+
+    public static int uniquePaths_helper(int startx, int starty, int endx, int endy, int[][] dr, String[] dirNames,
+            int[][] dp) {
+        if (startx >= endx || starty >= endy) {
+            return 0;
+        }
+        if (startx == endx - 1 && starty == endy - 1) {
+            return 1;
+        }
+        int result = 0;
+        for (int i = 0; i < dirNames.length; i++) {
+            int row = dr[i][0];
+            int column = dr[i][1];
+            result += uniquePaths_helper(startx + row, starty + column, endx, endy, dr, dirNames, dp);
+
+        }
+        return result;
+
     }
 
     public static void main(String[] args) {
-        double x = 2.00;
-        int n = 10;
 
-        // double x = 2;
-        // int n = -2147483648;
-        double result = myPow(x, n);
-        System.out.println(result);
+        int totalPaths = uniquePaths(3, 7);
+
+        System.out.println("result:" + totalPaths);
+
     }
 
 }
