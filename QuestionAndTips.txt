@@ -14,6 +14,10 @@ Round robin Algo
 3) How to design an SDK which can be consumed by users?  What design patters to be used?
 4) Design a Payment gateway
 
+For Payment Service - 
+https://www.udemy.com/course/microservices-clean-architecture-ddd-saga-outbox-kafka-kubernetes/
+https://www.udemy.com/course/design-microservices-architecture-with-patterns-principles/
+
 More Interview questions asked:
 1. Find the largest sub sequence with non-repeating characters.
 2. Low level design (how you design classes and various flow) -  Stack overflow, Snake & Ladder, Tic-Tac-Toe, Movie booking system(Both LLD and HLD)

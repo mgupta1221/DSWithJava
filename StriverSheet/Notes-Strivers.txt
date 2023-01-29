@@ -1,5 +1,8 @@
  O(1) < O(logn) < O(n) < O(nlogn) holds true.
 
+ For single values- Use HashSet    .add()
+ For <Key,Value> pairs- Use HashMap  .put()
+
 1. Use case for "Floyd Cycle detection algorithm (Slow-Fast pointer)" - Finding Duplicate element - Day 2
 Cycle detection will only work when there are numbers from 1-N....For random nujmbers it will
 not work becuase we are using indexes from 1-N
@@ -14,25 +17,25 @@ Day 3 - Search in 2D Matrix
 int row = mid / NumberOfColumns;
 int col = mid % NumberOfColumns;
 
-3. Day 3 - In UniquePaths, check different patterns to solve DP problems (Recursive and DP solution)
+4. Day 3 - In UniquePaths, check different patterns to solve DP problems (Recursive and DP solution)
 
-3. 2 pointers technique is used in :
+5. 2 pointers technique is used in :
 i)  3Sum (or, 4 numbers) with a target sum. - Day 4
 ii) Trapping Rain water problem - Day 7
 
 Note: 2 pointers appraoch always need Sorting
 
-4.  Day 4 questions on array uses various important approaches like: 2 pointers, Sliding Window
+6.  Day 4 questions on array uses various important approaches like: 2 pointers, Sliding Window
 
-5. For Linked list, try to use dummyNode logic, this handles many use cases:
+7. For Linked list, try to use dummyNode logic, this handles many use cases:
 dummyNode= new Node(-1);
 dummyNode.next= head;
 
-5. In DP, there are following two different ways to store the values so that these values can be reused: 
+8. In DP, there are following two different ways to store the values so that these values can be reused: 
 i)  Memoization (Top Down) 
 ii) Tabulation (Bottom Up)
 
-6. SubString in Java
+9. SubString in Java
 startIndex: inclusive
 endIndex: exclusive
 

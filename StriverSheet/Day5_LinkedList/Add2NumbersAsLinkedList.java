@@ -1,5 +1,6 @@
 package StriverSheet.Day5_LinkedList;
 
+
 // LC: 2 https://leetcode.com/problems/add-two-numbers/
 
 // Problem:  The digits are stored in reverse order, and each of their nodes contains
@@ -30,9 +31,9 @@ public class Add2NumbersAsLinkedList {
     }
 
     public static void main(String[] args) {
-        int[] nums1 = { 9, 9, 9, 9, 9, 9, 9 };
+        int[] nums1 = { 7, 8, 9 };
         ListNode head1 = GetLinkedList(nums1);
-        int[] nums2 = { 9, 9, 9, 9 };
+        int[] nums2 = { 7, 8, 9 };
         ListNode head2 = GetLinkedList(nums2);
 
         ListNode head = addTwoNumbers(head1, head2);

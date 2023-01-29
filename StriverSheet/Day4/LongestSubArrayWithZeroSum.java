@@ -11,8 +11,6 @@ public class LongestSubArrayWithZeroSum {
     // We keep calculating the sum at each index. Idea is when same sum value
     // repeats than all numbers in between current Index and Index at last
     // occurence of that sum - make sum as 0
-  
-
     public static int maxLen(int nums[], int n) {
 
         int maxCount = 0;
@@ -44,6 +42,7 @@ public class LongestSubArrayWithZeroSum {
 
     public static void main(String[] args) {
         int[] nums = { 15, -2, 2, -8, 1, 7, 10, 23 };
+                    // 15  13  15  7  8  15  25  28
 
         int result = maxLen(nums, nums.length);
 

@@ -15,8 +15,7 @@ public class LongestSubstringWithoutRepeat {
     // starting from 0. As we traverse ,we will keep storing characters in
     // hashSet(and keep increasing currentIndex as we move in while loop). If a
     // repeated element appears, we will remove last occured element increasw
-    // 'removal index' by
-    // 1 at each removal (sliding window).
+    // 'removal index' by 1 at each removal (sliding window).
 
     // Answer Hashset ke size() ki max value se nikaalna hai
 

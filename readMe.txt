@@ -88,6 +88,7 @@ https://github.com/imujjwalanand/Grokking-the-System-Design
 https://sites.google.com/site/includemak/system-design
 https://github.com/codekarle/system-design/tree/master/system-design-prep-material/architecture-diagrams
 https://github.com/sanyathisside/System-Design
+https://github.com/shashank88/system_design
 
 1). InterviewReady - By Gaurav Sen
 2). Educative.io - Use https://lnkd.in/gy-uGDN7 to get 10% discount or use https://lnkd.in/dQtAV45A for my 𝐀𝐟𝐟𝐢𝐥𝐢𝐚𝐭𝐞 𝐥𝐢𝐧𝐤𝐬

@@ -30,7 +30,10 @@ public class LongestConsecutiveSequence {
         int maxCount = 1;
 
         for (int i = 0; i < nums.length; i++) {
-            if (!hSet.contains(nums[i] - 1)) { // Without this TLE will come
+            if (!hSet.contains(nums[i] - 1)) { // Without this TLE will come, basically array mai us element se chota
+                                               // element nahi hona chhaiye, tabhi 'while' loop se bade elements check
+                                               // karo. So, in this case, [4,3,2] ke liye 'while' loop nahi chalega,
+                                               // kewal 1 ke liye chalega, so TLE will not occur
                 int count = 1;
                 int j = 1;
                 while (hSet.contains(nums[i] + j)) {
