@@ -24,7 +24,6 @@ public class StartingPointOfLoop {
                     fast = fast.next;
                 }
                 return slow;
-
             }
         }
         return null;

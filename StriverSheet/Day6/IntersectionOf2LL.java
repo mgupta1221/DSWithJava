@@ -10,6 +10,26 @@ package StriverSheet.Day6;
 // Finding cycle approach - Iterate theough each LL in parrallel and when one LL ends,
 // attach its end to the head of the other LL and keep iterating till the common node is found.
 
+// Steps for Approach 2: 
+// 1. Initialize two pointers ptr1 and ptr2  at head1 and  head2.
+// 2. Traverse through the lists, one node at a time.
+// 3. When ptr1 reaches the end of a list, then redirect it to head2.
+// 4. similarly, when ptr2 reaches the end of a list, redirect it to the head1.
+// 5. Once both of them go through reassigning, they will be equidistant from 
+//    the collision point
+// 6. If at any node ptr1 meets ptr2, then it is the intersection node.
+// 7. After the second iteration if there is no intersection node it returns NULL.
+
+// Time complexity : O( m + n ) 
+// Auxiliary Space:  O(1)
+
+
+// Approach 3: (Make a circle in the first list)  - Not coded below
+
+// 1. Traverse the first linked list(count the elements) and make a circular linked list. (Remember the last node so
+//    that we can break the circle later on). 
+// 2. Now view the problem as finding the loop in the second linked list. So the problem is solved. 
+
 public class IntersectionOf2LL {
     public static ListNode getIntersectionNode_approach2(ListNode head1, ListNode head2) {
 
@@ -17,9 +37,9 @@ public class IntersectionOf2LL {
         ListNode temp2 = head2;
 
         while (temp1 != temp2) {
-            if (temp1.next == null)
+            if (temp1 == null)
                 temp1 = head2;
-            if (temp2.next == null)
+            if (temp2 == null)
                 temp2 = head1;
 
             temp1 = temp1.next;

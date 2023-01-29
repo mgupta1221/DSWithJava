@@ -7,44 +7,80 @@ import java.util.HashSet;
 import java.util.List;
 
 public class test1 {
-    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static ListNode reverseKGroup(ListNode head, int k) {
+        int len = getLengthOfLinkedList(head);
+        ListNode result = reverseKGroup_recur(head, k, len);
+        return result;
 
-        ListNode temp1 = list1;
-        ListNode temp2 = list2;
+    }
 
-        while (temp1 != null && temp2 != null) {
-
+    public static ListNode reverseKGroup_recur(ListNode head, int k, int len) {
+        if (len < k) {
+            return head;
         }
 
+        ListNode current = head;
+        ListNode previous = null;
+        ListNode next = null;
+        if (len > k) {
+            for (int i = 1; i <= k; i++) {
+                next = current.next;
+                current.next = previous;
+                previous = current;
+                current = next;
+            }
+        }
+        if (next != null)
+            head.next = reverseKGroup_recur(next, k, len - k);
+        return previous;
     }
 
     public static void main(String[] args) {
-        int[] nums1 = { 1, 2, 3, 5 };
-        ListNode fourNode = new ListNode(4);
-        ListNode head1 = GetLinkedList(nums1, fourNode);
-
-        PrintLinkedList(head1);
-        ListNode head = deleteNode(head1, fourNode);
-        // PrintLinkedList(head);
-        System.out.println(head.val);
+        int[] nums1 = { 1, 2, 3, 4, 5 };
+        ListNode head1 = GetLinkedList(nums1);
+        ListNode head2 = reverseKGroup(head1, 2);
+        PrintLinkedList(head2);
     }
 
-    public static ListNode GetLinkedList(int[] nums, ListNode fourNode) {
-        ListNode head = new ListNode(nums[0]);
-        ListNode temp = head;
-
-        for (int i = 1; i < nums.length; i++) {
-            if (i == 3) {
-                temp.next = fourNode;
-                temp = temp.next;
-            } else {
-                temp.next = new ListNode(nums[i]);
-                temp = temp.next;
-            }
+    public static int getLengthOfLinkedList(ListNode head) {
+        int len = 0;
+        while (head != null) {
+            head = head.next;
+            len++;
         }
-        temp.next = new ListNode(5);
+        return len;
+    }
 
+    public static ListNode GetLinkedList(int[] nums) {
+        ListNode head = new ListNode(nums[0]);
+
+        ListNode tempHead = head;
+        for (int i = 1; i < nums.length; i++) {
+            ListNode node = new ListNode(nums[i]);
+            tempHead.next = node;
+            tempHead = node;
+        }
         return head;
+    }
+
+    public static NodeF GetBottomLinkedList(int[] nums) {
+        NodeF head = new NodeF(nums[0]);
+
+        NodeF tempHead = head;
+        for (int i = 1; i < nums.length; i++) {
+            NodeF node = new NodeF(nums[i]);
+            tempHead.bottom = node;
+            tempHead = node;
+        }
+        return head;
+    }
+
+    public static void PrintLinkedList(NodeF head) {
+        while (head != null) {
+            System.out.print(head.val + " -> ");
+            head = head.bottom;
+        }
+        System.out.println();
     }
 
     public static void PrintLinkedList(ListNode head) {

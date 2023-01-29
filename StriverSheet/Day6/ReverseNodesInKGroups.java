@@ -8,6 +8,14 @@ import StriverSheet.Day6.IntersectionOf2LL;
 // In recursive approach - We reverse the first k elements(1st group) and assume that recursive call will reverse the rest of the elments and return the head of them (via "Prev" variable as seen in "Reversing a Linked list" solution). Now, we have to attach the returned "head" from the recursive call to "head.next" which is first element
 
 public class ReverseNodesInKGroups {
+
+    public static ListNode reverseKGroup(ListNode head, int k) {
+        int len = getLengthOfLinkedList(head);
+        ListNode result = reverseKGroup_recur(head, k, len);
+        return result;
+
+    }
+
     public static ListNode reverseKGroup_recur(ListNode head, int k, int len) {
 
         // this below condition is very important to attach last remaining nodes(<k) to
@@ -52,11 +60,8 @@ public class ReverseNodesInKGroups {
 
         int[] nums1 = { 1, 2, 3, 4, 5 };
         ListNode head1 = GetLinkedList(nums1);
-
-        // Recursive solution
-        int len = getLengthOfLinkedList(head1);
-        ListNode result = reverseKGroup_recur(head1, 2, len);
-
+        
+        ListNode result = reverseKGroup(head1, 2);
         PrintLinkedList(result);
     }
 
