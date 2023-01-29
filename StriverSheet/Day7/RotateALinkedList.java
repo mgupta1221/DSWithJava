@@ -23,7 +23,7 @@ public class RotateALinkedList {
         // E.g. [0,1,2] and k=4
         k = k % len;
 
-        // If number of rotations required is same as length than norotation required,
+        // If number of rotations required is same as length than no rotation required,
         // return head
         if (k == 0)
             return head;
@@ -31,7 +31,7 @@ public class RotateALinkedList {
         // Connect last node with the head of the node
         temp.next = head;
 
-        // Reach kth Node
+        // Reach (Len - kth) Node
         ListNode current = head;
         for (int i = 1; i < len - k; i++) {
             current = current.next;
