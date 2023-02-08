@@ -13,8 +13,10 @@ public class PermutationSequence {
     // Brute Force: The extreme naive solution is to generate all the possible
     // permutations of the given sequence. This is achieved using recursion and
     // every permutation generated is stored in some other data structure (here we
-    // have used a vector). Finally, we sort the data structure in which we have
-    // stored all the sequences and return the Kth sequence from it.
+    // have used a ArrayList). Finally, we sort the data structure using
+    // Collections.sort(res), where 'res' is ArrayList<String> res
+    // in which we have stored all the sequences and return the Kth sequence from
+    // it.
 
     // Optimal Solution below:
     // https://takeuforward.org/data-structure/find-k-th-permutation-sequence/

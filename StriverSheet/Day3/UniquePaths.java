@@ -60,7 +60,7 @@ public class UniquePaths {
                                            // function
             int c1 = c + directions[i][1];
 
-            if (r >= 0 && c >= 0 && r <= m && c <= n) {
+            if (r1 >= 0 && c1 >= 0 && r1 <= m && c1 <= n) {
                 count += uniquePaths2(m, n, r1, c1, directions, dirNames);
             }
         }
@@ -78,10 +78,8 @@ public class UniquePaths {
                 if (i == 0 || j == 0) {
                     dp[i][j] = 1;
                 } else {
-
                     dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
                 }
-
             }
         }
         return dp[m - 1][n - 1];

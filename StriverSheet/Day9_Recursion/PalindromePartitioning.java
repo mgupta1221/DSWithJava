@@ -26,7 +26,9 @@ public class PalindromePartitioning {
         for (int i = idx; i < s.length(); i++) {
             if (isPallendrome(s, idx, i)) {
                 subResult.add(s.substring(idx, i + 1));
-                partitionHelper(s, i + 1, subResult, result);
+                partitionHelper(s, i + 1, subResult, result); // In permutuation quention, it is (idx+1), check the
+                                                              // difference by making (i+1) to (idx+1)
+
                 subResult.remove(subResult.size() - 1);
             }
         }
