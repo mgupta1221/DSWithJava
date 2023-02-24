@@ -3,9 +3,7 @@ package StriverSheet.Day10_RecursionAndBacktracking;
 import java.util.ArrayList;
 import java.util.List;
 
-
 // Problem:  https://leetcode.com/problems/n-queens/
-
 
 public class NQueens {
 
@@ -38,18 +36,30 @@ public class NQueens {
 
     public static boolean isItSafetoPlaceQueen(char[][] chess, int r, int c) {
 
+        // upper rows
         for (int i = r - 1; i >= 0; i--) {
             if (chess[i][c] == 'Q') {
                 return false;
             }
         }
+
+        // left diaognal
         for (int i = r - 1, j = c - 1; i >= 0 && j >= 0; i--, j--) {
             if (chess[i][j] == 'Q') {
                 return false;
             }
         }
+
+        // right diaognal
         for (int i = r - 1, j = c + 1; i >= 0 && j < chess[0].length; i--, j++) {
             if (chess[i][j] == 'Q') {
+                return false;
+            }
+        }
+
+        // left columns
+        for (int j = c - 1; j >= 0; j--) {
+            if (chess[r][j] == 'Q') {
                 return false;
             }
         }

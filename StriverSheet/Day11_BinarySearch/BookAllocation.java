@@ -14,7 +14,7 @@ public class BookAllocation {
 
     // Approach is Binary search use hoga kyunki Sorted array ka quesiton.
     // Binary search mai range define karni hoti hai for 'low' and 'high' wo range
-    // is case mai 0 - sum of all element hogi..kyunki answer isi ke beech maii lie
+    // is case mai 0 - sum of all element hogi..kyunki answer isi ke beech mai lie
     // karega
 
     // Now We will try to allocate pages to students such that no student shoud have

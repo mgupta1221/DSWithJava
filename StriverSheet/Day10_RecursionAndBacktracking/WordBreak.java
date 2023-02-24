@@ -35,7 +35,8 @@ public class WordBreak {
             if (!wordDict.contains(subStr)) {
                 continue;
             } else {
-                if (wordBreakHelper(str.substring(i), wordDict, dp)) {
+                if (wordBreakHelper(str.substring(i), wordDict, dp)) { // dont return directly, return only if value is
+                                                                       // true
                     dp.put(str, true);
                     return true;
                 }
