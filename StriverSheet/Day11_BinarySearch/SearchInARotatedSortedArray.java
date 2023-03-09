@@ -2,8 +2,10 @@ package StriverSheet.Day11_BinarySearch;
 
 public class SearchInARotatedSortedArray {
 
+    // https://leetcode.com/problems/search-in-rotated-sorted-array/
+
     // We used Binary search
-    // Idea is:  Har baar array ko break karenge aur sabse pehle mid par element ko
+    // Idea is: Har baar array ko break karenge aur sabse pehle mid par element ko
     // check kar lenege ..if yes to wahi se return kar denge...if 'no' than
     // dekhenge ki kya array ka left part sorted hai.. agar hai to kya target 'low'
     // or 'mid' ki range mai aa rha hai...agar 'yes' to usme hi element milega to
@@ -38,11 +40,15 @@ public class SearchInARotatedSortedArray {
     }
 
     public static void main(String args[]) {
+
         // int arr[] = { 4, 5, 6, 7, 0, 1, 2 };
-        // int target = 0;
+        // int target = 1;
 
         // int arr[] = { 4, 5, 6, 7, 0, 1, 2 };
         // int target = 3;
+
+        // int arr[] = { 6,7,0,1,2,3,4 };
+        // int target = 7;
 
         int arr[] = { 5, 1, 3 };
         int target = 3;
