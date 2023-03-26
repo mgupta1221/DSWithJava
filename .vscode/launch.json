@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test1",
+            "request": "launch",
+            "mainClass": "StriverSheet.Day12_Heaps.test1",
+            "projectName": "PepJava_c02ecfb3"
+        },
+        {
+            "type": "java",
             "name": "Launch ConvertToMirror",
             "request": "launch",
             "mainClass": "StriverSheet.Day19.ConvertToMirror",

@@ -85,8 +85,8 @@ public class MaxSumCombination {
 
     public static void main(String[] args) {
 
-        int A[] = { 4, 2, 5, 1 };
-        int B[] = { 8, 0, 5, 3 };
+        int A[] = { 1, 4, 2, 6 };
+        int B[] = { 2, 5, 1, 6 };
         int N = A.length;
         int K = 3;
 
