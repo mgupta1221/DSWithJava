@@ -25,6 +25,7 @@ public class MaxSumCombination {
     // Time Complexity : O(N log N) assuming K <= N
     // Auxiliary Space : O(N)
 
+    // Approach 1:
     public static void KMaxCombinations_BruteForce(int A[], int B[],
             int N, int K) {
 
@@ -43,6 +44,7 @@ public class MaxSumCombination {
         }
     }
 
+    // Approach 2 (Optimized) :
     public static void KMaxCombinations_Optimized(int A[], int B[],
             int N, int K) {
 

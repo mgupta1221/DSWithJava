@@ -84,7 +84,6 @@ class Heap {
             swap(pos, biggerChildIndex);
             maxHeapify(biggerChildIndex); // recursive call
         }
-        return;
 
     }
 

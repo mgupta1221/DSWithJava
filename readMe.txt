@@ -12,7 +12,7 @@ Udit Agarwal (youtube) for LLD
 Head First Book for Object Oriented Analysis and patterns
 
 
-Patterns problems for reveision:
+Patterns problems for revision:
 https://leetcode.com/discuss/study-guide/1476329/useful-posts-from-leetcode-discussions-for-personal-use-and-concept-revision/1468977
 
 For LLD 
@@ -38,7 +38,7 @@ Youtube playlist
 Some paid best resources for ones who are looking out for well-structured content of LLD :
 
 1). Educative.io – Grokking the Object-Oriented Design Interview
-2). InterviewReady – By Gaurav Sen 
+2). InterviewReady – By Gaurav Sen
 3). GeeksforGeeks - Low-Level Design Course 
  
 Best resources in form of Blogs :
