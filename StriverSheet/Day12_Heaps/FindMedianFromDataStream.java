@@ -9,8 +9,11 @@ import java.util.PriorityQueue;
 
 // Idea is to create 1 MaxHeap and 1 MinHeap
 // We distribute the elements in both  with few rules
-//  Base Rule is MinHeap will never have more elements than MaxHeap and also, Maxheap will have elements lesser than Median and Minheap will have elements more than Median
-// Maxheap <-> median  <-> MinHeap
+// Base Rules are:
+
+// 1. Maxheap will have elements which are lesser than Median and Minheap will have elements which are more than Median
+// 2. MaxHeap will always have more, or equal elements than MinHeap, so
+//  (less elements) Maxheap <-> median  <-> MinHeap (more elements)
 
 // Insertion logic in MinHeap or Maxheap
 // 1. Put element in maxheap if: MaxHeap is empty, or, if new element's value is less than max value in MaxHeap
@@ -36,6 +39,8 @@ class MedianFinder {
 
     public void addNum(int num) {
         // If maxHeap is empty or number is less than maximum value in MaxHeap
+        // num < Maxheap.peek() kiya hai kyunki agar 'num' maxHeap ke largest element(.peek() function) se chota hai to wo
+        // maxHeap ka hi part hoga
         if (maxHeap.size() == 0 || num <= maxHeap.peek()) {
             maxHeap.add(num);
         } else {
