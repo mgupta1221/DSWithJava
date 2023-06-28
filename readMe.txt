@@ -27,12 +27,13 @@ Youtube playlist
 6). Christopher Okhravi - For Design Patterns
 7). Keerti Purswani (She/Her) – For Design Patterns & Mock LLD Interviews
 8). SudoCODE – By Yogita Sharma
-9). Distributed Sytems Guy - Bala G
-10) Derek Banas
-11) https://github.com/coding-parrot/Low-Level-Design
-12) Tips on LLD design topics - https://www.youtube.com/watch?v=9_7jDlmexME  
-13) https://github.com/arpit20adlakha/Data-Structure-Algorithms-LLD-HLD
-14) LLD Basic to Advanced playlist - https://www.youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW
+9)  All consolidated links here - https://github.com/topics/low-level-design
+10). Distributed Sytems Guy - Bala G
+11) Derek Banas
+12) https://github.com/coding-parrot/Low-Level-Design
+13) Tips on LLD design topics - https://www.youtube.com/watch?v=9_7jDlmexME  
+14) https://github.com/arpit20adlakha/Data-Structure-Algorithms-LLD-HLD
+15) LLD Basic to Advanced playlist - https://www.youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW
 
 
 Some paid best resources for ones who are looking out for well-structured content of LLD :
