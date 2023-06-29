@@ -11,13 +11,13 @@ import StriverSheet.Day6.IntersectionOf2LL;
 // Image: StartingPointOfLoop-Explanation.png
 
 public class StartingPointOfLoop {
-    public static ListNode detectCycle(ListNode head) {
+    public static ListNode getStartingPoint(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if (slow == fast) {
+            if (slow == fast) {// cycle exist
                 fast = head;
                 while (slow != fast) {
                     slow = slow.next;
@@ -40,7 +40,7 @@ public class StartingPointOfLoop {
         node3.next = node4;
         node4.next = node2; // cycle created here
 
-        ListNode result = detectCycle(head);
+        ListNode result = getStartingPoint(head);
 
         System.out.println(result.val);
     }

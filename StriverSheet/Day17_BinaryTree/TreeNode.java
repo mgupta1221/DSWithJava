@@ -3,8 +3,8 @@ package StriverSheet.Day17_BinaryTree;
 // Refer TreeImageForReference.png in this folder
 public class TreeNode {
     int val;
-    TreeNode left;
-    TreeNode right;
+    public TreeNode left;
+    public TreeNode right;
 
     TreeNode() {
     }
