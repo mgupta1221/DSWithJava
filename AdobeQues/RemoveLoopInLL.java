@@ -35,7 +35,7 @@ public class RemoveLoopInLL {
                     slow = slow.next;
                     fast = fast.next;
                 }
-                // move fast till fast's next does not reach slow
+                // move 'fast' pointer till fast's next reach slow
                 while (slow != fast.next) {
                     fast = fast.next;
                 }
