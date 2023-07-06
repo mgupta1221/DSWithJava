@@ -4,6 +4,7 @@ import StriverSheet.Day6.Node;
 
 // https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1
 // https://leetcode.com/problems/intersection-of-two-linked-lists/
+// Solved earlier
 
 // Approach 1 (Not solved below):
 // Find difference(diff) in length of two LLs. Move the longer one by 'diff'. 

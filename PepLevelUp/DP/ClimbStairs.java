@@ -1,7 +1,7 @@
 package PepLevelUp.DP;
 
 
-// LC 70
+// LC 70 https://leetcode.com/problems/climbing-stairs/
 // Solution video : https://www.youtube.com/watch?v=A6mOASLl2Dg&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=3
 // Solved using Recursive approach
 // See Trick diagram in same folder: ClimbStairs1.png

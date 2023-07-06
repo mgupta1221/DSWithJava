@@ -6,6 +6,7 @@ import java.util.Collections;
 public class LeadersInArray {
 
     // Problem: https://www.geeksforgeeks.org/leaders-in-an-array/
+    // New
     // An element is a leader if it is greater than all the elements to its right side. And the rightmost element is always a leader. 
 
     static ArrayList<Integer> leaders(int arr[], int n) {

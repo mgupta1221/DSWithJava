@@ -6,6 +6,7 @@ public class SpiralTraversalMatrix {
 
     // Problem:
     // https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1
+    // New
 
     // Approach : Take 4 variables for: Left, Right, Top, Bottom
 

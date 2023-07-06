@@ -3,7 +3,8 @@ package AdobeQues;
 public class SortArray0s1s2s {
 
     // LC 75: https://leetcode.com/problems/sort-colors/
-
+    // Solved earlier
+    
     // Approach 1 - Merge Sort - O(NlogN)
 
     // Approach 2 - Iterate and Count number of 0s, 1s and 2s

@@ -3,6 +3,8 @@ package AdobeQues;
 import StriverSheet.Day6.Node;
 
 // LC: 234 https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1
+// Solved earlier
+
 // Solution:
 // Step 1: Reach to the middle of the LL
 // Step 2: Reverse the second part of the LL

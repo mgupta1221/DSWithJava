@@ -19,7 +19,9 @@ public class ReverseNodesInKGroups {
     public static ListNode reverseKGroup_recur(ListNode head, int k, int len) {
 
         // this below condition is very important to attach last remaining nodes(<k) to
-        // the last group
+        // the last group.
+        // Also, remove this condition if you also want to reverse the last pending
+        // (less than k) nodes
         if (len < k) {
             return head;
         }
@@ -60,7 +62,7 @@ public class ReverseNodesInKGroups {
 
         int[] nums1 = { 1, 2, 3, 4, 5 };
         ListNode head1 = GetLinkedList(nums1);
-        
+
         ListNode result = reverseKGroup(head1, 2);
         PrintLinkedList(result);
     }

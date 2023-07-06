@@ -38,7 +38,7 @@ public class SubsetSum {
     public static boolean targetSum(int[] nums, int target) {
 
         Boolean[][] dp = new Boolean[nums.length + 1][target + 1]; // Default values will be 'null', not 'false' in
-                                                                   // 'Boolean' array
+                                                                   // 'Boolean' array, notice it is not 'boolean'
 
         // return targetSum_helper_withoutMemo(nums, 0, target);// without memoization
         return targetSum_helper_withMemo(nums, 0, target, dp); // with memoization

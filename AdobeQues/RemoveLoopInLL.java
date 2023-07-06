@@ -6,6 +6,8 @@ public class RemoveLoopInLL {
 
     // Problem:
     // https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1
+    // New
+
     // We have to remove the loop from the LL if exists by disconnected the node
     // from one point which forms the loop
 

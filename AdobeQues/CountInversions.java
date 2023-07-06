@@ -2,8 +2,10 @@ package AdobeQues;
 
 public class CountInversions {
 
-    // Problem: https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1?page=1&difficulty[]=1&company[]=Adobe&sortBy=submissions
-
+    // Problem:
+    // https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1?page=1&difficulty[]=1&company[]=Adobe&sortBy=submissions
+    // Solved earlier
+    
     public static long inversionCount(long arr[], long N) {
         return mergeSort(arr, 0, (int) N - 1);
     }

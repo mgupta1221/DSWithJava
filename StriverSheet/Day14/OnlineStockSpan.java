@@ -9,7 +9,7 @@ class StockSpanner {
     // Problem: LC 901 https://leetcode.com/problems/online-stock-span/description/
 
     // 2 approaches:
-    // Approach 1: Solved with the technique of "Next Greater Element"
+    // Approach 1(Optimized): Solved with the technique of "Next Greater Element"
     // Approach 2: Without using stack (using List)
 
     // In approach 2: In worst case, for 1st input it will check 1 time in the list,
@@ -72,7 +72,7 @@ public class OnlineStockSpan {
         System.out.println(stockSpanner.next_approachWithStack(75)); // return 4, because the last 4 prices (including
                                                                      // today's price of
         // 75) were less than or equal to today's price.
-        System.out.println(stockSpanner.next_approachWithStack(85)); // return 6
+        System.out.print(stockSpanner.next_approachWithStack(85)); // return 6
 
     }
 }

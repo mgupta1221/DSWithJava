@@ -4,6 +4,7 @@ package AdobeQues;
 import java.util.Stack;
 
 //Problem: LC 496  https://leetcode.com/problems/next-greater-element-i/
+// Solved earlier
 
 // Soluton :
 //https://www.youtube.com/watch?v=rSf9vPtKcmI&list=PL-Jc9J83PIiEyUGT3S8zPdTMYojwZPLUM&index=7
@@ -38,9 +39,9 @@ public class NextGreaterElement_I {
                 st.pop();
             }
             if (st.isEmpty()) {
-                result[idx] = (long) -1;
+                result[i] = (long) -1;
             } else {
-                result[idx] = st.peek();
+                result[i] = st.peek();
             }
             idx--;
             st.push(arr[i]);

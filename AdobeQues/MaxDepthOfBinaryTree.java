@@ -5,6 +5,7 @@ import StriverSheet.Day17_BinaryTree.TreeNode;
 public class MaxDepthOfBinaryTree {
 
     // https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
+    // New
 
     public static int maxDepth(TreeNode root) {
         if (root == null) {

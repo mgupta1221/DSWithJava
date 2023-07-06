@@ -2,6 +2,7 @@ package AdobeQues;
 
 
 public class MergeSort {
+    // Solved ealier
 
     public static int[] mergeSort(int[] arr, int low, int high) {
 

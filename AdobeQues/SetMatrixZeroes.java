@@ -3,7 +3,8 @@ package AdobeQues;
 public class SetMatrixZeroes {
 
     // https://leetcode.com/problems/set-matrix-zeroes/
-
+    // Solved earlier
+    
     // Bruteforce and Better Approach:
     // https://www.youtube.com/watch?v=M65xBewcqcI&t=309s
     // Best Approach with least Time and Space Complexity:
@@ -24,7 +25,6 @@ public class SetMatrixZeroes {
         int[] col = new int[m];
         int[] row = new int[n];
 
-        
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (matrix[i][j] == 0) {
