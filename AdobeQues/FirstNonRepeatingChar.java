@@ -13,6 +13,16 @@ import java.util.Stack;
 // upto that point. If there are many characters that have appeared only once, you have to tell which one of them was 
 // the first one to appear. If there is no such character then append '#' to the answer.
 
+// Approach:
+// Follow the below steps to solve the given problem:
+
+// Take map to check the uniqueness of an element.
+// Take queue to find first non-repeating element.
+// Traverse through the string and increase the count of elements in map and push in to queue is count is 1.
+// If count of front element of the queue > 1 anytime then pop it from the queue until we get unique element at the front.
+// If queue is empty anytime append answer string with ‘#’ else append it with front element of queue.
+// return answer string.
+
 public class FirstNonRepeatingChar {
 
     public static String FirstNonRepeating(String A) {
