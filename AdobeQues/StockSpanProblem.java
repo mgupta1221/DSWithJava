@@ -20,11 +20,11 @@ public class StockSpanProblem {
 
     public StockSpanProblem() {
         itr = 0;
+        st.push(itr); // pushing first value
     }
 
     public int next(int price) {
         int result = 0;
-        st.push(price);
         prices[itr] = price;
 
         while (!st.isEmpty() && price >= prices[st.peek()]) {
@@ -36,14 +36,16 @@ public class StockSpanProblem {
         } else {
             result = itr - st.peek();
         }
-        st.push(itr);
+        st.push(itr);// notice itr is pushed first before incrementing becuase we have to consider
+                     // this current 'itr' in next iteration
         itr++;
+
         return result;
     }
 
     public static void main(String[] args) {
         int price[] = { 100, 80, 60, 70, 60, 75, 85 };
-        StockSpanProblem obj= new StockSpanProblem();
+        StockSpanProblem obj = new StockSpanProblem();
 
         for (int i = 0; i < price.length; i++) {
             int result = obj.next(price[i]);
