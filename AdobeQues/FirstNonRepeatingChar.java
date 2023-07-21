@@ -1,10 +1,9 @@
 package AdobeQues;
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 // https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1
 

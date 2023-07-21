@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Node",
+            "request": "launch",
+            "mainClass": "AdobeQues.Node",
+            "projectName": "PepJava_c02ecfb3"
+        },
+        {
+            "type": "java",
             "name": "test1",
             "request": "launch",
             "mainClass": "StriverSheet.Day12_Heaps.test1",

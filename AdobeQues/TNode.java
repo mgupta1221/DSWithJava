@@ -1,34 +1,32 @@
-package StriverSheet.Day20_BinarySearchTree;
+package AdobeQues;
 
 // Refer TreeImageForReference.png in this folder
-public class Node {
+public class TNode {
     public int val;
-    public Node left;
-    public Node right;
-    Node next;
+    public TNode left;
+    public TNode right;
 
-    Node() {
+    TNode() {
     }
 
-    Node(int val) {
+    TNode(int val) {
         this.val = val;
     }
 
-    public Node(int val, Node left, Node right) {
+    public TNode(int val, TNode left, TNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
-        this.next = null;
     }
 
-    public static Node PopulateBinaryTree() {
-        Node root = new Node(50, null, null);
-        Node child1 = new Node(25, null, null);
-        Node child2 = new Node(75, null, null);
-        Node child3 = new Node(12, null, null);
-        Node child4 = new Node(37, null, null);
-        Node child5 = new Node(30, null, null);
-        Node child7 = new Node(45, null, null);
+    public static TNode PopulateBinaryTree() {
+        TNode root = new TNode(50, null, null);
+        TNode child1 = new TNode(25, null, null);
+        TNode child2 = new TNode(75, null, null);
+        TNode child3 = new TNode(12, null, null);
+        TNode child4 = new TNode(37, null, null);
+        TNode child5 = new TNode(30, null, null);
+        TNode child7 = new TNode(45, null, null);
 
         root.left = child1;
         root.right = child2;
@@ -43,7 +41,7 @@ public class Node {
         return root;
     }
 
-    public static void PrintTree(Node root) {
+    public static void PrintTree(TNode root) {
         if (root == null) {
             return;
         }

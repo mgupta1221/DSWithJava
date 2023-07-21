@@ -1,8 +1,7 @@
 package AdobeQues;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
-import java.util.Collections;
 
 public class MinimizeTheHeights {
 
@@ -11,7 +10,7 @@ public class MinimizeTheHeights {
     // New
 
     // Approach Explanation: https://www.youtube.com/watch?v=Av7vSnPSCtw
-    https://www.youtube.com/watch?v=tSLiZAQG9NM
+   //  https://www.youtube.com/watch?v=tSLiZAQG9NM
 
     // Explnsation on code:
     // 1. We sorted the array first becuase minimum differnece can only be found from consecutive elements
