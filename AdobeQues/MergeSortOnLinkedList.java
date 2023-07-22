@@ -2,24 +2,36 @@ package AdobeQues;
 
 import StriverSheet.Day6.Node;
 
+// Problem :https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1
+
+// The task is to Sort the given linked list using Merge Sort.
+
 public class MergeSortOnLinkedList {
 
     static Node mergeSort(Node head) {
         if (head == null || head.next == null)
             return head;
 
+        // Finding mid node
+        if (head == null || head.next == null)
+            return head;
+
         Node slow = head;
         Node fast = head;
-        Node beforeMid = head;
-        while (fast != null && fast.next != null) {
-            beforeMid = slow;
+
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
+        // This is important and used to break the Linked list at mid node
+        // Linked list split here in next 2 statements
         Node mid = slow;
-        beforeMid.next = null;
+        Node nextOfMiddle = mid.next;
+        mid.next = null;
+
+        // Merge Sort logic begins after finding mid
         Node left = mergeSort(head);
-        Node right = mergeSort(mid);
+        Node right = mergeSort(nextOfMiddle); // passing second half
 
         return merge(left, right);
     }
@@ -70,7 +82,7 @@ public class MergeSortOnLinkedList {
     public static void main(String[] args) {
         int[] vals1 = new int[] { 3, 2, 4, 5, 1 };
         Node head = Node.GetLinkedList(vals1);
-        head= mergeSort(head);
+        head = mergeSort(head);
 
         Node.PrintLinkedList(head);
     }
