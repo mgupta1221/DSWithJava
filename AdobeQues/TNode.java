@@ -5,6 +5,7 @@ public class TNode {
     public int val;
     public TNode left;
     public TNode right;
+    public TNode nextRight;// added for
 
     TNode() {
     }
@@ -55,5 +56,7 @@ public class TNode {
         PrintTree(root.right);
 
     }
+
+   
 
 }
