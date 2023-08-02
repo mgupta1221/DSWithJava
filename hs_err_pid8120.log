@@ -1,0 +1,34 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffbe6f385a6, pid=8120, tid=28324
+#
+# JRE version: OpenJDK Runtime Environment Temurin-17.0.7+7 (17.0.7+7) (build 17.0.7+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-17.0.7+7 (17.0.7+7, mixed mode, tiered, compressed oops, compressed class ptrs, parallel gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x3885a6]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:c:\Users\mohgupt\.vscode\extensions\redhat.java-1.21.0-win32-x64\lombok\lombok-1.18.28.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=c:\Users\mohgupt\AppData\Roaming\Code\User\workspaceStorage\e5c2113bf48eb89d724292ea34da7c65\redhat.java -Daether.dependencyCollector.impl=bf c:\Users\mohgupt\.vscode\extensions\redhat.java-1.21.0-win32-x64\server\plugins\org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar -configuration c:\Users\mohgupt\AppData\Roaming\Code\User\globalStorage\redhat.java\1.21.0\config_win -data c:\Users\mohgupt\AppData\Roaming\Code\User\workspaceStorage\e5c2113bf48eb89d724292ea34da7c65\redhat.java\jdt_ws
+
+Host: Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz, 8 cores, 15G,  Windows 11 , 64 bit Build 22000 (10.0.22000.2124)
+Time: Mon Jul 31 00:32:29 2023 India Standard Time elapsed time: 204020.699243 seconds (2d 8h 40m 20s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000193c52f5750):  JavaThread "Framework stop - Equinox Container: 108345e4-ed27-4e5b-9bf9-2940bfb23a5b" [_thread_in_vm, id=28324, stack(0x0000006dd8a00000,0x0000006dd8b00000)]
+
+Stack: [0x0000006dd8a00000,0x0000006dd8b00000],  sp=0x0000006dd8af8da0,  free space=995k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x3885a6]
+V  [jvm.dll+0x677472]
+V  [jvm.dll+0x38824e]
+V  [jvm.dll+0x6bffae]
+V  [jvm.dll+0x6c0556]
