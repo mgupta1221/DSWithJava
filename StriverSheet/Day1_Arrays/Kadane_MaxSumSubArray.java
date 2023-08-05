@@ -41,7 +41,7 @@ public class Kadane_MaxSumSubArray {
                 max_ending_here = nums[i];
                 startIndex = i;
             }
-            if (max_ending_here > maxSum) {
+            if (max_ending_here > maxSum) {// getting max of (max_ending_here,maxSum) in maxSum variable
                 maxSum = max_ending_here;
                 endIndex = i;
             }
