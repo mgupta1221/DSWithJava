@@ -4,24 +4,28 @@ import StriverSheet.Day6.Node;
 
 public class test {
 
-    public static void removeLoop(Node head) {
+    public static int findPlatform(int arr[], int dep[], int n) {
+
+        int count = 0;
+
+        for (int i = 1; i < dep.length; i++) {
+            if (arr[i] > dep[i - 1]) {
+                count++;
+            }
+        }
+        return count;
 
     }
 
     public static void main(String[] args) {
 
-        Node head = new Node(1);
-        Node node2 = new Node(2);
-        Node node3 = new Node(3);
-        Node node4 = new Node(4);
-        head.next = node2;
-        node2.next = node3;
-        node3.next = node4;
-        node4.next = head; // cycle created here
+        int[] arr = { 900, 940, 950, 1100, 1500, 1800 };
+        int[] dep = { 910, 1200, 1120, 1130, 1900, 2000 };
 
-        removeLoop(head);
-
-        Node.PrintLinkedList(head);
+        // int[] arr = { 900, 1100, 1235 };
+        // int[] dep = { 1000, 1200, 1240 };
+        int result = findPlatform(arr, dep, arr.length);
+        System.out.println(result);
     }
 
 }

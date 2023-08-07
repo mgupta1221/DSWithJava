@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 // Problem: https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#
 // Solved earlier
-// Aproach:
+// Approach:
 // https://www.youtube.com/watch?v=Ls_AYoz1IX0
 
 // Sort both arrival and departure times. Idea is if all trains come than
