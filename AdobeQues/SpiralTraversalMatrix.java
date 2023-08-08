@@ -28,14 +28,15 @@ public class SpiralTraversalMatrix {
             }
             right--;
 
-            // Notice this below condition placed additonally else it print incorrect values
+            // Notice we have to put below condition additonally, else it prints few values again
+            // which were already printed in first 2 loops
             if (top <= bottom) {
                 for (int i = right; i >= left; i--) {
                     result.add(matrix[bottom][i]);
                 }
                 bottom--;
             }
-            // Notice this below condition
+            // Notice this below condition similar to above
             if (left <= right) {
                 for (int i = bottom; i >= top; i--) {
                     result.add(matrix[i][left]);

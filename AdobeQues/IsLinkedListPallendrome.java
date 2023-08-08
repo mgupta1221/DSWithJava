@@ -16,7 +16,7 @@ public class IsLinkedListPallendrome {
 
         Node slow = head;
         Node fast = head;
-
+        // reach middle of list
         while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;

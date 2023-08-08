@@ -29,11 +29,11 @@ import java.util.Stack;
 public class NextGreaterElement_I {
 
     public static long[] nextLargerElement(long[] arr, int n) {
-        Stack<Long> st = new Stack<Long>();
+        Stack<Long> st = new Stack<Long>(); // notice how we have declared Long
         st.push(arr[n - 1]);
         long[] result = new long[n];
         result[n - 1] = -1;
-        int idx = n - 2;
+        
         for (int i = n - 2; i >= 0; i--) {
             while (!st.isEmpty() && arr[i] >= st.peek()) {
                 st.pop();
@@ -41,9 +41,8 @@ public class NextGreaterElement_I {
             if (st.isEmpty()) {
                 result[i] = (long) -1;
             } else {
-                result[i] = st.peek();
+                result[i] = st.peek(); // notice here we are using peek() , NOT pop()
             }
-            idx--;
             st.push(arr[i]);
 
         }
