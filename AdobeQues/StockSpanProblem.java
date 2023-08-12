@@ -32,7 +32,7 @@ public class StockSpanProblem {
         }
 
         if (st.isEmpty()) {
-            result = itr + 1;
+            result = itr + 1; /// this is iportant
         } else {
             result = itr - st.peek();
         }

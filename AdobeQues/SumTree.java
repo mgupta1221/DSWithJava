@@ -8,7 +8,7 @@ import StriverSheet.Day17_BinaryTree.TreeNode;
 public class SumTree {
 
     // https://practice.geeksforgeeks.org/problems/sum-tree/1
-    // New 
+    // New
     // Approach: Create a help which will return <isSumTree, SumAtRoot>
 
     public static boolean isSumTree(TreeNode root) {
@@ -28,7 +28,7 @@ public class SumTree {
         Pair p2 = new Pair(true, 0);
         if (root.left != null) {
             p1 = isSumTreeHelper(root.left);
-            if (p1.isSum == false) {
+            if (p1.isSum == false) {// this has to be remembered, if 'left' is not SumTree than return 0 as sum
                 return new Pair(false, 0);
             }
         }

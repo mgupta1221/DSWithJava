@@ -10,7 +10,9 @@ package AdobeQues;
 public class ImplementAtoi {
 
     public static int atoi(String str) {
-        int result = 0;
+        int result = 0;// remember to take this '0' not 1-> becuase first charcater can be handled
+                       // better and will not do : 10*char[0]
+                       
         boolean isNegative = false;
         for (int i = 0; i <= str.length() - 1; i++) {
             if (i == 0 && str.charAt(0) == '-') {

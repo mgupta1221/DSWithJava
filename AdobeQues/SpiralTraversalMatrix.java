@@ -30,6 +30,7 @@ public class SpiralTraversalMatrix {
 
             // Notice we have to put below condition additonally, else it prints few values again
             // which were already printed in first 2 loops
+            // https://www.youtube.com/watch?v=v63dUJXHqcM  <- see the end of this video from 38:44 mins
             if (top <= bottom) {
                 for (int i = right; i >= left; i--) {
                     result.add(matrix[bottom][i]);
