@@ -19,7 +19,7 @@ public class FacotorialsOfLargeNumber {
     // add(int index, E element): inserts the element at the given index. The
     // elements from the given index are shifted toward the right of the list.
 
-    // set() -  will set the element at specfied index WITHOUT Shifting elements
+    // set() - will set the element at specfied index WITHOUT Shifting elements
 
     public static ArrayList<Integer> factorial(int n) {
 
@@ -35,7 +35,8 @@ public class FacotorialsOfLargeNumber {
                 carry = product / 10;
             }
             while (carry > 0) {
-                list.add(0, carry % 10); // 'list.add()'
+                int digit = carry % 10;
+                list.add(0, digit); // 'list.add()' - Notice carry
                 carry = carry / 10;
             }
         }

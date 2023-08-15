@@ -50,7 +50,8 @@ public class MultiplyStrings {
             for (int j = s2.length() - 1; j >= 0; j--) {
                 int n2 = s2.charAt(j) - '0';
 
-                /// Multiply with current digits of s1 and s2 and add result to previously stored result[] at current position
+                /// Multiply with current digits of s1 and s2 and add result to previously
+                /// stored result[] at current position
                 int product = n1 * n2 + result[i1 + i2] + carry;
                 carry = product / 10;
                 result[i1 + i2] = product % 10; // update result with new value
@@ -66,7 +67,11 @@ public class MultiplyStrings {
 
         }
 
-        // result is filled from left to right (0 to n-1) so there might be empty zeroes at the end, trim them
+        // result is filled from left to right (0 to n-1) so there might be empty zeroes
+        // at the end, trim them
+        // E.g. s1= 15 , s2= 2
+        // result = 030 that means ending 0 of result 30 will be at 0th index
+        // of result[] array, so last zeroes should be ignored
         int n = result.length - 1;
         while (n >= 0 && result[n] == 0) {
             n--;
@@ -87,8 +92,8 @@ public class MultiplyStrings {
     public static void main(String[] args) {
         // String s1 = "33";
         // String s2 = "44";
-        String s1 = "4416";
-        String s2 = "-333";
+        String s1 = "-9";
+        String s2 = "02";
         String result = multiplyStrings(s1, s2);
         System.out.println(result);
     }

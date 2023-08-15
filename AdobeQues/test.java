@@ -1,6 +1,7 @@
 package AdobeQues;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -11,35 +12,35 @@ import StriverSheet.Day6.Node;
 
 public class test {
 
-    public static int[] calculateSpan(int price[], int n) {
-        int[] result = new int[price.length];
+    static ArrayList<Integer> factorial(int n) {
 
-        Stack<Integer> st = new Stack<>();
-        st.push(0);
-        result[0] = 1;
+        ArrayList<Integer> result = new ArrayList<>();
 
-        for (int i = 1; i < result.length; i++) {
-
-            while (!st.isEmpty() && price[i] >= price[st.peek()]) {
-                st.pop();
+        int carry = 0;
+        result.add(1);
+        for (int i = 2; i <= n; i++) {
+            carry = 0;
+            for (int j = result.size() - 1; j >= 0; j--) {
+                int prod = (result.get(j) * i) + carry;
+                result.set(j, prod % 10);
+                carry = prod / 10;
             }
-            if (st.isEmpty()) {
-                result[i] = 1;
-            } else {
-                result[i] = i - st.peek();
-            }
-            st.push(i);
+            if (carry > 0) {
+                result.add(0, carry);
+                carry /= 10;
 
+            }
         }
         return result;
 
     }
 
     public static void main(String[] args) {
-        int price[] = { 100, 80, 60, 70, 60, 75, 85 };
-        int[] result = calculateSpan(price, price.length);
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + " ");
+        String s1 = "15";
+        String s2 = "2";
+        ArrayList<Integer> result = factorial(5); // 1,2,3,4
+        for (Integer inte : result) {
+            System.out.println(inte);
         }
 
     }

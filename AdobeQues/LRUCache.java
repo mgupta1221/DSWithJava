@@ -11,18 +11,22 @@ import java.util.HashMap;
 // we will remove it from its position from linked list and put it as next node
 // to head(bring in front)
 
+// Things to remember: We need 3 things :
+//      1. Node with next, prev, key, value
+//      2. HashMap with <Integer, Node>
+//      3. Head and Tail between which all Nodes will be stored
+
 class Node {
     int key;
     int value;
     Node next;
     Node prev;
 
-    Node(int key, int val) {
+    Node(int key, int val) { // Note that Node has both Key and value
         this.key = key;
         this.value = val;
     }
 }
-
 
 class LRU_Cache {
     int capacity;
