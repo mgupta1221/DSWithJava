@@ -16,6 +16,9 @@ import java.util.Queue;
 // becuase we have to return the minimum number of times dice is rolled to reach the end
 // We are also maintaining 'visited' to make sure we dont visit the node cell again.
 
+// Trick here is to make chessboard a 1-D array and fill it with snakes and Ladders's header points than apply DFS from 
+// 1st point, as you reach cell 30, stop and return diceCount
+
 public class SnakeAndLadders {
     static int minThrow(int N, int arr[]) {
 
