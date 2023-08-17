@@ -3,6 +3,8 @@ package AdobeQues;
 // 
 public class DeleteNodeInBST {
 
+    // the function will return the root of the deleted tree
+
     public static TNode deleteNode(TNode root, int X) {
 
         if (root == null) {
@@ -12,7 +14,8 @@ public class DeleteNodeInBST {
         if (root.val < X) {
             // Notice we have to assign the result of deleteNote() function(not just call
             // func)
-            root.right = deleteNode(root.right, X);
+            root.right = deleteNode(root.right, X);// assigning back to root.right as function will return the TreeRoot
+                                                   // after deleting
         }
         // case 2:
         else if (root.val > X) {
@@ -43,7 +46,7 @@ public class DeleteNodeInBST {
                 nodeToBePlaced = rightChild;
             }
             root.val = nodeToBePlaced.val;
-            root.right = deleteNode(root.right, nodeToBePlaced.val);//deleting the replaced node
+            root.right = deleteNode(root.right, nodeToBePlaced.val);// deleting the replaced node
         }
         return root;
 

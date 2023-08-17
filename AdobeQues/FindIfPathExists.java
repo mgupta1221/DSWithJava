@@ -17,12 +17,12 @@ public class FindIfPathExists {
                 }
             }
         }
-        is_Possible_helper(grid, 0, row, col, directions, visited, result);
+        is_Possible_helper(grid, row, col, directions, visited, result);
         return result[0];
 
     }
 
-    public static void is_Possible_helper(int[][] grid, int idx, int row, int col,
+    public static void is_Possible_helper(int[][] grid, int row, int col,
             int[][] directions, boolean visited[][], Boolean[] result) {
         if (row == grid.length || col == grid[0].length) {
             result[0] = false;
@@ -44,7 +44,7 @@ public class FindIfPathExists {
             }
             visited[newRow][newCol] = true;
 
-            is_Possible_helper(grid, idx, newRow, newCol,
+            is_Possible_helper(grid, newRow, newCol,
                     directions, visited, result);
 
         }

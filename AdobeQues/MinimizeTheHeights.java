@@ -37,7 +37,9 @@ public class MinimizeTheHeights {
 
         for (int i = 1; i < arr.length; i++) {
 
-            max = Math.max(arr[i - 1] + k, largest); // i runs from 0 to (n-2), skipping last element
+            max = Math.max(arr[i - 1] + k, largest); // i runs from 0 to (n-2), skipping last element,
+                                                     // To remember, 'max' element chhote elements se banega jinme hum
+                                                     // (+k) kar rhe hain and vice versa
             min = Math.min(arr[i] - k, smallest); // i runs from 1 to (n-1), skipping first element
 
             if (min < 0) // becuase if we do (max-min) and 'min' is negative, than the value will

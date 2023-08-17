@@ -9,13 +9,14 @@ import StriverSheet.Day6.Node;
 public class MergeSortOnLinkedList {
 
     static Node mergeSort(Node head) {
+
         if (head == null || head.next == null)
-            return head;
+            return head; // make sure to return 'head' only and not 'null' here as answer will not come
+        // because in case head.next is null so there is only single node which we can
+        // return and in case head is null that mean list is empty so null cna be
+        // returned
 
         // Finding mid node
-        if (head == null || head.next == null)
-            return head;
-
         Node slow = head;
         Node fast = head;
 
@@ -30,6 +31,9 @@ public class MergeSortOnLinkedList {
         mid.next = null;
 
         // Merge Sort logic begins after finding mid
+        // Notice we are capturing the result here to pass to merge() func. In normal
+        // meregSort we dont capture the result since we have 'mid' available in the
+        // case.
         Node left = mergeSort(head);
         Node right = mergeSort(nextOfMiddle); // passing second half
 

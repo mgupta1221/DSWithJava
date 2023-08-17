@@ -9,7 +9,7 @@ public class ConnectNodeAtSameLevel {
     // 2. Print
     // 3. Addchildren
 
-    // For printing each level in separate line we have used 2 queues.
+    // For printing each level in separate line we have used queues.
 
     // Solved with 2 approaches, both use DFS -
 
@@ -28,7 +28,8 @@ public class ConnectNodeAtSameLevel {
 
         mainQueue.add(root);
         while (!mainQueue.isEmpty()) {
-            int count = mainQueue.size();
+            int count = mainQueue.size(); // always calculate size like this becuase we are changing Queue size in the
+                                          // loop
             ArrayList<TNode> arr = new ArrayList<>();
             for (int i = 0; i < count; i++) {
 

@@ -6,9 +6,42 @@ import java.util.Queue;
 
 // Remmeber to use Queue to implement DFS in this solution
 
+// Approach 1: Using recursion (simpler)
+// Approach 2: Using DFS with Queue
+// Point to note to implement this is - Always add "-1" to ArrayList for leaf nodes for Serialize(). 
+// And Also handle -1 in "Deserialize()"
+
 public class SerializeDeserialzeBinryTree {
 
-    public static void serialize(TNode root, ArrayList<Integer> A) {
+    // Approach 1: Recursion
+    public void serialize_approach1(TNode root, ArrayList<Integer> A) {
+        if (root == null) {
+            A.add(-1);
+            return;
+        }
+
+        A.add(root.val);
+        serialize_approach1(root.left, A);
+        serialize_approach1(root.right, A);
+    }
+
+    // Function to deserialize a list and construct the tree.
+    public TNode deSerialize_approach1(ArrayList<Integer> A) {
+        if (A.size() == 0)
+            return null;
+        int val = A.get(0);
+        A.remove(0); // removes element at index n
+        if (val == -1) {
+            return null;
+        }
+        TNode root = new TNode(val);
+        root.left = deSerialize_approach1(A);
+        root.right = deSerialize_approach1(A);
+        return root;
+    }
+
+    // Approach 2: Using DFS
+    public static void serialize_app2(TNode root, ArrayList<Integer> A) {
         Queue<TNode> q = new LinkedList<>();
         q.add(root);
         while (!q.isEmpty()) {
@@ -25,7 +58,7 @@ public class SerializeDeserialzeBinryTree {
     }
 
     // Function to deserialize a list and construct the tree.
-    public static TNode deSerialize(ArrayList<Integer> A) {
+    public static TNode deSerialize_app2(ArrayList<Integer> A) {
         if (A.size() == 0) {
             return null;
         }
