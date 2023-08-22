@@ -25,6 +25,7 @@ public class ConstructTreeFromPreandInOrder {
     // left and right subtree from InOrder array recursively.
     // We will use 'start' and 'end' variable to populate left and right nodes of
     // root node recursively.
+    // start and end belongs to Inorder array
 
     // global variables
 
@@ -32,7 +33,8 @@ public class ConstructTreeFromPreandInOrder {
     static HashMap<Integer, Integer> map = new HashMap<>();
 
     public static Node buildTree(int[] preorder, int[] inorder) {
-        // Storing index of each node as per its inorder placement, which will be used later
+        // Storing index of each node as per its inorder placement, which will be used
+        // later
         for (int i = 0; i < inorder.length; i++) {
             map.put(inorder[i], i);
         }
@@ -40,6 +42,8 @@ public class ConstructTreeFromPreandInOrder {
         return root;
     }
 
+    // Idea is this function will always give me root node lying between start and
+    // End in InOrder array
     public static Node buildTreeHelper(int[] preorder, int[] inorder, int start, int end) {
         if (start > end) {
             return null;

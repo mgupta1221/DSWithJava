@@ -11,6 +11,8 @@ public class ConstructTreeFromPostandInOrder {
     // InOrder array )
     // https://www.youtube.com/watch?v=FBpQEQkQ1No
 
+    // startt and end belongs to Inorder array
+
     // See this quesiton first - ConstructTreeFromPreandInOrder.java
 
     // global variables

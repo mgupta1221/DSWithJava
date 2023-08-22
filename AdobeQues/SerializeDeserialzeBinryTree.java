@@ -14,7 +14,7 @@ import java.util.Queue;
 public class SerializeDeserialzeBinryTree {
 
     // Approach 1: Recursion
-    public void serialize_approach1(TNode root, ArrayList<Integer> A) {
+    public static void serialize_approach1(TNode root, ArrayList<Integer> A) {
         if (root == null) {
             A.add(-1);
             return;
@@ -26,7 +26,7 @@ public class SerializeDeserialzeBinryTree {
     }
 
     // Function to deserialize a list and construct the tree.
-    public TNode deSerialize_approach1(ArrayList<Integer> A) {
+    public static TNode deSerialize_approach1(ArrayList<Integer> A) {
         if (A.size() == 0)
             return null;
         int val = A.get(0);
@@ -41,7 +41,7 @@ public class SerializeDeserialzeBinryTree {
     }
 
     // Approach 2: Using DFS
-    public static void serialize_app2(TNode root, ArrayList<Integer> A) {
+    public static void serialize_approach2(TNode root, ArrayList<Integer> A) {
         Queue<TNode> q = new LinkedList<>();
         q.add(root);
         while (!q.isEmpty()) {
@@ -58,7 +58,7 @@ public class SerializeDeserialzeBinryTree {
     }
 
     // Function to deserialize a list and construct the tree.
-    public static TNode deSerialize_app2(ArrayList<Integer> A) {
+    public static TNode deSerialize_approach2(ArrayList<Integer> A) {
         if (A.size() == 0) {
             return null;
         }
@@ -95,9 +95,11 @@ public class SerializeDeserialzeBinryTree {
     public static void main(String[] args) {
         TNode root = TNode.PopulateBinaryTree();
         ArrayList<Integer> A = new ArrayList<>();
-        serialize2(root, A);
 
-        TNode root2 = deSerialize2(A);
+        // serialize_approach1(root, A);
+        serialize_approach1(root, A);
+
+        TNode root2 = deSerialize_approach2(A);
         TNode.PrintTree(root2);
     }
 

@@ -14,7 +14,7 @@ import java.util.HashMap;
 // Things to remember: We need 3 things :
 //      1. Node with next, prev, key, value
 //      2. HashMap with <Integer, Node>
-//      3. Head and Tail between which all Nodes will be stored
+//      3. Head and Tail "between" which all Nodes will be stored
 
 class Node {
     int key;
