@@ -1,8 +1,8 @@
 package AdobeQues;
 
-//https://practice.geeksforgeeks.org/problems/reverse-each-word-in-a-given-string1001/
+//https://practice.geeksforgeeks.org/problems/reverse-each-word-in-a-given-string1001/1
 
-public class ReverseWordsinString {
+public class ReverseWordsInString {
     static String reverseWords(String S) {
         int start = 0;
         int end;
@@ -32,6 +32,8 @@ public class ReverseWordsinString {
                 }
             }
         }
+
+        // returning character array (with swapped characters) - as String result
         return String.valueOf(ch);
     }
 

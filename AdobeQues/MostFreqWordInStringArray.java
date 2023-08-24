@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class MostFreqWordInStringArray {
 
-    // https://practice.geeksforgeeks.org/problems/most-frequent-word-in-an-array-of-strings3528
+    // https://practice.geeksforgeeks.org/problems/most-frequent-word-in-an-array-of-strings3528/1
 
     // Solution: First Get counts of each words in HashMap. Then follow apporach 1
     // or 2
