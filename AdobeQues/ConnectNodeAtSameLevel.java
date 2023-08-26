@@ -33,7 +33,8 @@ public class ConnectNodeAtSameLevel {
             ArrayList<TNode> arr = new ArrayList<>();
             for (int i = 0; i < count; i++) {
 
-                TNode node = mainQueue.poll();
+                TNode node = mainQueue.poll(); // Notice we are popping element inside for loop not inside while loop
+                                               // above
 
                 arr.add(node);// fill arraylist
 

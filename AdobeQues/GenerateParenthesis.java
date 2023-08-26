@@ -12,10 +12,10 @@ import java.util.List;
 // Imp: Notice the 2 if conditions
 //
 
-public class GenerateParenthesis {
+public class GenerateParenthesis {  
 
     // Aproach 1:
-    public static List<String> AllParenthesis(int n) {
+    public static List<String> AllParenthesis2(int n) {
         ArrayList<String> al = new ArrayList<String>();
         AllParenthesis_helper(al, 0, 0, "", n);
         return al;

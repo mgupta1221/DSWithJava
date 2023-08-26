@@ -4,6 +4,9 @@ package AdobeQues;
 
 // This is like KnapSack problem -  Either element will come or not come.
 // We have used a variable 'memo' to avoid TLE
+// Becuase the values can be too big, so we will do [mod%] with 1e9+7  at each step;
+
+// Solution video: https://www.youtube.com/watch?v=8qDhW1Owcfo
 
 public class SumOfPowerOfNums {
     static int mod = 1000000000 + 7;
@@ -29,10 +32,10 @@ public class SumOfPowerOfNums {
             return memo[idx][targetSum];
         }
 
-        int pick = numOfWaysHelper(idx + 1, targetSum - power, x, memo); // come
-        int notpick = numOfWaysHelper(idx + 1, targetSum, x, memo); // not come
+        int pick = numOfWaysHelper(idx + 1, targetSum - power, x, memo); // idx will come
+        int notpick = numOfWaysHelper(idx + 1, targetSum, x, memo); // idx will not come
 
-        return memo[idx][targetSum] = ((pick % mod) + (notpick % mod)) % mod; // add both and return
+        return memo[idx][targetSum] = ((pick % mod) + (notpick % mod)) % mod; // add both, save it in memo and return
 
     }
 
