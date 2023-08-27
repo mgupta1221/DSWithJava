@@ -12,8 +12,8 @@ import java.util.Stack;
 
 // Approach :
 // Sort the arrays of array by start time
-// To sort we store the array set {a,b} in a class and sort it using compareTo() if Comparable interface
-// Than we create an array, and push the first class object and compare the next element's start with its end
+// To sort we store the array set {start, end} in a class 'Pair' and sort it using compareTo() if Comparable interface
+// Than we create an array, and push the first pair and compare the next element's start with its end
 // If start and end overlap we merge the pair and push it back to the stack and do it till the last class object
 
 public class MergeIntervals {
