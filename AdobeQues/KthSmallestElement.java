@@ -4,26 +4,24 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class KthSmallestElement {
-
-    // Problem: https://www.geeksforgeeks.org/kth-smallest-largest-element-in-unsorted-array/
     // New
+    // Problem:
+    // https://www.geeksforgeeks.org/kth-smallest-largest-element-in-unsorted-array/
 
     // If the element with the smallest value has the highest priority,
-    // then that priority queue is called the min priority queue
+    // then that priority queue is called the Min priority queue. Min Priority Queue
+    // mai sabse pehle sabse chota element pop hoga
 
-    // Approach:
-    // For each element, after the Kth element (arr[K] to arr[n-1]),
-    // compare it with the root of priority queue:
-
-    // a) If the element is less than the root then remove the root and insert this
-    // element into the priority queue
-    // b) Else ignore it.
-
-    // Finally, the root of the priority queue is the Kth smallest element.
+    // Kth Smallest find karne ke liye..Max Priority Queue(with
+    // Collections.reverseOrder) use karna hoga..kyunki hume bigger elements ko pop
+    // karna hai
+    // Similarly, Kth Largest find karne ke liye..Min Priority Queue() use karna hoga
 
     public static int kthSmallest(int[] arr, int l, int r, int k) {
 
         // Max Priority queue
+        // Collections.reverseOrder() ka matlab hai sabse bada element sabse pehle pop
+        // hoga
         PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
 
         for (int i = 0; i < arr.length; i++) {

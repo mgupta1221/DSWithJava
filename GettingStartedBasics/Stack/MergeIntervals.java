@@ -33,7 +33,7 @@ public class MergeIntervals {
     }
 
     public static int[][] merge(int[][] intervals) {
-        
+
         // Storing arrays of array in array of class 'Pair'
 
         Pair[] pairs = new Pair[intervals.length];
@@ -61,13 +61,12 @@ public class MergeIntervals {
             }
         }
 
-        // Since lowest is present at the bottom, create a new stack to reverse the
-        // order of items
+        // Since first result pair is present at the bottom, create a new stack to
+        // reverse the order of items
         Stack<Pair> result = new Stack<>();
         while (st.size() > 0) {
             result.push(st.pop());
         }
-
 
         int[][] finalResult = new int[result.size()][intervals[0].length];
 

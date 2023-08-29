@@ -112,8 +112,8 @@ public class ShortestPrimePath {
     }
 
     public static void main(String[] args) {
-        int Num1 = 1033;
-        int Num2 = 8179;
+        int Num1 = 5791;
+        int Num2 = 2309;
         ShortestPrimePath so = new ShortestPrimePath();
         int result = so.shortestPath(Num1, Num2);
         System.out.println(result);

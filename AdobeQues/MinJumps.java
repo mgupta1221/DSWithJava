@@ -22,7 +22,11 @@ public class MinJumps {
                                                               // be reached from this index
 
             // isme hum ye check kar rhe hain..kya peeche wale index ne mujhe better answer
-            // diya tha
+            // diya tha - basically jaise hi 'i' curEnd se match karta hai (iska matlab hum
+            // current position par pahuch gaye hain) - hum 'curEnd' ko ab tak ke maximum
+            // reached index(which is 'curFarthest' that is calculated at each iteration
+            // hence it is maximum reachable point till here) se update kar denege or jump
+            // ka count bhi badha denge
             if (i == curEnd) {
                 jumps++; // increment jumps by 1
                 curEnd = curFarthest; // update curEnd with the new farthest index
@@ -38,7 +42,7 @@ public class MinJumps {
     }
 
     public static void main(String[] args) {
-        int[] nums = { 2, 3, 1, 1, 4, 3, 1 };
+        int[] nums = { 2, 3, 1, 1, 4 };
         int result = jump(nums);
         System.out.println(result);
     }
