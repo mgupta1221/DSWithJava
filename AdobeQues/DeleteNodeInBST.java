@@ -1,6 +1,8 @@
 package AdobeQues;
 
-// 
+// https://practice.geeksforgeeks.org/problems/delete-a-node-from-bst/1
+
+
 public class DeleteNodeInBST {
 
     // the function will return the root of the deleted tree

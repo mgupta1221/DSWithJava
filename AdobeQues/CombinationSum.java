@@ -24,9 +24,9 @@ public class CombinationSum {
         return result;
     }
 
-    static void combinationSumHelper(ArrayList<Integer> A, int B, int idx, ArrayList<ArrayList<Integer>> result,
+    static void combinationSumHelper(ArrayList<Integer> A, int targetSum, int idx, ArrayList<ArrayList<Integer>> result,
             ArrayList<Integer> subResult) {
-        if (B == 0) {
+        if (targetSum == 0) {
             if (!result.contains(subResult)) {
                 result.add(new ArrayList<>(subResult));
             }
@@ -36,13 +36,13 @@ public class CombinationSum {
             return;
         }
         int currentItem = A.get(idx);
-        if (B - currentItem >= 0) {
+        if (targetSum - currentItem >= 0) {
             subResult.add(currentItem);
-            combinationSumHelper(A, B - currentItem, idx, result, subResult);
+            combinationSumHelper(A, targetSum - currentItem, idx, result, subResult);
             subResult.remove(subResult.size() - 1);
 
         }
-        combinationSumHelper(A, B, idx + 1, result, subResult);
+        combinationSumHelper(A, targetSum, idx + 1, result, subResult);
 
     }
 

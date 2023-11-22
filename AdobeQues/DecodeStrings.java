@@ -72,7 +72,7 @@ public class DecodeStrings {
 
                 st.pop(); // removing '['
 
-                 //get the number
+                // get the number
                 int n1 = 0;
                 int count = 1;
                 while (!st.isEmpty() && Character.isDigit(st.peek())) {
@@ -82,7 +82,7 @@ public class DecodeStrings {
                     count *= 10;
                 }
 
-                // put back the substring in stack k times
+                // THIS IS IMPORTANT:  put back the substring in stack k times
                 while (n1 > 0) {
                     for (int j = 0; j <= sb.length() - 1; j++) {
                         st.push(sb.charAt(j));

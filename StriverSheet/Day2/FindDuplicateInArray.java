@@ -20,7 +20,8 @@ public class FindDuplicateInArray {
         int slow = nums[0];
         int fast = nums[0];
 
-        // find intersection point
+        // find intersection point, using do-while so that pointer going inside loop at
+        // least once
         do {
             slow = nums[slow];
             fast = nums[nums[fast]];
