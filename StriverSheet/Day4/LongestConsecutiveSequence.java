@@ -7,7 +7,7 @@ public class LongestConsecutiveSequence {
     // LC 128: https://leetcode.com/problems/longest-consecutive-sequence/
 
     // Probelm Desc: Given an unsorted array, return the length of the
-    // longest consecutive elements sequence. E.g. [100,4,200,1,3,2] = [1,2,3,4]
+    // longest consecutive elements sequence. E.g. [100,4,200,1,3,2] =Ans: 4 i.e. [1,2,3,4]
 
     // Approach: We store all numbers in a hashSet. We run a FOR loop on array and
     // than run a WHILE loop inside to check all the numbers above ith element

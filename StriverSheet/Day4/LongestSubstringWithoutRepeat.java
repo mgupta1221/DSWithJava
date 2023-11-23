@@ -29,8 +29,7 @@ public class LongestSubstringWithoutRepeat {
         }
         HashSet<Character> hSet = new HashSet<>();
         // Maintain 2 pointers - One for currentIndex and one for item to be removed
-        // when
-        // duplicate
+        // when duplicate
         int currentIndex = 0;
         int indexTobeRemoved = 0;
         int maxLength = 0;
