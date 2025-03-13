@@ -5,7 +5,7 @@ han EMAIL Design
 aur get all user of a contact
 vice versa
 
-Adobe quesitons:
+Adobe questions:
 1) Platform, Meeting room, Stock-Buy-sell, 
 Reverse words in sentence(with followups liked you need to exclude some charatcers, Store the given sentence in Linked list such that reversal is easy),
 Round robin Algo
