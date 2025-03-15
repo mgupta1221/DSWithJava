@@ -1,10 +1,10 @@
-package StriverSheet.Day4;
+package Blind75.Arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ThreeSum_3Sum {
+public class ThreeSum {
 
     // LC 15 - https://leetcode.com/problems/3sum/
     // Problem : return all the triplets [nums[i], nums[j], nums[k]] such that i !=
