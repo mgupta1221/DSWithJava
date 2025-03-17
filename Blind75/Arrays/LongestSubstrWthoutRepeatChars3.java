@@ -2,7 +2,7 @@ package Blind75.Arrays;
 
 import java.util.HashSet;
 
-public class LongestSubstrWthoutRepeatChars {
+public class LongestSubstrWthoutRepeatChars3 {
 
     public int LongestSubStringWithReapeatingChars(String s) {
         int maxLength = 0;
@@ -12,7 +12,6 @@ public class LongestSubstrWthoutRepeatChars {
         while (currentIndex < s.length()) {
             Character ch = s.charAt(currentIndex);
             if (hs.contains(ch)) {
-                maxLength = Math.max(maxLength, hs.size());
                 hs.remove(s.charAt(indexTobeRemoved));
                 indexTobeRemoved++;
             } else {
@@ -25,7 +24,7 @@ public class LongestSubstrWthoutRepeatChars {
     }
 
     public static void main(String[] args) {
-        LongestSubstrWthoutRepeatChars lswrc = new LongestSubstrWthoutRepeatChars();
+        LongestSubstrWthoutRepeatChars3 lswrc = new LongestSubstrWthoutRepeatChars3();
         String s = "aab";
         System.out.println(lswrc.LongestSubStringWithReapeatingChars(s));
     }

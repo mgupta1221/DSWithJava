@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ThreeSum {
+public class ThreeSum15 {
 
     // LC 15 - https://leetcode.com/problems/3sum/
     // Problem : return all the triplets [nums[i], nums[j], nums[k]] such that i !=

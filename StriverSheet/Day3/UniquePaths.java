@@ -20,13 +20,21 @@ public class UniquePaths {
         // Solved using recursion -- Aapproach 1
         // return uniquePaths_recursion(m, n, 0, 0, 0);
 
+        // ...0 1
+        // 0 [X,X]
+        // 1 [X,X]
+        // 0 means row and 1 means column
+        // (0,1) means Horizontal movement, these are cell values, here column is
+        // increasing
+        // (1,0) means Vertical movement, here row is increasing
+
         // Solved using recursion -- Approach 2
         // int[][] directions = { { 0, 1 }, { 1, 0 } };
         // String[] dirNames = { "r", "d" };
         // return uniquePaths2(m - 1, n - 1, 0, 0, directions, dirNames);
 
         // Solved using DP - 2 ways (TOP Down)
-        // return uniquePaths_DP1(m, n, 0, 0, 0);
+        // return uniquePaths_DP1(m, n);
         int[][] dp = new int[m][n];
         return uniquePaths_DP2(0, 0, m, n, dp);
     }
@@ -69,7 +77,7 @@ public class UniquePaths {
 
     }
 
-    public static int uniquePaths_DP1(int m, int n, int currentI, int currentJ, int totalPaths) {
+    public static int uniquePaths_DP1(int m, int n) {
 
         int[][] dp = new int[m][n];
 

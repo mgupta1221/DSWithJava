@@ -22,7 +22,7 @@ public class EncodeDecodeStrings271 {
         while (i < s.length()) {
             int slash = s.indexOf("/", i);
             int strLen = Integer.parseInt(s.substring(i, slash));
-            String str = s.substring(slash + 1, slash + strLen + 1);
+            String str = s.substring(slash + 1, slash + 1 + strLen);
             decodedStrs.add(str);
             i = slash + strLen + 1;
         }

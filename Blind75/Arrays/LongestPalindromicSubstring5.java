@@ -26,7 +26,7 @@ package Blind75.Arrays;
 // For other diagnals, if left most and right most characters are same, then 
 // check if the string formed by removing leftmost and rightmost characters is pallendrome or not
 
-public class LongestPalindromicSubstring {
+public class LongestPalindromicSubstring5 {
     public String longestPalindrome(String s) {
         String ans = "";
         int[][] dp = new int[s.length() + 1][s.length() + 1];
@@ -49,7 +49,7 @@ public class LongestPalindromicSubstring {
                 }
 
                 if (dp[i][j] == 1) {
-                    ans = s.substring(i, j + 1);
+                    ans = s.substring(i, j + 1); // j+1 becuase second index is not inclusive in substring
                 }
 
             }
@@ -59,7 +59,7 @@ public class LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
+        LongestPalindromicSubstring5 lps = new LongestPalindromicSubstring5();
         String s = "babad";
         System.out.println(lps.longestPalindrome(s));
     }

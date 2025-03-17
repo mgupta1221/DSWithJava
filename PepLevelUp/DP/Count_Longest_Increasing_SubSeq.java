@@ -14,7 +14,7 @@ public class Count_Longest_Increasing_SubSeq {
         int maxlength = 0;
         // go from left to right
         for (int i = 1; i < arr.length; i++) {
-            dp[i] = 1;
+            dp[i] = 1; // itna to hoga hi
             // go from 0 to ith index- check if number at jth index < ith , then only update
             // add dp[j]+1 into dp[i]
 
@@ -27,9 +27,8 @@ public class Count_Longest_Increasing_SubSeq {
                     }
                 }
             }
-            // once dp[i] is calcualted, change 'maxlength' to highest dp[i] so that we
-            // maintain
-            // longest subsequence
+            // once dp[i] is calculated, change 'maxlength' to highest dp[i] so that we
+            // maintain longest subsequence
             if (dp[i] > maxlength) {
                 maxlength = dp[i];
             }
