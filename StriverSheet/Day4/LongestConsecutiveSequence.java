@@ -7,7 +7,8 @@ public class LongestConsecutiveSequence {
     // LC 128: https://leetcode.com/problems/longest-consecutive-sequence/
 
     // Probelm Desc: Given an unsorted array, return the length of the
-    // longest consecutive elements sequence. E.g. [100,4,200,1,3,2] =Ans: 4 i.e. [1,2,3,4]
+    // longest consecutive elements sequence. E.g. [100,4,200,1,3,2] =Ans: 4 i.e.
+    // [1,2,3,4]
 
     // Approach: We store all numbers in a hashSet. We run a FOR loop on array and
     // than run a WHILE loop inside to check all the numbers above ith element
@@ -29,18 +30,21 @@ public class LongestConsecutiveSequence {
         }
         int maxCount = 1;
 
-        for (int i = 0; i < nums.length; i++) {
-            if (!hSet.contains(nums[i] - 1)) { // Without this TLE will come, basically array mai us element se chota
-                                               // element nahi hona chhaiye, tabhi 'while' loop se bade elements check
-                                               // karo. So, in this case, [4,3,2] ke liye 'while' loop nahi chalega,
-                                               // kewal 1 ke liye chalega, so TLE will not occur
+        for (int num : hSet) {// To avoid TLE, we are not using 'for' loop on nums but using HashSet for
+                              // iteration
+            if (!hSet.contains(num - 1)) { // Without this TLE will come, basically array mai us element se chota
+                                           // element nahi hona chhaiye, tabhi 'while' loop se bade elements check
+                                           // karo. So, in this case, [4,3,2] ke liye 'while' loop nahi chalega,
+                                           // kewal 1 ke liye chalega, so TLE will not occur
                 int count = 1;
                 int j = 1;
-                while (hSet.contains(nums[i] + j)) {
+                while (hSet.contains(num + j)) {
                     count++;
                     j++;
-                    maxCount = Math.max(maxCount, count);
+
                 }
+                maxCount = Math.max(maxCount, count);// TO avoid TLE, notice we are caluclating maxCount after 'while
+                                                     // loop'
             }
 
         }

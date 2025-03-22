@@ -12,7 +12,7 @@ import java.util.List;
 // Imp: Notice the 2 if conditions
 //
 
-public class GenerateParenthesis {  
+public class GenerateParenthesis {
 
     // Aproach 1:
     public static List<String> AllParenthesis2(int n) {
@@ -59,7 +59,7 @@ public class GenerateParenthesis {
 
     public static void main(String[] args) {
 
-        List<String> result = AllParenthesis(3);
+        List<String> result = AllParenthesis2(3);
 
         for (String string : result) {
             System.out.println(string);

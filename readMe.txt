@@ -101,6 +101,11 @@ https://github.com/coding-parrot/Low-Level-Design
 https://github.com/sanyathisside/System-Design
 LLD- refactoring.guru
 
+O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(2^n) < O(n!) 
+
+Space complexity in a recursive function is O(n) where n is the depth of the recursive call stack.
+Time complexity in a recursive function is O(2^n) where n is the depth of the recursive call stack.
+
 Some of the best resources available for free on the Internet in form of blogs :
 
 1). Recommended “System Design Primer” repository on GitHub
