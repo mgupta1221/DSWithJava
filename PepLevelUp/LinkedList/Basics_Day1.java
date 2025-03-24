@@ -66,7 +66,7 @@ public class Basics_Day1 {
             return null;
 
         Node middleNode = findMiddleNode(root);
-        var tempNext = middleNode.next;// temporarily storing to get the second part reveresed using it
+        var tempNext = middleNode.next; // temporarily storing to get the second part reveresed using it
         middleNode.next = null; // this step is important to cut the list , otherwise it will bceome infinite
         Node newHeadWithReversed = Reverse(tempNext);
         Node c1 = root;
