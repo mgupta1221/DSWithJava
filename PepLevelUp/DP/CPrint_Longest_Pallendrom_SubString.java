@@ -25,15 +25,17 @@ public class CPrint_Longest_Pallendrom_SubString {
         for (int g = 0; g < str.length(); g++) {
             for (int i = 0, j = g; j < str.length(); i++, j++) { // Notice the 2 loops , we have to fill upper triangle
                                                                  // of 2-D array in a diagnal way..see video
+                                                                 // and cond. for for lopp shold (j<len), NOT (i<len)
 
                 // main diagnal of the 2D array will represent 1 charcter hence will be
                 // pallendrome
-                if (i == j) {
+                if (i == j) { // you can also write if(gap==0)
                     dp[i][j] = 1;
                 }
                 // diagonal just uppoer to main diagnal will be 2 character long
                 // and if both chracters are same they will be pallendome
-                else if (i + 1 == j) {
+
+                else if (i + 1 == j) { // you can also write if(gap==1)
                     if (str.charAt(i) == str.charAt(j)) {
                         dp[i][j] = 1;
                     }

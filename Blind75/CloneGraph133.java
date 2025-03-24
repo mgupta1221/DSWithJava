@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class CloneGraph133 {
+    // To avoid cloning the same (node) again and again in a cycle (because graphs
+    // can loop!), we use a HashMap to keep track of the nodes we’ve already
+    // cloned/created.
 
     public static Node cloneGraph(Node node) {
         if (node == null)
