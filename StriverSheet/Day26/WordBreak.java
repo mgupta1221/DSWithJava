@@ -25,8 +25,8 @@ public class WordBreak {
             return 1;
         }
 
-        for (int i = 1; i <= size; i++) {
-            String str = A.substring(0, i);
+        for (int i = 1; i <= size; i++) {// Notice either run it from (1 to len) or (0 to len-1)
+            String str = A.substring(0, i); // adjust subString accordingly
 
             if (map.contains(str)) {
                 String ros = A.substring(i, size);
