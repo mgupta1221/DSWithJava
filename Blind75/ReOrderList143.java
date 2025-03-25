@@ -1,7 +1,7 @@
 package Blind75;
 
 public class ReOrderList143 {
-    public void reorderList(ListNode head) {
+    public static void reorderList(ListNode head) {
 
         if (head == null || head.next == null)
             return;
@@ -13,7 +13,7 @@ public class ReOrderList143 {
 
     }
 
-    public void mergeLists(ListNode first, ListNode second) {
+    public static void mergeLists(ListNode first, ListNode second) {
         ListNode tempFirst;
         ListNode tempSecond;
         while (second != null) {
@@ -27,7 +27,7 @@ public class ReOrderList143 {
         }
     }
 
-    public ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
         if (head == null)
             return null;
         ListNode prev = null;
@@ -44,7 +44,7 @@ public class ReOrderList143 {
 
     }
 
-    public ListNode findMiddleNode(ListNode head) {
+    public static ListNode findMiddleNode(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
         while (fast != null && fast.next != null) {
@@ -54,22 +54,12 @@ public class ReOrderList143 {
         return slow;
     }
 
-    public static void printList(ListNode head) {
-        ListNode current = head;
-        while (current != null) {
-            System.out.print(current.val + " ");
-            current = current.next;
-        }
-        System.out.println();
-    }
-
     public static void main(String[] args) {
         int[] list = { 1, 2, 3, 4, 5 };
         ListNode head = ListNode.createLinkedList(list);
-        printList(head);
-        ReOrderList143 reorder = new ReOrderList143();
-        reorder.reorderList(head);
-        printList(head);
+        ListNode.printList(head);
+        reorderList(head);
+        ListNode.printList(head);
     }
 
 }
