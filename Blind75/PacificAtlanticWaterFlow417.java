@@ -6,6 +6,19 @@ import java.util.ArrayList;
 import java.util.Queue;
 import java.util.Arrays;;
 
+// Solve using BFS, the leftmost column, rightmost column, top row and last row...these 4
+// can always flow through oceans, so they are added to queue by default.
+
+// // In helper code, we only add the new co-ordinates to Queue only if:
+// 1) They have not been reached before
+// 2) heights[newX][newY] >= heights[x][y], this means the new coordicates are at higher level
+// than the borders so they will allow water to flow.
+// Note that we are moving from borders to inside, so borders(previous X,Y) 
+// should be at less depth to allow water to flow
+
+// At the end, we match the reachable coordinates of both oceans, if they are part 
+// of both Pacific and Atlantic reachable list returnd from bfs helpers,  they are 
+// added to the result.
 public class PacificAtlanticWaterFlow417 {
     public static List<List<Integer>> pacificAtlantic(int[][] heights) {
         if (heights == null || heights.length == 0) {
