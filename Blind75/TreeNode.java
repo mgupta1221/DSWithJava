@@ -1,33 +1,33 @@
-package AdobeQues;
+package Blind75;
 
 // Refer TreeImageForReference.png in this folder
-public class TNode {
+public class TreeNode {
     public int val;
-    public TNode left;
-    public TNode right;
-    public TNode nextRight;// added for
+    public TreeNode left;
+    public TreeNode right;
+    public TreeNode nextRight;
 
-    TNode() {
+    TreeNode() {
     }
 
-    TNode(int val) {
+    TreeNode(int val) {
         this.val = val;
     }
 
-    public TNode(int val, TNode left, TNode right) {
+    public TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
     }
 
-    public static TNode PopulateBinaryTree() {
-        TNode root = new TNode(50, null, null);
-        TNode child1 = new TNode(25, null, null);
-        TNode child2 = new TNode(75, null, null);
-        TNode child3 = new TNode(12, null, null);
-        TNode child4 = new TNode(37, null, null);
-        TNode child5 = new TNode(30, null, null);
-        TNode child7 = new TNode(45, null, null);
+    public static TreeNode PopulateBinaryTree() {
+        TreeNode root = new TreeNode(50, null, null);
+        TreeNode child1 = new TreeNode(25, null, null);
+        TreeNode child2 = new TreeNode(75, null, null);
+        TreeNode child3 = new TreeNode(12, null, null);
+        TreeNode child4 = new TreeNode(37, null, null);
+        TreeNode child5 = new TreeNode(30, null, null);
+        TreeNode child7 = new TreeNode(45, null, null);
 
         root.left = child1;
         root.right = child2;
@@ -42,7 +42,7 @@ public class TNode {
         return root;
     }
 
-    public static void PrintTree(TNode root) {
+    public static void PrintTree(TreeNode root) {
         if (root == null) {
             return;
         }
